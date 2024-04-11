@@ -1,0 +1,66 @@
+
+.section-info-block-black {
+    padding: 80px 0;
+    background-color: $c-text;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 800px;
+    @media only screen and (max-width: 1550px) {
+        background-size: 45%;
+    }
+    @include mq('md') {
+        padding: 60px 0;
+    }
+    @include mq('sm') {
+        padding: 40px 0;
+        background-size: 50%;
+    }
+    .section-number {
+        p {
+            color: rgba(255, 255, 255, .4);
+        }
+    }
+    .content {
+        max-width: 750px;
+        .section-title {
+            h2 {
+                font-size: 40px;
+                color: #fff;
+                margin-bottom: 40px;
+                @include mq('lg') {
+                    font-size: 34px;
+                }
+                @include mq('md') {
+                    font-size: 30px;
+                }
+                @include mq('sm') {
+                    font-size: 26px;
+                }
+            }
+            p {
+                font-size: 20px;
+                line-height: 1.4;
+                color: #fff;
+                max-width: 460px;
+                @include mq('lg') {
+                    font-size: 18px;
+                }
+                @include mq('sm') {
+                    font-size: 16px;
+                }
+            }
+        }
+        .btn-icon {
+            background-color: #fff;
+            @include mq('sm') {
+                width: 100%;
+            }
+            span {
+                white-space: nowrap;
+                @include mq('sm') {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

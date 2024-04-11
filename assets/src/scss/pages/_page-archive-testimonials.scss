@@ -1,0 +1,472 @@
+
+
+.page-archive-testimonials {
+    .testimonials-wrap {
+        .page-title-block {
+            align-items: flex-start;
+            @include mq('xl') {
+                flex-direction: column;
+            }
+            .section-title {
+                @media only screen and (max-width: 1550px) {
+                    width: calc(100% - 400px);
+                }
+                @include mq('xl') {
+                    order: 2;
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+                @include mq('md') {
+                    margin-bottom: 20px;
+                }
+            }
+            .right-block {
+                width: 500px;
+                padding-top: 25px;
+                @media only screen and (max-width: 1550px) {
+                    width: 400px;
+                    padding-top: 20px;
+                }
+                @include mq('xl') {
+                    order: 1;
+                    width: auto;
+                    padding: 0;
+                }
+                .breadcrumbs {
+                    width: auto;
+                    margin-bottom: 40px;
+                    @include mq('md') {
+                        margin-bottom: 10px;
+                    }
+                }
+                & > .btn-icon {
+                    @include mq('xl') {
+                        display: none;
+                    }
+                }
+            }
+            & > .btn-icon.mob {
+                order: 3;
+                display: none;
+                @include mq('xl') {
+                    display: inline-flex;
+                }
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .section-testimonials-video-big {
+        margin-bottom: 100px;
+        @include mq('md') {
+            margin-bottom: 80px;
+        }
+        @include mq('sm') {
+            margin-bottom: 60px;
+        }
+        .col-2 {
+            display: flex;
+            align-items: flex-end;
+            .block-audio {
+                width: 100%;
+                .block-play {
+                    p {
+                        font-size: 18px;
+                        line-height: 1.2;
+                        margin-bottom: 30px;
+                        @include mq('md') {
+                            margin-bottom: 0;
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                    .btn-play {
+                        @include mq('md') {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .big-testimonial {
+            display: flex;
+            @include mq('xl') {
+                flex-direction: column;
+            }
+            .video-wrap {
+                width: 66.66%;
+                padding-right: 120px;
+                position: relative;
+                overflow: hidden;
+                @media only screen and (max-width: 1550px) {
+                    padding-right: 60px;
+                }
+                @include mq('xl') {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 30px;
+                }
+                .video-inner {
+
+                }
+                .video-container {
+                    display: block;
+                    width: 100%;
+                    min-height: 500px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    overflow: hidden;
+                    padding-bottom: 0;
+                    @media only screen and (max-width: 1550px) {
+                        min-height: 450px;
+                    }
+                    @include mq('xl') {
+                        min-height: initial;
+                        height: auto;
+                    }
+                    video {
+                        @include mq('xl') {
+                            position: relative;
+                            width: 100%;
+                            height: auto;
+                        }
+                        // @media only screen and (max-width: 1550px) {
+                        //     transform: translateX(-10%);
+                        // }
+                        // @include mq('xl') {
+                        //     transform: translateX(0);
+                        // }
+                        // @media only screen and (max-width: 440px) {
+                        //     transform: translateX(-20%);
+                        // }
+                    }
+                }
+                .btn-play {
+                    display: none;
+                }
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 33.33%;
+                @include mq('xl') {
+                    width: 100%;
+                }
+                .text {
+                    margin-bottom: 40px;
+                    @include mq('md') {
+                        margin-bottom: 30px;
+                    }
+                    .ico-quote {
+                        display: block;
+                        width: 50px;
+                        height: 36px;
+                        object-fit: contain;
+                        margin-bottom: 40px;
+                        opacity: .3;
+                        @include mq('xl') {
+                            width: 44px;
+                            height: 32px;
+                            margin-bottom: 30px;
+                        }
+                        @include mq('lg') {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .text {
+                        font-size: 36px;
+                        line-height: 1.3;
+                        font-weight: 400;
+                        margin: 0;
+                        @media only screen and (max-width: 1750px) {
+                            font-size: 34px;
+                        }
+                        @media only screen and (max-width: 1550px) {
+                            font-size: 32px;
+                        }
+                        @include mq('xxl') {
+                            font-size: 30px;
+                        }
+                        @include mq('xl') {
+                            font-size: 27px;
+                        }
+                        @include mq('lg') {
+                            font-size: 22px;
+                        }
+                    }
+                }
+                .bottom {
+                    p {
+                        &.name {
+                            font-size: 24px;
+                            line-height: 1.2;
+                            font-weight: 500;
+                            @media only screen and (max-width: 1550px) {
+                                font-size: 22px;
+                            }
+                            @include mq('md') {
+                                font-size: 20px;
+                            }
+                        }
+                        &.location {
+                            font-size: 16px;
+                            line-height: 1.2;
+                            margin-top: 20px;
+                            color: rgba(52, 52, 52, .7);
+                            @include mq('md') {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-testimonials-video {
+        margin-bottom: 150px;
+        @include mq('md') {
+            margin-bottom: 100px;
+        }
+        @include mq('sm') {
+            margin-bottom: 60px;
+        }
+        .list-block {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 60px;
+            @include mq('sm') {
+                flex-direction: column;
+                row-gap: 40px;
+            }
+            .item {
+                width: calc(33.33% - 14px);
+                @include mq('xl') {
+                    width: calc(50% - 10px);
+                }
+                @include mq('sm') {
+                    width: 100%;
+                }
+                &.is-hidden {
+                    display: none !important;
+                }
+                .inner {
+                    color: $c-text;
+                    cursor: pointer;
+                    .video {
+                        position: relative;
+                        height: 340px;
+                        margin-bottom: 20px;
+                        background-color: #e6e6e6;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .btn-play {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: 80px;
+                            height: 80px;
+                            margin: auto;
+                            i {
+                                margin: 0;
+                            }
+                        }
+                    }
+                    h4 {
+                        font-size: 24px;
+                        line-height: 1.3;
+                        font-weight: 400;
+                        margin: 0;
+                        @media only screen and (max-width: 1550px) {
+                            font-size: 22px;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.3;
+                        margin-top: 20px;
+                        color: rgba(52, 52, 52, .7);
+                    }
+                    &:hover {
+                        color: $c-primary;
+                        .video {
+                            .btn-play {
+                                i {
+                                    background-color: $c-primary;
+                                    background-image: svg-load('../../images/svg/play.svg', fill=#fff);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .show-more {
+            margin-top: 100px;
+            @include mq('md') {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    .section-testimonials-text {
+        .list-block {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 50px;
+            row-gap: 75px;
+            @include mq('sm') {
+                row-gap: 40px;
+            }
+            .item {
+                width: calc(33.33% - 35px);
+                @include mq('xl') {
+                    width: calc(50% - 25px);
+                }
+                @include mq('sm') {
+                    width: 100%;
+                    padding-top: 40px;
+                    border-top: 1px solid rgba(52, 52, 52, .4);
+                    &:first-child {
+                        border-top: none;
+                        padding-top: 0;
+                    }
+                }
+                &.is-hidden {
+                    display: none !important;
+                }
+                .inner {
+                    cursor: pointer;
+                    .photo {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 30px;
+                        .img {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100px;
+                            height: 100px;
+                            margin-right: 20px;
+                            background-color: #fff;
+                            @include mq('sm') {
+                                width: 70px;
+                                height: 70px;
+                            }
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                            p {
+                                font-size: 38px;
+                                line-height: 1.1;
+                                font-weight: 500;
+                                color: $c-primary;
+                                @include mq('sm') {
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+                        & > p {
+                            display: inline-flex;
+                            align-items: center;
+                            width: calc(100% - 120px);
+                            font-size: 20px;
+                            line-height: 1.2;
+                            font-weight: 500;
+                            @include mq('sm') {
+                                font-size: 18px;
+                            }
+                            &:before {
+                                content: "";
+                                display: block;
+                                width: 30px;
+                                height: 30px;
+                                margin-right: 10px;
+                                background: svg-load('../../images/svg/star.svg', fill=$c-text) no-repeat center;
+                                background-size: contain;
+                                @include mq('sm') {
+                                    width: 26px;
+                                    height: 26px;
+                                }
+                            }
+                        }
+                    }
+                    .name {
+                        font-size: 24px;
+                        line-height: 1.4;
+                        font-weight: 500;
+                        margin-bottom: 25px;
+                        @media only screen and (max-width: 1550px) {
+                            font-size: 22px;
+                        }
+                        @include mq('sm') {
+                            font-size: 20px;
+                        }
+                    }
+                    .text {
+                        font-size: 20px;
+                        line-height: 1.4;
+                        font-weight: 400;
+                        margin-bottom: 25px;
+                        @media only screen and (max-width: 1550px) {
+                            font-size: 18px;
+                        }
+                        @include mq('sm') {
+                            font-size: 16px;
+                        }
+                    }
+                    .link {
+                        display: inline-flex;
+                        align-items: center;
+                        font-size: 16px;
+                        line-height: 1.1;
+                        transition: .2s ease;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            margin: 3px 0 0 20px;
+                            background: svg-load('../../images/svg/arrow-right.svg', fill=$c-text) no-repeat center;
+                            background-size: contain;
+                            transition: .2s ease;
+                        }
+                    }
+                    &:hover {
+                        .link {
+                            color: $c-primary;
+                            &:after {
+                                transform: translateX(3px);
+                                background-image: svg-load('../../images/svg/arrow-right.svg', fill=$c-primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .show-more {
+            margin-top: 100px;
+            @include mq('md') {
+                margin-top: 60px;
+            }
+        }
+    }
+    
+}
+
+

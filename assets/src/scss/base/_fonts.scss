@@ -1,0 +1,39 @@
+//-----------------------------------
+//   Fonts
+//-----------------------------------
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl/stolzl_book-webfont.woff2') format('woff2'),
+         url('../fonts/Stolzl/stolzl_book-webfont.woff') format('woff'),
+         url('../fonts/Stolzl/stolzl_book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Stolzl';
+//     src: url('../fonts/Stolzl/stolzl_regular-webfont.woff2') format('woff2'),
+//          url('../fonts/Stolzl/stolzl_regular-webfont.woff') format('woff'),
+//          url('../fonts/Stolzl/stolzl_regular-webfont.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl/stolzl_medium-webfont.woff2') format('woff2'),
+         url('../fonts/Stolzl/stolzl_medium-webfont.woff') format('woff'),
+         url('../fonts/Stolzl/stolzl_medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl/stolzl_book-webfont.woff2') format('woff2'),
+         url('../fonts/Stolzl/stolzl_book-webfont.woff') format('woff'),
+         url('../fonts/Stolzl/stolzl_book-webfont.ttf') format('truetype');
+    font-weight: 350;
+    font-style: normal;
+}

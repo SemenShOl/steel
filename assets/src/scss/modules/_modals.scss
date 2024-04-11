@@ -1,0 +1,443 @@
+//-----------------------------------
+//   Modals
+//-----------------------------------
+
+.modal {
+	.modal-dialog {
+		max-width: 660px;
+		padding: 20px;
+		.modal-content {
+			position: relative;
+			border: none;
+			box-shadow: none;
+			border-radius: 0;
+			padding: 70px 100px;
+			background-color: #F1F1F1;
+			@include mq('md') {
+				padding: 60px;
+			}
+			@include mq('sm') {
+				padding: 60px 30px 30px 30px;
+			}
+			.btn-close {
+				position: absolute;
+				top: 0;
+				right: -80px;
+				width: 80px;
+				height: 80px;
+				border: none;
+				padding: 0;
+				cursor: pointer;
+				outline: none !important;
+				box-shadow: none !important;
+				background: svg-load('../../images/svg/close-1.svg', fill=#fff) no-repeat center $c-text;
+				background-size: 40%;
+				opacity: 1;
+				border-radius: 0;
+				transition: .2s ease;
+				@media only screen and (max-width: 1550px) {
+					right: -60px;
+					width: 60px;
+					height: 60px;
+				}
+				@include mq('md') {
+					top: 10px;
+					right: 10px;
+					background: svg-load('../../images/svg/close-1.svg', fill=$c-text) no-repeat center transparent;
+					background-size: 45%;
+				}
+				@include mq('sm') {
+					width: 50px;
+					height: 50px;
+				}
+				&:hover {
+					@include mq('md', min) {
+						background-image: svg-load('../../images/svg/close-1.svg', fill=#9f9f9f);
+						background-size: 42%;
+					}
+				}
+			}
+			.modal-title {
+				margin-bottom: 60px;
+				@include mq('sm') {
+					margin-bottom: 40px;
+				}
+				h4 {
+					font-size: 30px;
+					line-height: 1.2;
+					font-weight: 400;
+					margin: 0;
+					@include mq('md') {
+						font-size: 26px;
+					}
+					@include mq('sm') {
+						font-size: 24px;
+					}
+				}
+				p {
+					font-size: 16px;
+					line-height: 1.2;
+					margin-top: 15px;
+				}
+			}
+			.common-form {
+				.form-group {
+					label {
+						background-color: #F1F1F1;
+					}
+				}
+				.form-group-set {
+					margin-bottom: 40px;
+					.btn-icon {
+						width: 100%;
+						margin-bottom: 40px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				.submit {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	// Новый отзыв
+	&.new-review {
+		.modal-dialog {
+			max-width: 1000px;
+		}
+		.modal-content {
+			.btn-close {
+				@include mq('xl') {
+					top: 10px;
+					right: 10px;
+					background: svg-load('../../images/svg/close-1.svg', fill=$c-text) no-repeat center transparent;
+					background-size: 45%;
+					&:hover {
+						background-size: 45% !important;
+					}
+				}
+			}
+			.modal-title {
+				display: flex;
+				justify-content: space-between;
+				@include mq('lg') {
+					flex-direction: column;
+					justify-content: flex-start;
+				}
+				h4 {
+					margin-right: 30px;
+					text-align: left;
+				}
+				p {
+					margin-top: 0;
+					max-width: 350px;
+					text-align: left;
+					@include mq('lg') {
+						margin-top: 15px;
+					}
+				}
+			}
+			.common-form {
+				.form-group-set {
+					display: flex;
+					column-gap: 30px;
+					@include mq('lg') {
+						flex-direction: column;
+					}
+					.btn-icon {
+						width: calc(50% - 15px);
+						@include mq('lg') {
+							width: calc(100%);
+						}
+					}
+					.form-group {
+						margin-bottom: 0;
+					}
+				}
+				.textarea {
+					margin-bottom: 30px;
+				}
+				.bottom {
+					display: flex;
+					@include mq('md') {
+						flex-direction: column;
+					}
+					.left-block {
+						width: calc(100% - 300px);
+						padding-right: 30px;
+						@include mq('lg') {
+							width: calc(100% - 275px);
+						}
+						@include mq('md') {
+							width: 100%;
+							margin-bottom: 30px;
+						}
+						.rating-stars-wrap {
+							display: flex;
+							margin: 0;
+							p {
+								font-size: 16px;
+								line-height: 1.2;
+								margin-right: 20px;
+								transition: .2s ease;
+							}
+							.rating-stars {
+								
+							}
+							&.has-error {
+								p {
+									color: $c-danger;
+								}
+							}
+						}
+						.privacy {
+							margin-top: 15px;
+						}
+					}
+					.submit {
+						width: 300px;
+						@include mq('lg') {
+							width: 275px;
+						}
+						@include mq('sm') {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Просмотр отзыва
+	&.review-view {
+		.modal-dialog {
+			max-width: 1200px;
+		}
+		.modal-content {
+			padding: 60px;
+			@include mq('md') {
+				padding: 30px;
+			}
+			.btn-close {
+				@media only screen and (max-width: 1300px) {
+					top: 15px;
+					right: 15px;
+					background: svg-load('../../images/svg/close-1.svg', fill=$c-text) no-repeat center transparent;
+					background-size: 45%;
+					&:hover {
+						background-size: 45% !important;
+					}
+				}
+				@include mq('md') {
+					top: 15px;
+					right: 15px;
+				}
+			}
+
+			
+			.review-single {
+				&-title {
+					display: flex;
+					align-items: center;
+					margin-bottom: 60px;
+					@include mq('md') {
+						margin-bottom: 40px;
+					}
+					&-img {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100px;
+						height: 100px;
+						margin-right: 30px;
+						background-color: #fff;
+						@include mq('md') {
+							width: 70px;
+							height: 70px;
+							margin-right: 20px;
+						}
+						img {
+							display: block;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+						p {
+							font-size: 38px;
+							line-height: 1.1;
+							font-weight: 500;
+							color: $c-primary;
+							@include mq('md') {
+								font-size: 32px;
+							}
+						}
+					}
+					&-text {
+						.date {
+							font-size: 16px;
+							line-height: 1.2;
+							margin-bottom: 7px;
+							color: rgba(52, 52, 52, .7);
+							@include mq('sm') {
+								font-size: 14px;
+							}
+						}
+						.name {
+							font-size: 20px;
+							line-height: 1.2;
+							@include mq('md') {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+				&-text {
+					font-size: 20px;
+					line-height: 1.4;
+					margin-bottom: 120px;
+					@include mq('md') {
+						font-size: 18px;
+						margin-bottom: 60px;
+					}
+					@include mq('sm') {
+						font-size: 16px;
+					}
+					p {
+						margin-bottom: 20px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				&-bottom {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					cursor: pointer;
+					.close {
+						display: inline-flex;
+						align-items: center;
+						span {
+							font-size: 20px;
+							line-height: 1.2;
+							color: $c-primary;
+							@include mq('md') {
+								font-size: 18px;
+							}
+						}
+						&:after {
+							content: "";
+							display: block;
+							width: 16px;
+							height: 16px;
+							margin-left: 10px;
+							background: svg-load('../../images/svg/close-1.svg', fill=$c-text) no-repeat center;
+							background-size: contain;
+							transition: .2s ease;
+						}
+						&:hover {
+							&:after {
+								background-image: svg-load('../../images/svg/close-1.svg', fill=$c-primary);
+							}
+						}
+					}
+					.rating {
+						display: inline-flex;
+						align-items: center;
+						font-size: 36px;
+						line-height: 1.2;
+						font-weight: 500;
+						@include mq('md') {
+							font-size: 30px;
+						}
+						&:before {
+							content: "";
+							display: block;
+							width: 40px;
+							height: 40px;
+							margin-right: 10px;
+							background: svg-load('../../images/svg/star.svg', fill=$c-text) no-repeat center;
+							background-size: contain;
+							@include mq('md') {
+								width: 30px;
+								height: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Успешна отправка
+	&.success {
+		.modal-dialog {
+			max-width: 840px;
+		}
+		.modal-content {
+			padding-top: 60px;
+			padding-bottom: 60px;
+			padding: 100px 140px;
+			background-color: $c-text;
+			@include mq('lg') {
+				padding: 80px 60px;
+			}
+			@include mq('md') {
+				padding: 90px 60px;
+			}
+			@include mq('sm') {
+				padding: 70px 30px;
+			}
+			.btn-close {
+				position: absolute;
+				top: 20px !important;
+				right: 20px !important;
+				background-size: 30px;
+				background-color: transparent;
+				@include mq('md') {
+					background-image: svg-load('../../images/svg/close-1.svg', fill=#fff);
+				}
+			}
+			.text { 
+				display: flex;
+				justify-content: center;
+				@include mq('sm') {
+					flex-direction: column;
+					align-items: center;
+				}
+				&:before {
+					content: "";
+					width: 35px;
+					height: 35px;
+					margin-right: 20px;
+					background: svg-load('../../images/svg/check.svg', fill=$c-text) no-repeat center #fff;
+					background-size: 50%;
+					border-radius: 40px;
+					@include mq('sm') {
+						margin: 0 0 20px 0;
+					}
+				}
+				p {
+					max-width: calc(100% - 55px);
+					font-size: 30px;
+					line-height: 1.3;
+					color: #fff;
+					@include mq('lg') {
+						font-size: 26px;
+					}
+					@include mq('sm') {
+						max-width: 100%;
+						text-align: center;
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+
+

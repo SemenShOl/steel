@@ -1,0 +1,326 @@
+
+.page-archive-technologies {
+    padding-top: 170px;
+    @include mq('lg') {
+        padding-top: 130px;
+    }
+    .technologies-intro {
+        .col-10 {
+            
+        }
+        .content {
+            display: flex;
+            padding-bottom: 100px;
+            border-bottom: 1px solid rgba(52, 52, 52, .4);
+            @include mq('xl') {
+                flex-direction: column;
+            }
+            @include mq('md') {
+                padding-bottom: 60px;
+            }
+            .text {
+                font-size: 20px;
+                line-height: 1.4;
+                width: 45%;
+                padding-right: 50px;
+                @media only screen and (max-width: 1550px) {
+                    font-size: 18px;
+                }
+                @include mq('xl') {
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+                @include mq('sm') {
+                    font-size: 16px;
+                }
+                p {
+                    max-width: 520px;
+                }
+            }
+            .tech-list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 55%;
+                @include mq('xl') {
+                    width: 100%;
+                }
+                .item {
+                    width: 50%;
+                    margin-top: 20px;
+                    @include mq('sm') {
+                        margin-top: 30px;
+                    }
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        margin-top: 0;
+                    }
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        color: $c-text;
+                        @include mq('sm') {
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                        .icon {
+                            display: block;
+                            width: 80px;
+                            height: 80px;
+                            margin-right: 25px;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            background-color: #fff;
+                            background-size: 45%;
+                            @media only screen and (max-width: 1550px) {
+                                width: 70px;
+                                height: 70px;
+                            }
+                            @include mq('sm') {
+                                margin-bottom: 10px;
+                            }
+                            &.icon-monolit {
+                                background-image: svg-load('../../images/svg/monolit.svg');
+                            }
+                            &.icon-carkas {
+                                background-image: svg-load('../../images/svg/carkas.svg');
+                            }
+                            &.icon-profbrus {
+                                background-image: svg-load('../../images/svg/profbrus.svg');
+                            }
+                            &.icon-brick {
+                                background-image: svg-load('../../images/svg/brick.svg');
+                            }
+                            &.icon-gasbeton {
+                                background-image: svg-load('../../images/svg/gasbeton.svg');
+                            }
+                            &.icon-gluebrus {
+                                background-image: svg-load('../../images/svg/gluebrus.svg');
+                            }
+                            &.icon-shale {
+                                background-image: svg-load('../../images/svg/shale.svg');
+                            }
+                            &.icon-flat-roof {
+                                background-image: svg-load('../../images/svg/flat-roof.svg');
+                            }
+                            &.icon-barnhouse {
+                                background-image: svg-load('../../images/svg/barnhouse.svg');
+                            }
+                            &.icon-high-tech {
+                                background-image: svg-load('../../images/svg/high-tech.svg');
+                            }
+                        }
+                        span {
+                            width: calc(100% - 105px);
+                            font-size: 22px;
+                            line-height: 1.2;
+                            padding-right: 20px;
+                            @media only screen and (max-width: 1550px) {
+                                font-size: 20px;
+                                width: calc(100% - 95px);
+                            }
+                            @include mq('xl') {
+                                font-size: 18px;
+                            }
+                            @include mq('sm') {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .technologies-list {
+        padding-top: 100px;
+        @include mq('md') {
+            padding-top: 60px;
+        }
+        .technologies-list-item {
+            margin-bottom: 100px;
+            @include mq('md') {
+                margin-bottom: 60px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .content {
+                display: flex;
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 45%;
+                    padding-right: 50px;
+                    min-height: 360px;
+                    @media only screen and (max-width: 1550px) {
+                        min-height: 320px;
+                    }
+                    @include mq('xl') {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+                    h4 {
+                        font-size: 36px;
+                        line-height: 1.2;
+                        font-weight: 400;
+                        margin-bottom: 40px;
+                        @media only screen and (max-width: 1550px) {
+                            font-size: 32px;
+                        }
+                        @include mq('md') {
+                            font-size: 30px;
+                        }
+                        @include mq('sm') {
+                            font-size: 28px;
+                        }
+                    }
+                    .slider-mobile {
+                        display: none;
+                        margin-bottom: 20px;
+                        max-width: 85vw;
+                        @include mq('xl') {
+                            display: block;
+                        }
+                        @include mq('md') {
+                            max-width: calc(100vw - 60px);
+                        }
+                        .item {
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: 440px;
+                                object-fit: cover;
+                                @include mq('sm') {
+                                    height: 360px;
+                                }
+                            }
+                        }
+                    }
+                    .video-container {
+                        display: none;
+                        @include mq('xl') {
+                            display: flex;
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                        img {
+                            @include mq('xl') {
+                                height: auto;
+                            }
+                        }
+                    }
+                    .desc {
+                        font-size: 18px;
+                        line-height: 1.4;
+                        margin-bottom: 50px; 
+                        @include mq('sm') {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .image {
+                    position: relative;
+                    display: flex;
+                    width: 55%;
+                    height: 360px;
+                    @include mq('xl') {
+                        display: none;
+                    }
+                    .list {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        gap: 20px;
+                        width: calc(100% + 50px);
+                        .item {
+                            height: 360px;
+                            width: calc(50% - 10px);
+                            overflow: hidden;
+                            transition: .5s ease;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            img {
+                                display: block;
+                                width: auto;
+                                height: 100%;
+                                width: 600px;
+                                margin-left: -80px;
+                                min-width: 100%;
+                                object-fit: cover;
+                                transition: .5s ease;
+                            }
+                        }
+                        &.is-item-1-wide {
+                            .item-1 {
+                                width: 65%;
+                            }
+                            .item-2 {
+                                width: 35%;
+                            }
+                            img {
+                                margin-left: 0;
+                            }
+                        }
+                        &.is-item-2-wide {
+                            .item-1 {
+                                width: 35%;
+                            }
+                            .item-2 {
+                                width: 65%;
+                            }
+                            img {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+                .video-container {
+                    display: flex;
+                    position: relative;
+                    width: 55%;
+                    @include mq('xl') {
+                        display: none;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 530px;
+                        object-fit: cover;
+                        @media only screen and (max-width: 1550px) {
+                            height: 450px;
+                        }
+                    }
+                    .btn-play {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 80px;
+                        height: 80px;
+                        @include mq('md') {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        i {
+                            margin: 0;
+                        }
+                    }
+                    &:hover {
+                        .btn-play {
+                            i {
+                                background-color: $c-primary;
+                                background-image: svg-load('../../images/svg/play.svg', fill=#fff);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

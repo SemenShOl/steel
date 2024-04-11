@@ -1,0 +1,226 @@
+
+.section-warranty {
+    position: relative;
+    padding: 80px 0 0 0;
+    background-color: $c-text;
+    overflow: hidden;
+    .col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 120px;
+        @include mq('md') {
+            padding-bottom: 0px;
+        }
+        .section-number {
+            p {
+                color: rgba(255,255,255,.4);
+            }
+        }
+        .section-circle {
+            position: relative;
+            z-index: 2;
+            width: 340px;
+            height: 340px;
+            @media only screen and (max-width: 1550px) {
+                width: 280px;
+                height: 280px;
+            }
+            @include mq('xl') {
+                margin-bottom: 100px;
+                width: 240px;
+                height: 240px;
+            }
+            @include mq('md') {
+                display: none;
+            }
+            .text {
+                width: 340px;
+                height: 340px;
+                @media only screen and (max-width: 1550px) {
+                    width: 280px;
+                    height: 280px;
+                }
+                @include mq('xl') {
+                    width: 240px;
+                    height: 240px;
+                }
+            }
+            .text-center {
+
+            }
+        }
+    }
+    .section-title {
+        margin-bottom: 40px;
+        h2 {
+            color: #fff;
+        }
+    }
+    .image-wrap {
+        position: relative;
+        height: 520px;
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: calc(100% + 8vw);
+            overflow: hidden;
+            @include mq('md') {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+            }
+            img {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 130%;
+                object-fit: cover;
+                transition: .1s linear;
+            }
+        }
+    }
+    .text-row {
+        display: flex;
+        padding: 50px 0 90px 15%;
+        @media only screen and (max-width: 1750px) {
+            padding-left: 10%;
+        }
+        @media only screen and (max-width: 1550px) {
+            padding-left: 50px;
+        }
+        @include mq('lg') {
+            flex-direction: column;
+            row-gap: 25px;
+            padding-left: 80px;
+        }
+        @include mq('md') {
+            padding: 0 0 40px 0;
+        }
+        .section-circle {
+            display: none;
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            margin: -50px auto 0 auto;
+            @include mq('md') {
+                display: flex;
+            }
+            .text {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .item {
+            &:nth-child(1) {
+                width: 33.33%;
+                display: flex;
+                padding-right: 15px;
+                // justify-content: flex-end;
+                // text-align: right;
+            }
+            &:nth-child(2) {
+                width: 33.33%;
+                padding-right: 15px;
+                display: flex;
+                justify-content: center;
+                @include mq('lg') {
+                    justify-content: flex-start;
+                }
+            }
+            &:nth-child(3) {
+                width: 33.33%;
+            }
+            @include mq('lg') {
+                width: 100% !important;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.3;
+                color: #fff;
+                max-width: 350px;
+                @media only screen and (max-width: 1550px) {
+                    font-size: 16px;
+                }
+                @include mq('lg') {
+                    max-width: 100%;
+                }
+            }
+            ul {
+                li {
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    color: #fff;
+                    list-style: none;
+                    padding-left: 15px;
+                    margin-bottom: 5px;
+                    @media only screen and (max-width: 1550px) {
+                        font-size: 16px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 14px;
+                        left: 0;
+                        width: 6px;
+                        height: 2px;
+                        background-color: $c-primary;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-text {
+        padding: 100px 0;
+        background-color: #3C3C3C;
+        @include mq('lg') {
+            padding: 80px 0;
+        }
+        .content {
+            display: flex;
+            @include mq('lg') {
+                flex-direction: column;
+            }
+            .text-1 {
+                width: 70%;
+                font-size: 24px;
+                line-height: 1.4;
+                font-weight: 500;
+                color: #fff;
+                padding-right: 30px;
+                @media only screen and (max-width: 1550px) {
+                    font-size: 22px;
+                }
+                @include mq('lg') {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+                p {
+                    margin-bottom: 15px;
+                    max-width: 900px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .text-2 {
+                width: 30%;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #fff;
+                @media only screen and (max-width: 1550px) {
+                    font-size: 16px;
+                }
+                @include mq('lg') {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

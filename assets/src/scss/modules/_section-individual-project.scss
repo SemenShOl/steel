@@ -1,0 +1,145 @@
+
+.section-individual-project {
+    padding-top: 150px;
+    @include mq('md') {
+        padding-top: 120px;
+    }
+    @include mq('sm') {
+        padding-top: 80px;
+    }
+    .section-title {
+        margin-bottom: 80px;
+        @include mq('sm') {
+            margin-bottom: 40px;
+        }
+        h2 {
+            span {
+                display: block;
+            }
+        }
+    }
+    .section-circle {
+        @include mq('md') {
+            display: none;
+        }
+    }
+    .inner-wrap {
+        display: flex;
+        @include mq('xl') {
+            flex-direction: column;
+        }
+    }
+    .block {
+        &-image {
+            position: relative;
+            width: 66.66%;
+            padding-right: 70px;
+            @media only screen and (max-width: 1550px) {
+                padding-right: 50px;
+            }
+            @include mq('xl') {
+                width: 100%;
+                padding-right: 0;
+            }
+            @include mq('md') {
+                display: none;
+            }
+            .change-image-wrap {
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+                height: 100%;
+                overflow: hidden;
+                &:after {
+                    z-index: 99991;
+                }
+            }
+            .change-image {
+                position: relative;
+                overflow: visible !important;
+                .images {
+                    overflow: visible !important;
+                }
+                .image-lft {
+                    z-index: 999;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -40%;
+                        right: 0;
+                        width: 3px;
+                        height: 180%;
+                        background-color: $c-primary;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 40%;
+                        right: -4px;
+                        width: 11px;
+                        height: 56px;
+                        border-radius: 2px;
+                        background: svg-load('../../images/svg/dots.svg') no-repeat center $c-text;
+                        background-size: 4px;
+                    }
+                }
+            }
+        }
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 33.33%;
+            @include mq('xl') {
+                width: 100%;
+            }
+            .props {
+                margin-bottom: 40px;
+                padding-top: 25px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 60px;
+                    @include mq('sm') {
+                        margin-bottom: 30px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 100px;
+                        margin-right: 30px;
+                        background-color: #fff;
+                        @media only screen and (max-width: 1550px) {
+                            width: 90px;
+                            width: 90px;
+                        }
+                        @include mq('sm') {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        img {
+                            width: 45%;
+                            height: auto;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.2;
+                        width: calc(100% - 130px);
+                        opacity: .7;
+                        max-width: 250px;
+                    }
+                }
+            }
+            .btn-icon {
+                width: 100%;
+            }
+        }
+    }
+}

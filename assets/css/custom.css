@@ -1,0 +1,208 @@
+/* body {
+    background-color: #fff!important;
+}
+.header {
+    background-color: #fff;
+} */
+/* .section-intro {
+    height: 100vh;
+} */
+/* .section-intro .wrapper .col-10 {
+    width: 85%;
+} */
+.section-intro .main-img .section-title {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+/* .section-intro .main-info {
+    width: 40%;
+} */
+/* .section-intro .wrapper .col-2 {
+    width: 15%;
+} */
+/* h1 {
+    color: #fff;
+} */
+.section-title h1 {
+    margin-bottom: 40px;
+}
+/* .section-intro .main-img .section-title p {
+    display: block;
+    max-width: 76%;
+    color: #fff;
+    opacity: 1;
+} */
+/* .section-intro .main-img .video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    filter: brightness(0.7);
+} */
+.video-container.type-local video {
+    cursor: auto;
+}
+.cutoff-corner-right:after {
+    display: none;
+}
+/* .l-page {
+    padding-top: 180px;
+} */
+.section-intro .props-grid .item a, .section-intro .props-grid .item > div {
+    background-color: #2B344A;
+}
+.section-intro .props-grid .item a:hover, .section-intro .props-grid .item > div:hover {
+    background-color: #1D2332;
+}
+/* .section-intro .main-info {
+    padding-top: 120px;
+} */
+.section-intro .props-grid .item .icon img {
+    width: 68px;
+    height: 68px;
+}
+.section-intro .props-grid .item:nth-child(4) .icon img {
+    width: 68px;
+    height: 68px;
+}
+.section-intro .props-grid .item:nth-child(2) a {
+    border-top-right-radius: 24px;
+}
+.project-list-item .text .props span {
+    display: none;
+}
+/* .section-house-projects {
+    margin-bottom: 150px;
+} */
+.section-technologies-construction {
+    padding-top: 0;
+}
+.section-house-projects .top-block .section-title {
+    width: 70%;
+}
+.section-house-projects .top-block {
+    justify-content: space-between;
+}
+.section-technologies-construction .section-title {
+    justify-content: space-between;
+}
+/* .section-house-projects .top-block .buttons {
+    width: auto;
+} */
+/* .section-technologies-construction .section-title .buttons {
+    width: auto;
+} */
+.section-house-projects .top-block .buttons .btn-wrap {
+    width: auto;
+}
+.section-technologies-construction .section-title .buttons .btn-icon {
+    width: auto;
+}
+.partners-callback .btn-icon > span {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+/* .page-about-company .intro .content-info .item:last-child {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-end;
+    justify-content: space-between;
+} */
+.page-about-company .intro .content-info h4 {
+    font-weight: 500;
+}
+/* .section-technologies-construction .section-title {
+    margin-bottom: 80px;
+} */
+.page-about-company .intro {
+    padding-bottom: 0;
+}
+.partners-title h1, .partners-title .h1 {
+    color: #343434;
+}
+/* .section-intro .section-title h1 {
+    color: #fff;
+} */
+.section-title h1 {
+    color: #343434;
+}
+/* .section-contacts .block-form {
+    height: 840px;
+} */
+.header.is-scrolled .logo a img {
+    width: auto;
+}
+/* .page-about-company .advantages .list {
+    flex-wrap: wrap;
+} */
+.page-about-company .advantages .list .item {
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-between;
+    background-color: #2B344A; */
+}
+.page-about-company .advantages .list .item:hover {
+    background-color: #1D2332;
+}
+.page-about-company .advantages .list .item p {
+    font-size: 24px;
+    color: #fff;
+}
+.page-about-company .advantages .list .item .icon {
+    width: auto;
+    height: auto;
+}
+.page-about-company .advantages .list .item .icon svg {
+    width: auto;
+}
+.page-about-company .advantages .list .item .icon.icon-3 svg {
+    width: auto;
+}
+.page-about-company .advantages {
+    margin-bottom: 150px;
+}
+.section-contacts .block-form .form-wrap .contacts-list .item .name:before {
+    width: 16px;
+    height: 10px;
+}
+/* .page-about-company .rating .list .item a .img svg, .page-about-company .rating .list .item a .img img {
+    margin-bottom: 24px;
+    height: auto;
+} */
+.page-about-company .rating .list .item a .img {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-about-company .rating .list .item a:hover {
+    /* background-color: #2B344A; */
+}
+/* .page-about-company .rating .list .item a {
+    height: 300px;
+} */
+.page-about-company .rating .list .item a p {
+    text-align: center;
+    font-size: 24px;
+}
+.partners-list {
+    margin-bottom: 0;
+}
+.section-contacts .block-form .bg {
+    background-color: #fff;
+}
+.section-contacts .block-form .form-wrap {
+    background-color: #fff;
+}
+
+.map .google-map-control {
+    right: 0 !important;
+}

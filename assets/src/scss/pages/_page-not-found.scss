@@ -1,0 +1,26 @@
+//-----------------------------------
+//   Page - 404
+//-----------------------------------
+
+.page-404 {
+	.page-content {
+		padding: 100px 0;
+		text-align: center;
+		h1 {
+			font-size: 40px;
+			line-height: 50px;
+			@include mq('sm') {
+				font-size: 28px;
+				line-height: 36px;
+			}
+		}
+		p {
+			font-size: 20px;
+			line-height: 28px;
+			@include mq('sm') {
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+
+.section-map {
+    height: 630px;
+    overflow: hidden;
+    @media only screen and (max-width: 1550px) {
+        height: 550px;
+    }
+    .map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% + 35px);
+        font-size: 24px;
+        background-color: #e3e3e3;
+        [class*="ymaps-2"][class*="-ground-pane"] {
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale1\'><feColorMatrix type=\'matrix\' values=\'0.3 0 0 0 0 0 0.3 0 0 0 0 0 0.3 0 0 0 0 0 1 0\'/></filter></svg>#grayscale1");
+            -webkit-filter: grayscale1(100%);
+        }
+    }
+}

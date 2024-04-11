@@ -1,0 +1,79 @@
+
+.section-steps-list {
+    padding-top: 150px; 
+    @include mq('md') {
+        padding-top: 120px;
+    }
+    @include mq('sm') {
+        padding-top: 80px;
+    }
+    .section-title {
+        margin-bottom: 60px;
+        @include mq('md') {
+            margin-bottom: 40px;
+        }
+    }
+    .steps-list {
+        .item {
+            display: flex;
+            padding-bottom: 60px;
+            margin-top: 60px;
+            border-bottom: 1px solid rgba(52, 52, 52, .2);
+            &:first-child {
+                margin-top: 0;
+            }
+            @include mq('sm') {
+                flex-direction: column;
+                padding-bottom: 40px;
+                margin-top: 40px;
+            }
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                margin-right: 30px;
+                font-size: 26px;
+                line-height: 1.2;
+                color: $c-primary;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 45%;
+                background-color: #fff;
+                @include mq('sm') {
+                    margin: 0 0 20px 0;
+                }
+            } 
+            .text {
+                width: calc(100% - 110px);
+                @include mq('sm') {
+                    width: 100%;
+                }
+                h4 {
+                    font-size: 26px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    @include mq('sm') {
+                        font-size: 24px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.4;
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &.is-hidden {
+                display: none;
+            }
+        }
+    }
+    .show-more {
+        margin-top: -1px;
+    }
+}

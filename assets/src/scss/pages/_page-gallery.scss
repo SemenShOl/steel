@@ -1,0 +1,58 @@
+.section-gallery .is-hidden {
+  display: none;
+}
+
+.portfolio-list-item-inner {
+  width: 100%;
+}
+
+.portfolio-list-img-container {
+  height: 0;
+  padding-top: 75%;
+  position: relative;
+  img {
+      position: absolute;
+      object-fit: cover;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+  }
+}
+
+.gallery-video {
+  margin-bottom: 25px;
+  video {
+    width: 100%;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 0;
+  }
+  .btn-play {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80px;
+      height: 80px;
+      i {
+          margin-right: 0;
+      }
+  }
+  &:hover {
+    .btn-play {
+      i {
+          background-color: $c-primary;
+          background-image: svg-load('../../images/svg/play.svg', fill=#fff);
+      }
+    }
+  }
+}
