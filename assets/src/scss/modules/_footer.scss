@@ -4,7 +4,8 @@
 
 .footer {
     position: relative;
-    background-color: #343434;
+    // background-color: #343434;
+    background-color: $bg-color;
     overflow: hidden;
 
     .pc-border {
@@ -100,6 +101,7 @@
                     font-weight: 400;
                     line-height: 1.2;
                     color: #fff;
+                    color: $dark-text;
                     padding-right: 10px;
                     transition: all ease 0.2s;
                     
