@@ -11,16 +11,19 @@
 						</a>
 					</div>
 				</div>
+				<!-- &nbsp -->
 				<div class="col-10">
 					<div class="block-main-menu menu-desktop">
 						<ul class="inner">
-							<li><a href="<?php echo home_url( '/o-kompanii' ); ?>" class="link" style="">О&nbsp;компании</a></li>
-							<li><a href="<?php echo home_url( '/catalog' ); ?>" class="link" style="">Каталог продукции</a></li>
+							<li><a href="<?php echo home_url( '/production' ); ?>" class="link" style="">Продукция</a></li>
+							<li><a href="<?php echo home_url( '/oplata-i-dostavka' ); ?>" class="link" style="">Оплата</a></li>
 							<li><a href="<?php echo home_url( '/services' ); ?>" class="link" style="">Услуги</a></li>
+							<li><a href="<?php echo home_url( '/calculator' ); ?>" class="link" style="">Калькулятор</a></li>
+							<li><a href="<?php echo home_url( '/o-kompanii' ); ?>" class="link" style="">О компании</a></li>
+							<li><a href="<?php echo home_url( '/oplata-i-dostavka' ); ?>" class="link" style="">Доставка</a></li>
 							<li><a href="<?php echo home_url( '/kontakty' ); ?>" class="link" style="">Контакты</a></li>
-							<li><a href="<?php echo home_url( '/production' ); ?>" class="link" style="">Производство</a></li>
-							<li><a href="<?php echo home_url( '/oplata-i-dostavka' ); ?>" class="link" style="">Оплата и&nbsp;доставка</a></li>
-							<li><a href="<?php echo home_url( '/gallery' ); ?>" class="link" style="">Галерея</a></li>
+							<li><a href="<?php echo home_url( '/price-list' ); ?>" class="link" style="">Прайс-лист</a></li>
+
 						</ul>
 					</div>
 					<!-- Мобильное меню  -->
