@@ -146,23 +146,23 @@
         @include mq('md') {
             width: calc(100% - 56px);
         }
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: 2px;
-            height: 22px;
-            background-color: $c-text;
-            transition: .2s ease;
-        }
-        &:before {
-            top: 0;
+        // &:before,
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     right: 0;
+        //     width: 2px;
+        //     height: 22px;
+        //     background-color: $c-text;
+        //     transition: .2s ease;
+        // }
+        // &:before {
+        //     top: 0;
             
-        }
-        &:after {
-            bottom: 0;
-        }
+        // }
+        // &:after {
+        //     bottom: 0;
+        // }
         .form-control {
             display: inline-flex;
             align-items: center;
@@ -1702,6 +1702,7 @@
 form.common-form {
     .form-group {
         position: relative;
+        background-color: #FFFFFF;
         .form-control {
             border: none;
             padding: 10px 20px;
