@@ -89,7 +89,6 @@ add_action('pre_get_posts', function ($query) {
     if (count($GLOBALS['exludeHomesPostSlugArr']) > 0) {
         foreach ($GLOBALS['exludeHomesPostSlugArr'] as $key => $item) {
             $exludePost = get_page_by_path($item, OBJECT, 'homes');
-            echo "exPost:" . $exludePost;
             if ($exludePost) {
                 array_push($exludePostIdArr, $exludePost->ID);
             }

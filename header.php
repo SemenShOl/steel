@@ -96,8 +96,8 @@ $opengraph_image_height = fw_get_db_settings_option('ul_general_opengraph_image_
 <body <?php body_class(); ?>>
 
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHCTTVC"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHCTTVC"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 	<!-- End Google Tag Manager (noscript) -->
 
     <section class="l-main-wrapper">
