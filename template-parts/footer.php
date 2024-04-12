@@ -100,7 +100,7 @@
 								<a href="<?php echo home_url('/privacy') ?>" target="_blank">Политике
 									конфиденциальности</a>
 							</p>
-							<div class="block-bottom-content-dev">
+							<!-- <div class="block-bottom-content-dev">
 								<div class="item">
 									<a href="https://solt.design/" target="_blank">
 										<img class="footer-solt lazy"
@@ -116,7 +116,10 @@
 											alt="">
 										<span><span class="underline">Продвижение</span><br>сайта</span>
 									</a>
-								</div>
+								</div> -->
+
+
+
 								<!-- <div class="item">
 							<a href="https://solt.design/" target="_blank">
 								<img class="demis lazy" data-src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/demis.webp" alt="">
