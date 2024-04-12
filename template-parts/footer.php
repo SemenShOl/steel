@@ -5,7 +5,7 @@
 				<div class="col-2">
 					<div class="block-main-logo">
 						<a href="<?php echo home_url( '/' ); ?>">
-							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo-white.webp">
+							<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_logo.pnh">
 						</a>
 					</div>
 				</div>

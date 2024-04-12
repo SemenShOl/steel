@@ -5,7 +5,9 @@
         <div class="logo">
             <a href="<?php echo home_url( '/' ); ?>">
                 <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.webp"> --> 
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo-black.webp">
+                <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo-black.webp"> -->
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
+
             </a>
         </div>
         <?php if (has_nav_menu('header-menu')) : ?>
