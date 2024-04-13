@@ -75,30 +75,30 @@ if ($args['mobile-button-text'])
                 data-focus="false" novalidate="true">
                 <h4>Или оставьте заявку на консультацию</h4>
                 <div class="form-group-set">
-                    <!-- <div class="btn-icon"> -->
-                        <div class="form-group">
-                            <label>Введите ваше имя</label>
+                        <div class="form-group" style="grid-area: name;">
+                            <label>Имя</label>
                             <input type="text" class="form-control" name="name" minlength="2" required
-                                placeholder="Имя">
+                                placeholder="Введите ваше имя">
                         </div>
                         <i class="icon icon-user"></i>
-                    <!-- </div> -->
-                    <!-- <div class="btn-icon"> -->
-                        <div class="form-group phone">
-                            <label>Ваш номер телефона</label>
-                            <input type="text" class="form-control" name="phone" placeholder="Телефон" required>
+                        <div class="form-group phone" style="grid-area: phone;">
+                            <label>Номер телефона</label>
+                            <input type="text" class="form-control" name="phone" placeholder="+7" required>
                         </div>
                         <i class="icon icon-phone"></i>
-                    <!-- </div> -->
-                    <button class="btn-icon submit">
+                        <div class="form-group comment" style="grid-area: comment;">
+                            <label>Комментарий</label>
+                            <input type="text" class="form-control" name="comment" placeholder="Введите ваш вопрос" required>
+                        </div>
+                    <button class="btn-icon submit" style="grid-area: submit;">
                         <span>Отправить заявку</span>
-                        <i class="icon icon-arrow-right"></i>
+                        <!-- <i class="icon icon-arrow-right"></i> -->
                     </button>
-                    <div class="privacy">
-                        <label class="checkbox">
-                            <input type="checkbox" name="privacy" checked="">
-                            <i></i>
-                        </label>
+                    <div class="privacy" style="grid-area: privacy;">
+                        <!-- <label class="checkbox"> -->
+                            <!-- <input type="checkbox" name="privacy" checked=""> -->
+                            <!-- <i></i> -->
+                        <!-- </label> -->
                         <p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a href="<?php echo home_url('/privacy') ?>"
                                 target="_blank">условиями обработки персональных данных</a></p>
                     </div>
@@ -110,10 +110,10 @@ if ($args['mobile-button-text'])
                 <input type="hidden" name="action" value="send_message">
             </form>
         </div>
-        <div class="bg">
+        <!-- <div class="bg">
             <div class="bg-inner lazy"
                 data-bg="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/section-contacts-bg.webp">
             </div>
-        </div>
+        </div> -->
     </div>
 </section>

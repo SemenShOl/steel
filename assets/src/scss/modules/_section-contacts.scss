@@ -1,7 +1,9 @@
 .section-contacts {
   font-family: "PT Root UI";
-  padding-top: 150px;
+  padding-top: 80px;
   padding-left: 300px;
+  background-color: white;
+
   @include mq("md") {
     padding-top: 120px;
   }
@@ -12,7 +14,7 @@
     &-top {
       display: block;
       padding: 50px 0;
-      background-color: #f4f4f4;
+      background-color: white;
       overflow: hidden;
       cursor: pointer;
       transition: 0.2s ease;
@@ -158,8 +160,8 @@
     &-form {
       display: flex;
       position: relative;
-      background-color: #f6f7fa;
-      height: 840px;
+      background: inherit;
+      height: auto;
       @media only screen and (max-width: 1400px) {
         height: auto;
       }
@@ -201,6 +203,7 @@
         z-index: 1;
         width: 50%;
         padding: 70px 50px 70px 0;
+        padding-top: 0;
         background-color: #f6f7fa;
         @include mq("lg") {
           width: 100%;
@@ -404,7 +407,7 @@
             line-height: 36px;
             text-align: left;
             margin-bottom: 40px;
-            
+
             @media only screen and (max-width: 1550px) {
               font-size: 22px;
             }
@@ -413,8 +416,16 @@
             }
           }
           .form-group-set {
-            display: flex;
-            flex-wrap: wrap;
+            // display: flex;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 19px;
+            column-gap: 40px;
+            grid-template-areas:
+              "name phone"
+              "comment comment"
+              "submit privacy";
             row-gap: 30px;
             column-gap: 40px;
             .btn-icon {
@@ -423,9 +434,10 @@
               }
             }
             .form-group {
-              label {
-                background-color: #f6f7fa;
-              }
+              position: static;
+              //   label {
+              //     background-color: #f6f7fa;
+              //   }
             }
             .submit {
               @media only screen and (max-width: 1350px) {
@@ -443,13 +455,15 @@
             margin-bottom: 0;
           }
           .submit {
-            width: calc(50% - 20px);
+            // width: calc(50% - 20px);
+            width: 110%;
           }
           .privacy {
             display: flex;
-            align-items: center;
+            // align-items: end;
+            justify-content: end;
             margin: 0;
-            width: calc(50% - 20px);
+            width: 100%;
             p {
               font-size: 14px;
               line-height: 1.4;
