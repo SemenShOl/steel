@@ -1,7 +1,17 @@
 
 .page-about-company {
+
+    //My Styles
+
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-areas: 
+    "intro intro"
+    "contacts map";
+
     // Интро
     .intro {
+        grid-area: intro;
         padding-bottom: 200px;
         @include mq('md') {
             padding-bottom: 30px;

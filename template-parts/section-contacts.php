@@ -30,7 +30,7 @@ if ($args['mobile-button-text'])
     $mobileButtonText = $args['mobile-button-text'];
 ?>
 
-<section class="section-contacts">
+<section class="section-contacts" style="grid-area: contacts;">
 
     <div class="block-form">
 
