@@ -648,15 +648,17 @@
   margin-bottom: 40px;
   h1,
   h2 {
+    font-family: "Stolzl";
     font-size: 50px;
-    line-height: 1.2;
     font-weight: 400;
+    line-height: 60px;
+    text-align: left;
     margin: 0;
     @media only screen and (max-width: 1750px) {
-      font-size: 46px;
+      font-size: 50px;
     }
     @media only screen and (max-width: 1550px) {
-      font-size: 40px;
+      font-size: 50px;
     }
     @include mq("xl") {
       font-size: 38px;
@@ -693,17 +695,18 @@
 
 // Номер секций
 .section-number {
-  padding-top: 10px;
+  padding-top: 8px;
   @include mq("md") {
     display: flex;
     align-items: center;
   }
   p {
-    font-size: 18px;
-    line-height: 1.2;
-    color: rgba(29, 29, 29, 0.4);
+    font-family: "Consolas";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
     text-align: right;
-    margin-bottom: 20px;
+    color: $dark-text;
     transition: 0.2s ease;
     &:last-child {
       margin-bottom: 0;
@@ -722,6 +725,13 @@
         display: none;
       }
     }
+  }
+  .section-number {
+    font-family: "Consolas";
+    font-size: 30px;
+    font-weight: 400;
+    color: $button-background;
+    margin-bottom: 88px;
   }
 }
 
@@ -817,7 +827,7 @@
 
 .page-title-block {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 65px;
   @include mq("xl") {
     justify-content: flex-start;
     flex-direction: column;
@@ -868,6 +878,7 @@
     }
   }
   .breadcrumbs {
+    display: none;
     width: 500px;
     @media only screen and (max-width: 1550px) {
       width: 400px;

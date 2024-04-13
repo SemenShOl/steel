@@ -13,7 +13,7 @@
  * @package default-theme
  */
 
-get_header();
+get_header(); 
 
 ?>
 
@@ -21,40 +21,38 @@ get_header();
 	<div class="wrapper">
 		<div class="row">
 			<div class="col-2 blog-hide-xl">
-				<?php if (function_exists('bcn_display')) {
+				<?php if (function_exists('bcn_display')) { 
 					echo '<div class="breadcrumbs wow fadeIn" data-wow-delay=".2s">';
-					echo '<div class="breadcrumbs-inner">';
-					bcn_display();
-					echo '</div>';
+						echo '<div class="breadcrumbs-inner">';
+                                bcn_display();
+                                echo '</div>'; 
 					echo '</div>';
 				} ?>
-
+				
 				<div class="portfolio-filter wow fadeIn" data-wow-delay=".4s" data-type-active='[]'>
 					<p>Теги:</p>
 					<div class="list">
 						<?php
-						$tags = get_tags(
-							array(
+							$tags = get_tags(array(
 								'hide_empty' => false
-							)
-						);
+							));
 
-						if (count($tags) > 0) {
-							foreach ($tags as $key => $tag) {
-								echo '<a class="item" href="' . home_url('/tag/') . $tag->slug . '"><span>#' . $tag->name . '</span></a>';
+							if (count($tags) > 0) {
+								foreach ($tags as $key => $tag) {
+									echo '<a class="item" href="' . home_url( '/tag/' ) . $tag->slug . '"><span>#' . $tag->name . '</span></a>';
+								}
 							}
-						}
 						?>
 					</div>
 				</div>
 			</div>
 			<div class="col-10 blog-head">
 				<div class="blog-show-xl mb-10">
-					<?php if (function_exists('bcn_display')) {
+					<?php if (function_exists('bcn_display')) { 
 						echo '<div class="breadcrumbs wow fadeIn" data-wow-delay=".2s">';
-						echo '<div class="breadcrumbs-inner">';
-						bcn_display();
-						echo '</div>';
+							echo '<div class="breadcrumbs-inner">';
+                                bcn_display();
+                                echo '</div>'; 
 						echo '</div>';
 					} ?>
 				</div>
@@ -62,7 +60,7 @@ get_header();
 					<div class="blog-flex-sb blog-flex-title">
 
 						<p class="blog-title wow fadeInUp" data-wow-delay=".2s">Блог</p>
-
+						
 						<!-- <div class="social-networks-list">
 							<div class="blog-show-md blog-yt-mobile mb-10 wow fadeIn" data-wow-delay=".4s">
 								<a class="btn-icon" href="https://www.youtube.com/@PlotnikoFF54" target="_blank">
@@ -106,7 +104,7 @@ get_header();
 							</ul>
 						</div> -->
 					</div>
-
+					
 					<!-- <div class="blog-hide-1450-xl blog-hide-1150 wow fadeIn" data-wow-delay=".4s">
 						<div class="social-networks-list">
 							<ul>
@@ -137,41 +135,34 @@ get_header();
 				</div>
 
 				<!-- Закреплённый пост -->
-				<?php if (have_posts()):
-					while (have_posts()):
-						the_post();
-						if (is_sticky()):
-							get_template_part('template-parts/blog', 'list-item-big');
-						endif;
-					endwhile;
+				<?php if (have_posts()) : 
+					while (have_posts()) : the_post(); if (is_sticky()) : 
+						get_template_part('template-parts/blog', 'list-item-big');
+					endif; endwhile;
 				endif; ?>
 
-				<div class="portfolio-filter portfolio-filter-mobile mb-40 wow fadeIn" data-wow-delay=".4s"
-					data-type-active='[]'>
+				<div class="portfolio-filter portfolio-filter-mobile mb-40 wow fadeIn" data-wow-delay=".4s" data-type-active='[]'>
 					<p>Теги:</p>
 					<div class="list">
 						<?php
-						$tags = get_tags(
-							array(
+							$tags = get_tags(array(
 								'hide_empty' => false
-							)
-						);
+							));
 
-						if (count($tags) > 0) {
-							foreach ($tags as $key => $tag) {
-								echo '<a class="item" href="' . home_url('/tag/') . $tag->slug . '"><span>#' . $tag->name . '</span></a>';
+							if (count($tags) > 0) {
+								foreach ($tags as $key => $tag) {
+									echo '<a class="item" href="' . home_url( '/tag/' ) . $tag->slug . '"><span>#' . $tag->name . '</span></a>';
+								}
 							}
-						}
 						?>
 					</div>
 				</div>
 
 				<section class="section-blog-list wow fadeIn" data-wow-delay=".4s">
-					<?php if (have_posts()): ?>
+					<?php if (have_posts()) : ?>
 						<div class="project-list">
 							<div class="list">
-								<?php while (have_posts()):
-									the_post();
+								<?php while (have_posts()) : the_post();
 									if (!is_sticky()) {
 										get_template_part('template-parts/blog', 'list-item');
 									}
@@ -182,13 +173,13 @@ get_header();
 
 
 					<?php
-					global $wp_query;
-
-					$paged = get_query_var('paged') ? get_query_var('paged') : 1;
-					$max_pages = $wp_query->max_num_pages;
-
-					if ($paged < $max_pages):
-						?>
+						global $wp_query;
+ 
+						$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+						$max_pages = $wp_query->max_num_pages;
+					
+						if ($paged < $max_pages) : 
+					?>
 						<script>
 							var blog_true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
 							var blog_current_page = <?php echo $paged; ?>;
@@ -207,25 +198,23 @@ get_header();
 </section>
 
 
-	<?php
+<?php
 	// Section - Contacts
-	get_template_part('template-parts/section-contacts', null, array(
+	get_template_part( 'template-parts/section-contacts', null, array( 
 		'section-number' => '02',
 		'section-title' => 'Подпишитесь<br> на&nbsp;наши новости',
 		'section-subtitle' => 'Подпишитесь на&nbsp;наш telegram-канал и&nbsp;получайте актуальную информацию о&nbsp;загородном домостроении первым',
 		'circle-button-text-img' => esc_url(get_template_directory_uri()) . '/assets/images/svg/section-circle-blog-text.svg',
-		'circle-button-icon-img' => esc_url(get_template_directory_uri()) . '/assets/images/svg/section-circle-blog-icon.svg',
+        'circle-button-icon-img' => esc_url(get_template_directory_uri()) . '/assets/images/svg/section-circle-blog-icon.svg',
 		'section-link' => 'https://t.me/plotnikoff_novosib',
 		'mobile-button-text' => 'Получать уведомления',
-	)
-	);
-	?>
+	));
+?>
 
-	<?php
+<?php
 	// Section - Map
-	get_template_part('template-parts/section-map');
-	?>
-
+	get_template_part( 'template-parts/section-map' );
+?>
 
 
 

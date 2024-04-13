@@ -21,12 +21,17 @@
             }
 
         .content {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "info more-info"
+            "partners more-info";
+            margin-bottom: 95px;
             @include mq('xxl') {
                 flex-direction: column;
             }
             &-info {
-                width: 50%;
+                width: 100%;
                 @include mq('xxl') {
                     width: 100%;
                     max-width: 700px;
@@ -96,6 +101,119 @@
                         }
                         @include mq('md') {
                             flex-direction: column;
+                        }
+                    }
+                }
+            }
+            &-more-info {
+                width: 90%;
+                margin-left: 90px;
+                p{
+                    margin-bottom: 60px;
+                }
+            }
+            &-partners {
+                .list {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(auto, 1fr);
+            
+                    column-gap: 18px;
+                    row-gap: 30px;
+            
+                    // @include mq('xxl') {
+                    //     grid-template-columns: repeat(3, 1fr);
+                    // }
+            
+                    @include mq('xl') {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+            
+                    @include mq('sm') {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+            
+                    .deco {
+                        display: none;
+                        @media screen and (min-width: 1200px) and (max-width: 1400px) {
+                            display: block;
+                        }
+                    }
+            
+                    .item {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: .2s ease;
+                        @media only screen and (max-width: 1550px) {
+                            padding: 25px 8px;
+                        }
+                        @include mq('xl') {
+                            width: auto;
+                        }
+                        &:nth-last-child(2) {
+                            @include mq('sm') {
+                                display: none;
+                            }
+                        }
+                        .icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100px;
+                            height: 64px;
+                            margin: 0 auto 40px auto;
+                            svg {
+                                width: 64px;
+                                path {
+                                    transition: .2s ease;
+                                    fill: white;
+                                }
+                            }
+                            &.icon-3 {
+                                svg {
+                                    width: 80px;
+                                }
+                            }
+                        }
+                        h4 {
+                            font-size: 64px;
+                            font-weight: 400;
+                            line-height: 1.1;
+                            text-align: center;
+                            color: $c-primary;
+                            margin-bottom: 40px;
+                            transition: .2s ease;
+                            @media only screen and (max-width: 1550px) {
+                                font-size: 56px;
+                            }
+                        }
+                        p {
+                            font-size: 18px;
+                            line-height: 1.5;
+                            text-align: center;
+                            color: rgba(52, 52, 52, .7);
+                            transition: .2s ease;
+                            @media only screen and (max-width: 1550px) {
+                                font-size: 16px;
+                            }
+                        }
+                        &:hover {
+                            @include mq('sm', min) {
+                                background-color: #1D2332;
+                                .icon {
+                                    svg {
+                                        path {
+                                            fill: #fff;
+                                        }
+                                    }
+                                }
+                                p {
+                                    // color: rgba(255, 255, 255, .7);
+                                }
+                            }
                         }
                     }
                 }
@@ -304,7 +422,7 @@
             }
         }
     }
-
+    
     // Почему мы?
     .advantages {
         padding-top: 150px;
@@ -317,107 +435,7 @@
         .section-title {
             margin-bottom: 60px;
         }
-        .list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 4px;
-            row-gap: 4px;
-
-            // @include mq('xxl') {
-            //     grid-template-columns: repeat(3, 1fr);
-            // }
-
-            @include mq('xl') {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @include mq('sm') {
-                grid-template-columns: repeat(1, 1fr);
-            }
-
-            .deco {
-                display: none;
-                @media screen and (min-width: 1200px) and (max-width: 1400px) {
-                    display: block;
-                }
-            }
-
-            .item {
-                // width: calc(25% - 3px);
-                padding: 60px 40px;
-                cursor: pointer;
-                background-color: #2B344A;
-                transition: .2s ease;
-                @media only screen and (max-width: 1550px) {
-                    padding: 50px 25px;
-                }
-                @include mq('xl') {
-                    width: auto;
-                }
-                &:nth-last-child(2) {
-                    @include mq('sm') {
-                        display: none;
-                    }
-                }
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100px;
-                    height: 64px;
-                    margin: 0 auto 40px auto;
-                    svg {
-                        width: 64px;
-                        path {
-                            transition: .2s ease;
-                            fill: white;
-                        }
-                    }
-                    &.icon-3 {
-                        svg {
-                            width: 80px;
-                        }
-                    }
-                }
-                h4 {
-                    font-size: 64px;
-                    font-weight: 400;
-                    line-height: 1.1;
-                    text-align: center;
-                    color: $c-primary;
-                    margin-bottom: 40px;
-                    transition: .2s ease;
-                    @media only screen and (max-width: 1550px) {
-                        font-size: 56px;
-                    }
-                }
-                p {
-                    font-size: 18px;
-                    line-height: 1.5;
-                    text-align: center;
-                    color: rgba(52, 52, 52, .7);
-                    transition: .2s ease;
-                    @media only screen and (max-width: 1550px) {
-                        font-size: 16px;
-                    }
-                }
-                &:hover {
-                    @include mq('sm', min) {
-                        background-color: #1D2332;
-                        .icon {
-                            svg {
-                                path {
-                                    fill: #fff;
-                                }
-                            }
-                        }
-                        p {
-                            // color: rgba(255, 255, 255, .7);
-                        }
-                    }
-                }
-            }
-        }
+       
     }
 
     // Бегущая строка

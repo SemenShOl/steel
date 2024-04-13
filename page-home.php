@@ -16,17 +16,16 @@ get_header(); ?>
 							<h1>
 								<!-- <span class="wow fadeInUp" data-wow-delay=".2s">Строим дома</span>
 								<span class="wow fadeInUp" data-wow-delay=".3s">«Готовые для жизни»</span> -->
-								<span class="wow fadeInUp" data-wow-delay=".2s">Металлопродукция <br>с&nbsp;доставкой по&nbsp;всей России</span>
+								<span class="wow fadeInUp" data-wow-delay=".2s">Металлопродукция <br>с&nbsp;доставкой
+									по&nbsp;всей России</span>
 							</h1>
-							<p class="wow fadeIn" data-wow-delay=".3s">Компания &laquo;Сталь и точка&raquo; поставляет металлопродукцию по&nbsp;всей России. Развитая сеть филиалов, а&nbsp;также собственный автопарк позволяют нам подобрать соответствующее решение даже для нестандартных проектов.
+							<p class="wow fadeIn" data-wow-delay=".3s">Компания &laquo;Сталь и точка&raquo; поставляет
+								металлопродукцию по&nbsp;всей России. Развитая сеть филиалов, а&nbsp;также собственный
+								автопарк позволяют нам подобрать соответствующее решение даже для нестандартных
+								проектов.
 							</p>
-							<button
-								class="btn-icon white" 
-								data-bs-toggle="modal" 
-								data-bs-target="#modalCallback" 
-								data-modal-title="Оставить заявку" 
-								data-modal-form-name="Главная - Оставить заявку"
-							>
+							<button class="btn-icon white" data-bs-toggle="modal" data-bs-target="#modalCallback"
+								data-modal-title="Оставить заявку" data-modal-form-name="Главная - Оставить заявку">
 								<span>Оставить заявку</span>
 								<i class="icon icon-arrow-right"></i>
 							</button>
@@ -54,7 +53,8 @@ get_header(); ?>
 							<div class="item">
 								<a href="<?php echo home_url('/catalog'); ?>">
 									<div class="icon">
-										<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-one.svg">
+										<img
+											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-one.svg">
 									</div>
 									<div class="text">
 										<!-- <p>Более 15<br> проектов домов</p> -->
@@ -69,10 +69,12 @@ get_header(); ?>
 							<div class="item">
 								<a href="<?php echo home_url('/oplata-i-dostavka'); ?>">
 									<div class="icon">
-										<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-two.svg">
+										<img
+											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-two.svg">
 									</div>
 									<div class="text">
-										<p>Быст&shy;рая до&shy;став&shy;ка до&nbsp;ва&shy;ше&shy;го скла&shy;да или объ&shy;ек&shy;та</p>
+										<p>Быст&shy;рая до&shy;став&shy;ка до&nbsp;ва&shy;ше&shy;го скла&shy;да или
+											объ&shy;ек&shy;та</p>
 										<div class="link">
 											<span>Подробнее</span>
 											<i></i>
@@ -81,16 +83,13 @@ get_header(); ?>
 								</a>
 							</div>
 							<div class="item">
-								<div
-									data-bs-toggle="modal" 
-									data-bs-target="#modalCallback" 
-									data-modal-title="Узнать о наличии товара на складе" 
-									data-modal-textarea="message" 
-									data-modal-textarea-label="Опишите заказ" 
-									data-modal-form-name="Главная - Узнать наличие"
-								>
+								<div data-bs-toggle="modal" data-bs-target="#modalCallback"
+									data-modal-title="Узнать о наличии товара на складе" data-modal-textarea="message"
+									data-modal-textarea-label="Опишите заказ"
+									data-modal-form-name="Главная - Узнать наличие">
 									<div class="icon">
-										<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-three.svg">
+										<img
+											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-three.svg">
 									</div>
 									<div class="text">
 										<p>На&shy;ли&shy;чие на&nbsp;скла&shy;дах по&nbsp;всей Рос&shy;сии</p>
@@ -102,21 +101,20 @@ get_header(); ?>
 								</div>
 							</div>
 							<div class="item">
-								<div
-									data-bs-toggle="modal"
-									data-bs-target="#modalCallback" 
-									data-modal-title="Получить расчет стоимости заказа" 
-									data-modal-textarea="message" 
-									data-modal-textarea-label="Опишите заказ" 
-									data-modal-form-name="Главная - Узнать стоимость" 
-									data-modal-button="Скачать прайс-лист" 
-								>
-								<!-- data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf" -->
+								<div data-bs-toggle="modal" data-bs-target="#modalCallback"
+									data-modal-title="Получить расчет стоимости заказа" data-modal-textarea="message"
+									data-modal-textarea-label="Опишите заказ"
+									data-modal-form-name="Главная - Узнать стоимость"
+									data-modal-button="Скачать прайс-лист">
+									<!-- data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf" -->
 									<div class="icon">
-										<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-four.svg">
+										<img
+											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-four.svg">
 									</div>
 									<div class="text">
-										<p>Луч&shy;шая це&shy;на за&nbsp;тон&shy;ну и&nbsp;до&shy;пол&shy;ни&shy;тель&shy;ные скид&shy;ки от&nbsp;объ&shy;ёма</p>
+										<p>Луч&shy;шая це&shy;на за&nbsp;тон&shy;ну
+											и&nbsp;до&shy;пол&shy;ни&shy;тель&shy;ные скид&shy;ки от&nbsp;объ&shy;ёма
+										</p>
 										<div class="link">
 											<span>Подробнее</span>
 											<i></i>
@@ -130,7 +128,8 @@ get_header(); ?>
 						<div class="item">
 							<a href="<?php echo home_url('/catalog'); ?>">
 								<div class="icon">
-									<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-one.svg">
+									<img
+										src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-one.svg">
 								</div>
 								<div class="text">
 									<p>Большой выбор металлопродукции </p>
@@ -144,7 +143,8 @@ get_header(); ?>
 						<div class="item">
 							<a href="<?php echo home_url('/oplata-i-dostavka'); ?>">
 								<div class="icon">
-									<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-two.svg">
+									<img
+										src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-two.svg">
 								</div>
 								<div class="text">
 									<p>Быстрая доставка до&nbsp;вашего склада или объекта</p>
@@ -156,16 +156,13 @@ get_header(); ?>
 							</a>
 						</div>
 						<div class="item">
-							<div
-								data-bs-toggle="modal" 
-								data-bs-target="#modalCallback" 
-								data-modal-title="Узнать о наличии товара на складе" 
-								data-modal-textarea="message" 
-								data-modal-textarea-label="Опишите заказ" 
-								data-modal-form-name="Главная - Узнать наличие"
-							>
+							<div data-bs-toggle="modal" data-bs-target="#modalCallback"
+								data-modal-title="Узнать о наличии товара на складе" data-modal-textarea="message"
+								data-modal-textarea-label="Опишите заказ"
+								data-modal-form-name="Главная - Узнать наличие">
 								<div class="icon">
-									<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-three.svg">
+									<img
+										src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-three.svg">
 								</div>
 								<div class="text">
 									<p>На&shy;ли&shy;чие на&nbsp;скла&shy;дах по&nbsp;всей Рос&shy;сии</p>
@@ -177,20 +174,18 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="item">
-							<div
-								data-bs-toggle="modal"
-								data-bs-target="#modalCallback" 
-								data-modal-title="Получить расчет стоимости заказа" 
-								data-modal-textarea="message" 
-								data-modal-textarea-label="Опишите заказ" 
-								data-modal-form-name="Главная - Узнать стоимость" 
-								data-modal-button="Скачать прайс-лист" 
-							>
+							<div data-bs-toggle="modal" data-bs-target="#modalCallback"
+								data-modal-title="Получить расчет стоимости заказа" data-modal-textarea="message"
+								data-modal-textarea-label="Опишите заказ"
+								data-modal-form-name="Главная - Узнать стоимость"
+								data-modal-button="Скачать прайс-лист">
 								<div class="icon">
-									<img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-four.svg">
+									<img
+										src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-four.svg">
 								</div>
 								<div class="text">
-									<p>Луч&shy;шая це&shy;на за&nbsp;тон&shy;ну и&nbsp;до&shy;пол&shy;ни&shy;тель&shy;ные скид&shy;ки от&nbsp;объ&shy;ёма</p>
+									<p>Луч&shy;шая це&shy;на за&nbsp;тон&shy;ну
+										и&nbsp;до&shy;пол&shy;ни&shy;тель&shy;ные скид&shy;ки от&nbsp;объ&shy;ёма</p>
 									<div class="link">
 										<span>Подробнее</span>
 										<i></i>
@@ -205,54 +200,58 @@ get_header(); ?>
 	</section>
 
 	<?php
-		// Section - Technologies construction
-		get_template_part('template-parts/section-technologies-construction', null, array(
+	// Section - Technologies construction
+	get_template_part(
+		'template-parts/section-technologies-construction',
+		null,
+		array(
 			'section-number' => '01',
-		));
+		)
+	);
 	?>
 
 	<?php
-		// $exludePostIdArr = array();
+	// $exludePostIdArr = array();
+	
+	// // array_push($exludePostIdArr, $post->ID);
+	
+	// if (count($GLOBALS['exludeHomesPostSlugArr']) > 0) {
+	// 	foreach ($GLOBALS['exludeHomesPostSlugArr'] as $key => $item) {
+	// 		$exludePost = get_page_by_path($item, OBJECT, 'homes');
+	
+	// 		array_push($exludePostIdArr, $exludePost->ID);
+	// 	}
+	// }
+	
+	$queryHomes = new WP_Query(
+		array(
+			'post_type' => 'special',
+			// 'posts_per_page' => 1,
+			'order' => 'ASC',
+			// 'orderby' => 'title',
+			// 'post__not_in' => $exludePostIdArr,
+		)
+	);
+	if ($queryHomes->posts):
+		?>
 
-		// // array_push($exludePostIdArr, $post->ID);
-
-		// if (count($GLOBALS['exludeHomesPostSlugArr']) > 0) {
-		// 	foreach ($GLOBALS['exludeHomesPostSlugArr'] as $key => $item) {
-		// 		$exludePost = get_page_by_path($item, OBJECT, 'homes');
-
-		// 		array_push($exludePostIdArr, $exludePost->ID);
-		// 	}
-		// }
-
-		$queryHomes = new WP_Query(
-			array(
-				'post_type' => 'special',
-				// 'posts_per_page' => 1,
-				'order' => 'ASC',
-				// 'orderby' => 'title',
-				// 'post__not_in' => $exludePostIdArr,
-			)
-		);
-		if ($queryHomes->posts) :
-	?>
-
-	<section class="section-house-projects"> 
-		<div class="wrapper">
-			<div class="row">
-				<div class="col-2">
-					<div class="section-number wow fadeIn" data-wow-delay=".2s">
-						<p>02</p>
-						<p>Наши<br> акции</p>
-					</div>
-				</div>
-				<div class="col-10">
-					<div class="top-block">
-						<div class="section-title">
-							<h2>
-								<span class="wow fadeInUp" data-wow-delay=".2s">Специальные предложения</span>
-							</h2>
+		<section class="section-house-projects">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-2">
+						<div class="section-number wow fadeIn" data-wow-delay=".2s">
+							<p>02</p>
+							<p>Наши<br> акции</p>
 						</div>
-						<!-- <div class="buttons">
+					</div>
+					<div class="col-10">
+						<div class="top-block">
+							<div class="section-title">
+								<h2>
+									<span class="wow fadeInUp" data-wow-delay=".2s">Специальные предложения</span>
+								</h2>
+							</div>
+							<!-- <div class="buttons">
 							<div class="btn-wrap wow fadeIn" data-wow-delay=".3s">
 								<button class="btn-icon" data-bs-toggle="modal" data-bs-target="#modalCallback" data-modal-title="Скачайте презентацию" data-modal-button="Скачать" data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf">
 									<span>Смотреть все</span>
@@ -260,14 +259,15 @@ get_header(); ?>
 								</button>
 							</div>
 						</div> -->
-					</div>
+						</div>
 
 
-					
+
 						<div class="special-list">
 							<div class="list">
 								<?php
-								foreach ($queryHomes->posts as $key => $post) : setup_postdata($post);
+								foreach ($queryHomes->posts as $key => $post):
+									setup_postdata($post);
 									// Project list item
 									$isHidden = ($key > 5) ? true : false;
 									get_template_part('template-parts/catalog-card', null, array('id' => $post->ID, 'hidden' => $isHidden));
@@ -276,7 +276,7 @@ get_header(); ?>
 							</div>
 
 
-							<?php if (count($queryHomes->posts) > 3) : ?>
+							<?php if (count($queryHomes->posts) > 3): ?>
 								<script>
 									var homes_true_posts = '<?php echo serialize($queryHomes->query_vars); ?>';
 									var homes_current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
@@ -290,25 +290,29 @@ get_header(); ?>
 							<?php endif; ?>
 
 						</div>
-					<?php
-					wp_reset_query();
-					remove_filter('posts_orderby', 'orderby_post_title_int');
-					?>
+						<?php
+						wp_reset_query();
+						remove_filter('posts_orderby', 'orderby_post_title_int');
+						?>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<?php 
+		<?php
 	endif;
 	?>
 
 
 	<?php
 	// Section - Online broadcast
-	get_template_part('template-parts/section-online-broadcast', null, array(
-		'section-number' => '04',
-	));
+	get_template_part(
+		'template-parts/section-online-broadcast',
+		null,
+		array(
+			'section-number' => '04',
+		)
+	);
 	?>
 
 	<div class="partners-callback">
@@ -316,17 +320,18 @@ get_header(); ?>
 			<div class="wrapper">
 				<div class="row">
 					<div class="col-2">
-					<div class="section-number white-section-number wow fadeIn" data-wow-delay=".2s">
-						<p>03</p>
-						<p>Связь<br> с нами</p>
-					</div>
+						<div class="section-number white-section-number wow fadeIn" data-wow-delay=".2s">
+							<p>03</p>
+							<p>Связь<br> с нами</p>
+						</div>
 					</div>
 					<div class="col-10">
 						<p class="partners-callback-header wow fadeInUp" data-wow-delay=".2s">
 							Нужна помощь?
 						</p>
 						<p class="partners-callback-body wow fadeIn" data-wow-delay=".3s">
-							Обсудить все вопросы, рассчитать стоимость доставки и&nbsp;договориться о&nbsp;способе оплаты вы&nbsp;можете с&nbsp;нашими специалистами
+							Обсудить все вопросы, рассчитать стоимость доставки и&nbsp;договориться о&nbsp;способе
+							оплаты вы&nbsp;можете с&nbsp;нашими специалистами
 						</p>
 						<button class="btn-icon wow fadeIn" data-wow-delay=".4s">
 							<span>Напишите нам в WhatsApp</span>
@@ -344,69 +349,177 @@ get_header(); ?>
 			<div class="wrapper">
 				<div class="row">
 					<div class="col-2">
+						<div class="section-number wow fadeIn" data-wow-delay=".2s" style="margin-bottom: 178px">
+							<p class="section-number">04</p>
+							<p>Компания <br> Сталь-Н</p>
+						</div>
 						<div class="section-number wow fadeIn" data-wow-delay=".2s">
-							<p>04</p>
-							<p>Наша<br> компания</p>
+							<p>Наши <br> партнеры</p>
 						</div>
 					</div>
 					<div class="col-10">
 						<div class="page-title-block">
 							<div class="section-title">
-								<h2 class="wow fadeInUp" data-wow-delay=".2s">Компания «Сталь и точка»</h2>
+								<h2 class="wow fadeInUp" data-wow-delay=".2s">О компании</h2>
 							</div>
 
 							<?php if (function_exists('bcn_display')) {
 								echo '<div class="breadcrumbs wow fadeIn" data-wow-delay=".4s">';
 								echo '<div class="breadcrumbs-inner">';
-									bcn_display();
-									echo '</div>';
+								bcn_display();
+								echo '</div>';
 								echo '</div>';
 							} ?>
 						</div>
 						<div class="content-video xxl-display-block wow fadeIn" data-wow-delay=".4s">
-							<!-- <a href="https://www.youtube.com/watch?v=n1gLsYmWwSs" data-lity>
-								<video class="preview lazy" autoplay="true" muted="true" loop="true" data-poster="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/page-about-company-video.jpg">';
-									<source data-src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/videos/about-video-1-preview.webm">
-								</video>
-								<div class="btn-play white">
-									<i></i>
-								</div>
-							</a> -->
-													<div class="content-video xxl-display-block wow fadeIn" data-wow-delay=".4s">
-							<a class="cutoff-corner-right">
-								<img class="" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home-mtk.webp">
-							</a>
-						</div>
+
 						</div>
 						<div class="content wow fadeIn" data-wow-delay=".5s">
-							<div class="content-info">
+							<div class="content-info" style="grid-area: info">
 								<div class="item">
-									<h4>Наша компания основана в&nbsp;2016 году</h4>
-									<p>Компания &laquo;Сталь и точка&raquo;&nbsp;&mdash; один из&nbsp;ведущих 
-									поставщиков на&nbsp;рынке металлоторговли. Производим металлопрокат нетиповых 
-									размеров, изготавливаем детали, проводим металлообработку и&nbsp;комплектуем 
-									партии проката разного сортамента.<br><br>
-									Знаем, как сэкономить бюджет и&nbsp;уложиться в&nbsp;назначенные сроки. 
-									Организовываем доставку сертифицированной продукции в&nbsp;назначенный 
-									срок, предлагаем клиентам персональные скидки от&nbsp;объема и&nbsp;лучшую 
-									цену за&nbsp;тонну на&nbsp;рынке</p>
-									<a class="btn-icon" href="<?php echo home_url('/o-kompanii'); ?>">
-										<span>Узнать больше</span>
-										<i class="icon icon-arrow-right"></i>
-									</a>
+									<p>
+										Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере
+										продаж металлопроката. Мы работаем напрямую с обширной сетью поставщиков,
+										поэтому на наших складах всегда в наличии широкий ассортимент, налажены
+										партнерские отношения с большинством ведущих отечественных производителей труб,
+										листа, швеллера и других видов металлопродукции.
+									</p>
+
 								</div>
 							</div>
-							<div class="content-video xxl-display-none">
-								<a class="cutoff-corner-right">
-									<img class="" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/home-mtk.webp">
-									<!-- <video class="preview lazy" autoplay="true" muted="true" loop="true" data-poster="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/page-about-company-video.jpg">';
-										<source data-src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/videos/about-video-1-preview.webm">
-									</video>
-									<div class="btn-play white">
-										<i></i>
-									</div> -->
-								</a>
+							<div class="content-more-info" style="grid-area: more-info">
+								<p>Мы работаем напрямую с обширной сетью поставщиков по всей России, на наших складах
+									всегда в наличии широкий ассортимент металлопроката (более 8000 наименований) Вся
+									продукция изготовлена по ГОСТам и ТУ и имеет все необходимые сертификаты качества,
+									потому что мы стремимся к долгосрочному сотрудничеству с нашими клиентами.</p>
+								<p>Реализуем услуги по первичной обработке металлопродукции: перфорация, гибка,
+									покраска, резка плит, резка круга, рубка, токарная обработка, сверление, литье
+									втулок, заготовки металла</p>
+								<p>Самые выгодные цены на металлопродукцию, работаем напрямую с производителями, а также
+									предоставляем целую систему скидок для крупных заказов и постоянных клиентов.</p>
+								<p>Менеджеры-консультанты, которые окажут профессиональную помощь в выборе продукции и
+									оформят доставку. Специалисты помогут сократить ваши расходы, подобрав оптимальный
+									вариант.</p>
 							</div>
+
+							<div class="content-partners" style="grid-area: partners">
+								<div class="list">
+									<div class="item wow fadeIn" data-wow-delay=".2s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p1.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".3s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p2.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".4s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p3.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".5s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p4.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".6s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p5.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".7s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p6.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".8s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p7.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".9s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p8.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".10s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p9.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".11s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p10.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".12s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p11.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".13s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p12.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".14s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p13.svg">
+											</div>
+										</a>
+									</div>
+									<div class="item wow fadeIn" data-wow-delay=".15s">
+										<a target="_blank">
+											<div class="img">
+												<img class=""
+													src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/partners/p14.svg">
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+		
+
 						</div>
 					</div>
 				</div>
@@ -415,9 +528,13 @@ get_header(); ?>
 
 		<?php
 		// Section - Contacts
-		get_template_part('template-parts/section-contacts', null, array(
-			'section-number' => '08',
-		));
+		get_template_part(
+			'template-parts/section-contacts',
+			null,
+			array(
+				'section-number' => '08',
+			)
+		);
 		?>
 
 		<?php
