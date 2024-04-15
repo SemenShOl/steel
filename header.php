@@ -104,5 +104,5 @@ $opengraph_image_height = fw_get_db_settings_option('ul_general_opengraph_image_
 	    <section class="l-main">
 	    	<?php
 	    		// Header template
-				get_template_part( 'template-parts/header' );
+				get_template_part( 'template-parts/nheader' );
 	    	?>

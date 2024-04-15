@@ -112,7 +112,7 @@
     font-size: 16px;
     line-height: 1.2;
     height: 100%;
-    width: calc(100% - 63px);
+    width: 100%;
     padding: 5px 30px;
     flex: 1;
     @include mq("md") {
@@ -170,7 +170,9 @@
       display: inline-flex;
       align-items: center;
       width: 100%;
-      padding: 5px 20px;
+
+      // padding: 5px 20px;
+      height: 50px;
       box-shadow: none !important;
       outline: none !important;
     }
@@ -686,7 +688,6 @@
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
-    opacity: 0.7;
     @include mq("md") {
       font-size: 16px;
     }
@@ -1816,7 +1817,7 @@
 form.common-form {
   .form-group {
     position: relative;
-    background-color: #ffffff;
+    background-color: transparent;
 
     .form-control {
       border: none;
@@ -1824,7 +1825,7 @@ form.common-form {
       font-size: 16px;
       line-height: 1.2;
       border-radius: 0;
-      height: 61px;
+      height: 50px;
       background-color: transparent;
       transition: 0.2s ease;
       border: 2px solid #1e110e;
@@ -1843,9 +1844,6 @@ form.common-form {
       height: 100%;
     }
     label {
-      //   position: absolute;
-      //   top: -26px;
-      //   left: 0;
       font-size: 18px;
       line-height: 1.1;
       transition: 0.2s ease;
@@ -2184,54 +2182,7 @@ label.checkbox {
     }
   }
 
-  // @media screen and (min-width: 768px) {
-
-  //     &[data-animation-delay="0"]{
-  //         &:not(.animated){
-  //             /*
-  //             .inner::after{
-  //                 //transition-delay: .2s;
-  //             }
-  //             */
-  //             .link, .info-block-wrapper-item-text{
-  //                 transition-delay: 0.2s;
-  //             }
-  //         }
-  //     }
-
-  //     &[data-animation-delay="1"]{
-  //         &:not(.animated) {
-  //             .inner::after{
-  //                 transition-delay: .4s;
-  //             }
-  //             .link, .info-block-wrapper-item-text{
-  //                 transition-delay: 0.6s;
-  //             }
-  //         }
-  //     }
-
-  //     &[data-animation-delay="2"]{
-  //         &:not(.animated) {
-  //             .inner::after{
-  //                 transition-delay: .8s;
-  //             }
-  //             .link, .info-block-wrapper-item-text{
-  //                 transition-delay: 1s;
-  //             }
-  //         }
-  //     }
-
-  //     &[data-animation-delay="3"]{
-  //         &:not(.animated){
-  //             .inner::after{
-  //                 transition-delay: 1.2s;
-  //             }
-  //             .link, .info-block-wrapper-item-text{
-  //                 transition-delay: 1.4s;
-  //             }
-  //         }
-  //     }
-  // }
+  
 
   @include mq("md") {
     animation-delay: 0.2s;

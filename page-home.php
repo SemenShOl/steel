@@ -5,7 +5,7 @@ get_header(); ?>
 
 <section class="l-page">
 
-	<section class="section-intro">
+	<!-- <section class="section-intro">
 		<div class="background"></div>
 		<div class="wrapper">
 			<div class="row">
@@ -14,21 +14,61 @@ get_header(); ?>
 					<div class="main-img">
 						<div class="section-title">
 							<h1>
-								<!-- <span class="wow fadeInUp" data-wow-delay=".2s">Строим дома</span>
-								<span class="wow fadeInUp" data-wow-delay=".3s">«Готовые для жизни»</span> -->
-								<span class="wow fadeInUp" data-wow-delay=".2s">Металлопродукция <br>с&nbsp;доставкой
-									по&nbsp;всей России</span>
+								<span class="wow fadeInUp" data-wow-delay=".2s">Поставки <br>металлопроката <br>
+									по России и СНГ</span>
 							</h1>
-							<p class="wow fadeIn" data-wow-delay=".3s">Компания &laquo;Сталь и точка&raquo; поставляет
-								металлопродукцию по&nbsp;всей России. Развитая сеть филиалов, а&nbsp;также собственный
-								автопарк позволяют нам подобрать соответствующее решение даже для нестандартных
-								проектов.
-							</p>
-							<button class="btn-icon white" data-bs-toggle="modal" data-bs-target="#modalCallback"
-								data-modal-title="Оставить заявку" data-modal-form-name="Главная - Оставить заявку">
-								<span>Оставить заявку</span>
-								<i class="icon icon-arrow-right"></i>
-							</button>
+							<div class="bg-p">
+								<p class="wow fadeIn" data-wow-delay=".3s">Компания «СТАЛЬ-Н» является ведущим
+									предприятием
+									в Сибирском регионе в сфере продаж металлопроката. Мы работаем напрямую с обширной
+									сетью
+									поставщиков, поэтому на наших складах всегда в наличии широкий ассортимент, налажены
+									партнерские отношения с большинством ведущих отечественных производителей труб,
+									листа,
+									швеллера и других видов металлопродукции.
+								</p>
+							</div>
+
+						</div>
+						<div class="intro-form">
+
+							<div class="form-info">
+								<h3>
+									Оставьте заявку на расчёт стоимости
+								</h3>
+								<p>Сделаем расчет стоимости в течении 15 минут</p>
+							</div>
+							<form class="common-form wow fadeIn" data-wow-delay=".6s" data-toggle="validator"
+								role="form" data-focus="false" novalidate="true">
+								<div class="form-group-set dark">
+									<div class="form-group ">
+										<label>Имя</label>
+										<input type="text" class="form-control" name="name" minlength="2" required
+											placeholder="Введите ваше имя">
+									</div>
+									<div class="form-group phone">
+										<label>Номер телефона</label>
+										<input type="text" class="form-control" name="phone" placeholder="+7" required>
+									</div>
+									<div class="form-group comment">
+										<label>Комментарий</label>
+										<input type="text" class="form-control" name="comment"
+											placeholder="Введите ваш вопрос" required>
+									</div>
+
+									<div class="button-and-privacy">
+										<button class="btn-icon submit" style="grid-area: submit;">
+											<span>Отправить заявку</span>
+										</button>
+										<div class="privacy" style="grid-area: privacy;">
+											<p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a
+													href="<?php echo home_url('/privacy') ?>" target="_blank">условиями
+													обработки персональных данных</a></p>
+										</div>
+									</div>
+
+								</div>
+							</form>
 						</div>
 						<div class="video-wrap wow fadeIn --animation-image" data-wow-delay=".2s">
 							<?php
@@ -40,90 +80,14 @@ get_header(); ?>
 							echo '<video class="preview lazy" autoplay="true" muted="true" loop="true" data-poster="' . $poster . '">';
 							echo '<source data-src="' . $videoPreview . '">';
 							echo '</video>';
-
-							// echo '<div class="btn-play play-video-block" data-video-id="play-video-intro">';
-							// echo '<i></i><span>Смотреть</span>';
-							// echo '</div>';
 							echo '</div>';
 							?>
 						</div>
+
 					</div>
-					<div class="main-info">
-						<div class="props-grid wow fadeIn" data-wow-delay=".6s">
-							<div class="item">
-								<a href="<?php echo home_url('/catalog'); ?>">
-									<div class="icon">
-										<img
-											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-one.svg">
-									</div>
-									<div class="text">
-										<!-- <p>Более 15<br> проектов домов</p> -->
-										<p>Боль&shy;шой вы&shy;бор ме&shy;тал&shy;лоп&shy;ро&shy;дук&shy;ции</p>
-										<div class="link">
-											<span>Смотреть</span>
-											<i></i>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<a href="<?php echo home_url('/oplata-i-dostavka'); ?>">
-									<div class="icon">
-										<img
-											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-two.svg">
-									</div>
-									<div class="text">
-										<p>Быст&shy;рая до&shy;став&shy;ка до&nbsp;ва&shy;ше&shy;го скла&shy;да или
-											объ&shy;ек&shy;та</p>
-										<div class="link">
-											<span>Подробнее</span>
-											<i></i>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="item">
-								<div data-bs-toggle="modal" data-bs-target="#modalCallback"
-									data-modal-title="Узнать о наличии товара на складе" data-modal-textarea="message"
-									data-modal-textarea-label="Опишите заказ"
-									data-modal-form-name="Главная - Узнать наличие">
-									<div class="icon">
-										<img
-											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-three.svg">
-									</div>
-									<div class="text">
-										<p>На&shy;ли&shy;чие на&nbsp;скла&shy;дах по&nbsp;всей Рос&shy;сии</p>
-										<div class="link">
-											<span>Оставить заявку</span>
-											<i></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div data-bs-toggle="modal" data-bs-target="#modalCallback"
-									data-modal-title="Получить расчет стоимости заказа" data-modal-textarea="message"
-									data-modal-textarea-label="Опишите заказ"
-									data-modal-form-name="Главная - Узнать стоимость"
-									data-modal-button="Скачать прайс-лист">
-									<!-- data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf" -->
-									<div class="icon">
-										<img
-											src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/svg/intro-four.svg">
-									</div>
-									<div class="text">
-										<p>Луч&shy;шая це&shy;на за&nbsp;тон&shy;ну
-											и&nbsp;до&shy;пол&shy;ни&shy;тель&shy;ные скид&shy;ки от&nbsp;объ&shy;ёма
-										</p>
-										<div class="link">
-											<span>Подробнее</span>
-											<i></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+
+
 					<div class="props-grid props-grid-mobile wow fadeIn" data-wow-delay=".2s">
 						<div class="item">
 							<a href="<?php echo home_url('/catalog'); ?>">
@@ -197,8 +161,61 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
+
+	<section class="section-intro">
+		<div class="nwrapper">
+			<div class="ncol-2"></div>
+			<div class="ncol-10">
+				<div class="intro-title">
+					<h1>Поставки <br>
+						металлопроката <br>
+						по России и СНГ</h1>
+					<div class="bg-p">
+						<p>Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере продаж
+							металлопроката. Мы работаем напрямую с обширной сетью поставщиков, поэтому на наших складах
+							всегда в наличии широкий ассортимент, налажены партнерские отношения с большинством ведущих
+							отечественных производителей труб, листа, швеллера и других видов металлопродукции.</p>
+					</div>
+				</div>
+				<div class="intro-form">
+					<div class="info">
+						<h3>Оставьте заявку на расчёт стоимости</h3>
+						<p>
+							Сделаем расчет стоимости в течении 15 минут
+						</p>
+					</div>
+
+					<div class="form-group-set dark">
+						<div class="form-group" style="grid-area: search;">
+							<label>Что ищем?</label>
+							<input type="text" class="form-control" name="search" minlength="2" required
+								placeholder="Введите ваше имя">
+						</div>
+						<div class="form-group" style="grid-area: city;">
+							<label>Город доставки</label>
+							<input type="text" class="form-control" name="city" minlength="2" required
+								placeholder="Введите ваше имя">
+						</div>
+
+						<div class="form-group" style="grid-area: number;">
+							<label>Количество тон</label>
+							<input type="text" class="form-control" name="number" minlength="2" required
+								placeholder="Введите ваше имя">
+						</div>
+
+						<!-- <div class="btn"> -->
+							<button class="btn-icon submit" style="grid-area: submit;">
+								<span>Запросить стоимость</span>
+							</button>
+						<!-- </div> -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<?php
 	// Section - Technologies construction
 	get_template_part(
@@ -315,7 +332,7 @@ get_header(); ?>
 	);
 	?>
 
-	<div class="partners-callback">
+	<!-- <div class="partners-callback">
 		<a class="inner" href="https://wa.me/79618791171" target="_blank">
 			<div class="wrapper">
 				<div class="row">
@@ -341,7 +358,61 @@ get_header(); ?>
 				</div>
 			</div>
 		</a>
-	</div>
+	</div> -->
+
+
+	<section class="need-help">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-2">
+					<div class="section-number wow fadeIn" data-wow-delay=".2s" style="margin-bottom: 178px">
+						<p class="section-number">02</p>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="help-header">
+						<h2 class="wow fadeInUp " data-wow-delay=".2s">Нужна помощь</h2>
+						<p>Наши специалисты готовы обсудить любой вопрос! А также проконсультировать Вас по ассортименту
+							нашей продукции</p>
+					</div>
+					<form class="common-form wow fadeIn" data-wow-delay=".6s" data-toggle="validator" role="form"
+						data-focus="false" novalidate="true">
+						<div class="form-group-set light">
+							<div class="form-group ">
+								<label>Имя</label>
+								<input type="text" class="form-control" name="name" minlength="2" required
+									placeholder="Введите ваше имя">
+							</div>
+							<!-- <i class="icon icon-user"></i> -->
+							<div class="form-group phone">
+								<label>Номер телефона</label>
+								<input type="text" class="form-control" name="phone" placeholder="+7" required>
+							</div>
+							<!-- <i class="icon icon-phone"></i> -->
+							<div class="form-group comment">
+								<label>Комментарий</label>
+								<input type="text" class="form-control" name="comment" placeholder="Введите ваш вопрос"
+									required>
+							</div>
+
+							<div class="button-and-privacy">
+								<button class="btn-icon submit" style="grid-area: submit;">
+									<span>Отправить заявку</span>
+								</button>
+								<div class="privacy" style="grid-area: privacy;">
+									<p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a
+											href="<?php echo home_url('/privacy') ?>" target="_blank">условиями
+											обработки персональных данных</a></p>
+								</div>
+							</div>
+
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 	<section class="l-page page-about-company">
 
@@ -518,7 +589,7 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
-		
+
 
 						</div>
 					</div>

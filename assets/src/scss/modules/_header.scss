@@ -10,8 +10,8 @@
   top: 0;
   right: 0;
   width: 100%;
+  height: 200px;
   border-bottom: 1px solid #343434;
-  background-color: #f9f9f9;
   background: #0a3878;
   // overflow: hidden;
   transition: transform 0.3s ease;
@@ -22,6 +22,9 @@
   line-height: 15.6px;
   text-align: left;
   color: #ffffff;
+
+  display: flex;
+  align-items: center;
   @include mq("lg") {
     position: fixed;
     overflow: visible;
@@ -426,9 +429,13 @@
     }
   }
   .top-menu-wrap {
+    height: 120px;
+    margin: auto 0;
     display: flex;
-    width: calc(100% - 780px);
+    // width: calc(100% - 780px);
+    width: 100%;
     padding: 0 40px;
+    background: white;
     // border-right: 1px solid #343434;
     @media only screen and (max-width: 1920px) {
       width: calc(85% - 500px);
