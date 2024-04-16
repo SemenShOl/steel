@@ -51,9 +51,18 @@ button {
   margin: 0;
   padding: 0;
 }
-div {
+//
+body {
   overflow-x: hidden;
 }
+div {
+  overflow-x: hidden !important;
+}
+section {
+  overflow-x: hidden !important;
+}
+
+//
 h1,
 h2,
 h3,

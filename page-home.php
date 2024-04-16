@@ -229,7 +229,6 @@ get_header(); ?>
 	// );
 	// ?>
 
-	// New Sechtion - Techologies
 	<?php
 	// Section - Technologies construction
 	get_template_part(

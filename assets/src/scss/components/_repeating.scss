@@ -840,6 +840,7 @@
     width: calc(100% - 500px);
     margin-bottom: 0;
     padding-right: 30px;
+    overflow-y: hidden;
     @include mq("xl") {
       order: 2;
       padding-right: 0;
