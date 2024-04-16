@@ -1,15 +1,14 @@
 <header class="nheader">
 
-    <!-- <div class="wrapper header-desktop">
+     <div class="wrapper header-desktop">
         
          <div class="logo">
             <a href="<?php echo home_url('/'); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.webp"> 
-                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo-black.webp"> 
+                <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.webp">  -->
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
 
             </a>
-        </div> -->
+        </div> 
     <?php if (has_nav_menu('header-menu')): ?>
         <div class="top-menu-wrap">
 
@@ -44,7 +43,7 @@
             </nav>
         </div>
     <?php endif; ?> 
-    <!-- <div class="right-block">
+    <div class="right-block">
 
             <div class="phone-whatsapp">
                 <a href="https://api.whatsapp.com/send/?phone=79618791171&amp;text=Здравствуйте!" target="_blank"></a>
@@ -68,7 +67,7 @@
             >
                 <span>Быстрый&nbsp;заказ</span>
             </div>
-        </div> -->
+        </div> 
     <!-- <div
             class="phone lightning" 
             data-bs-toggle="modal" 

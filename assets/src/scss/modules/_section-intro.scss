@@ -561,14 +561,16 @@
 // }
 
 .section-intro {
-  // background:  no-repeat center;
-  // background-image: url("../../../images/intro-bg.jpg");
-  background-color: red;
-  background-size: cover;
+  position: relative;
+
   height: 730px;
   padding-top: 88px;
   padding-bottom: 80px;
   .nwrapper {
+    position: relative;
+    z-index: 10;
+    background: none;
+    margin-top: 60px;
     .ncol-10 {
       .intro-title {
         display: flex;
@@ -628,9 +630,9 @@
           }
         }
         @media only screen and (max-width: 1550px) {
-            .info {
-                width: 320px;
-            }
+          .info {
+            width: 320px;
+          }
         }
         .form-group-set {
           width: 80%;
@@ -652,5 +654,14 @@
         }
       }
     }
+  }
+
+  .bg {
+    position: absolute;
+    top:80px;
+    left: 0;
+    height: 100%;
+    z-index: 5;
+    width: 100%;
   }
 }

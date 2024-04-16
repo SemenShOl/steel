@@ -51,6 +51,9 @@ button {
   margin: 0;
   padding: 0;
 }
+div {
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -101,6 +104,7 @@ p {
 .l-main {
   height: 100%;
   display: table-row;
+  overflow-x: hidden;
 }
 
 .wrapper {

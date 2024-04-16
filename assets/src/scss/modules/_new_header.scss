@@ -1,5 +1,6 @@
 .nheader {
   position: absolute;
+  z-index: 15;
   width: 100vw;
   .wrapper {
     padding: 0;
@@ -135,7 +136,7 @@
             display: flex;
             gap:10px
 
-            
+
         }
     }
   }

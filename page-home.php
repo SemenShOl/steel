@@ -206,20 +206,34 @@ get_header(); ?>
 						</div>
 
 						<!-- <div class="btn"> -->
-							<button class="btn-icon submit" style="grid-area: submit;">
-								<span>Запросить стоимость</span>
-							</button>
+						<button class="btn-icon submit" style="grid-area: submit;">
+							<span>Запросить стоимость</span>
+						</button>
 						<!-- </div> -->
 
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<img class="bg" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/intro-bg.jpg">
 	</section>
 	<?php
 	// Section - Technologies construction
+	// get_template_part(
+	// 	'template-parts/section-technologies-construction',
+	// 	null,
+	// 	array(
+	// 		'section-number' => '01',
+	// 	)
+	// );
+	// ?>
+
+	// New Sechtion - Techologies
+	<?php
+	// Section - Technologies construction
 	get_template_part(
-		'template-parts/section-technologies-construction',
+		'template-parts/section-technologies',
 		null,
 		array(
 			'section-number' => '01',
@@ -228,18 +242,7 @@ get_header(); ?>
 	?>
 
 	<?php
-	// $exludePostIdArr = array();
-	
-	// // array_push($exludePostIdArr, $post->ID);
-	
-	// if (count($GLOBALS['exludeHomesPostSlugArr']) > 0) {
-	// 	foreach ($GLOBALS['exludeHomesPostSlugArr'] as $key => $item) {
-	// 		$exludePost = get_page_by_path($item, OBJECT, 'homes');
-	
-	// 		array_push($exludePostIdArr, $exludePost->ID);
-	// 	}
-	// }
-	
+
 	$queryHomes = new WP_Query(
 		array(
 			'post_type' => 'special',
@@ -252,7 +255,7 @@ get_header(); ?>
 	if ($queryHomes->posts):
 		?>
 
-		<section class="section-house-projects">
+		<!-- <section class="section-house-projects">
 			<div class="wrapper">
 				<div class="row">
 					<div class="col-2">
@@ -268,14 +271,7 @@ get_header(); ?>
 									<span class="wow fadeInUp" data-wow-delay=".2s">Специальные предложения</span>
 								</h2>
 							</div>
-							<!-- <div class="buttons">
-							<div class="btn-wrap wow fadeIn" data-wow-delay=".3s">
-								<button class="btn-icon" data-bs-toggle="modal" data-bs-target="#modalCallback" data-modal-title="Скачайте презентацию" data-modal-button="Скачать" data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf">
-									<span>Смотреть все</span>
-									<i class="icon icon-arrow-right"></i>
-								</button>
-							</div>
-						</div> -->
+
 						</div>
 
 
@@ -314,8 +310,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-		</section>
-
+	</section>  -->
 		<?php
 	endif;
 	?>
@@ -413,6 +408,18 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+
+
+	<?php
+	// Section - Services
+	get_template_part(
+		'template-parts/section-service',
+		null,
+		array(
+			'section-number' => '03',
+		)
+	);
+	?>
 
 	<section class="l-page page-about-company">
 
