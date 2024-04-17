@@ -70,7 +70,7 @@ get_header(); ?>
     </div>
     <div class="ncol-10">
 
-      <h1>Задвижки</h1>
+      <h1 class="section-title">Задвижки</h1>
 
       <div class="production-line">
         <div class="product">
@@ -139,37 +139,37 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="product-pages">
-        <div class="pages">
-          <div class="block">
+      <div class="pages-navigation">
+        <div class="pages-navigation__numbers">
+          <div class="pages-navigation__numbers-block">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
           </div>
-          <div class="block active">
+          <div class="pages-navigation__numbers-block active">
             <p>1</p>
           </div>
-          <div class="block">
+          <div class="pages-navigation__numbers-block">
             <p>2</p>
           </div>
-          <div class="block">
+          <div class="pages-navigation__numbers-block">
             <p>3</p>
           </div>
-          <div class="block">
+          <div class="pages-navigation__numbers-block">
             <p>4</p>
           </div>
-          <div class="block pre-last">
+          <div class="pages-navigation__numbers-block pre-last">
             <p>5</p>
           </div>
-          <div class="block ">
+          <div class="pages-navigation__numbers-block ">
             <p>...</p>
           </div>
-          <div class="block last">
+          <div class="pages-navigation__numbers-block last">
             <p>42</p>
           </div>
-          <div class="block ">
+          <div class="pages-navigation__numbers-block ">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
           </div>
         </div>
-        <div class="info">Показаны <span>1–20</span> из 740 товаров</div>
+        <div class="pages-navigation__info">Показаны <span>1–20</span> из 740 товаров</div>
       </div>
     </div>
 </section>

@@ -1,14 +1,14 @@
 <?php
 /* Template Name: Услуги */
 
-get_header(); 
+get_header();
 
 // $servicesAllArr = array();
 $queryServices = new WP_Query(
   array(
-      'post_type' => 'architectural-styles',
-      'posts_per_page' => -1,
-      'order'   => 'ASC',
+    'post_type' => 'architectural-styles',
+    'posts_per_page' => -1,
+    'order' => 'ASC',
   )
 );
 // if ($queryServices->posts) {
@@ -19,85 +19,228 @@ $queryServices = new WP_Query(
 
 ?>
 
-<section class="l-page page-services">
+<section class="section-product-card">
+  <div class="nwrapper">
+    <div class="product-description">
+      <h1 class="section-title">Задвижка стальная 30лс15нж (PN 40, DN 50-350)</h1>
+      <div class="product-description__product">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/big-product.png">
 
-  <div class="wrapper">
-    <div class="row">
-      <div class="col-2">
-        <div class="section-number wow fadeIn" data-wow-delay=".2s">
-          <p>01</p>
-        </div>
-      </div>
-      <div class="col-10 services-border">
-        <div class="services-head">
-          <div>
-            <h1 class="wow fadeInUp" data-wow-delay=".2s">Что мы можем<br>предложить</h1>
-            <?php if (function_exists('bcn_display')) { 
-            echo '<div class="breadcrumbs wow fadeIn" data-wow-delay=".3s">';
-              echo '<div class="breadcrumbs-inner">';
-                                  bcn_display();
-                                  echo '</div>'; 
-              echo '</div>';
-            } ?>
+        <div class="product-description__product-info">
+          <div class="short-info">
+            <div class="short-info__column">
+              <p>Розничная цена</p>
+              от <b>146</b> руб.кг
+            </div>
+
+            <div class="short-info__column">
+              <p>Оптовая цена</p>
+              <span>Уточняйте</span>
+            </div>
+            <div class="short-info__column">
+              <p>Наличие</p>
+              <div class="attetion-p">В наличии</div>
+            </div>
           </div>
-          <div>
-            <p class="font-400-20-150 mb-60-40 wow fadeIn" data-wow-delay=".4s">Компания &laquo;Сталь и точка&raquo; оказывает услуги по&nbsp;металлообработке и&nbsp;изготовлению деталей. Создадим металлопрокат и&nbsp;детали с&nbsp;нуля или отремонтируем и&nbsp;реставрируем&nbsp;то, что вы&nbsp;используете в&nbsp;работе.</p>
-            <p class="font-400-20-150 mb-60-40 wow fadeIn" data-wow-delay=".4s">Обрабатываем металл в&nbsp;собственных цехах компании &laquo;Сталь и точка&raquo; и&nbsp;пользуемся услугами компаний-партнеров. Принимаем заказы, 
-              от&nbsp;которых из-за сложности отказались 
-              другие компании.
+
+          <button class="nbtn">Быстрый заказ</button>
+
+          <div class="description-block">
+            <div class="description-block__header">
+              <button class="active">Описание</button>
+              <button>Характеристики</button>
+
+            </div>
+            <p class="description-block__info">
+              Для управления потоком, движущимся в трубопроводах различного назначения, применяется специальная
+              арматура.
+              Это, в частности, поворотные дисковые затворы, которые по своей сути являются запорно-регулирующими
+              устройствами. Они играют свою важную роль не только в бытовых системах водоснабжения, вентиляции,
+              отопления
+              и прочих. Такая арматура не менее востребована в пищевой, металлургической, нефтегазовой и других отраслях
+              промышленности.
+              <br> <br>
+              При этом полезно знать, что существуют упомянутые устройства, управляемые вручную. Другие
+              затворы оснащены электро- или пневмоприводом. Средой, которой управляют названные элементы трубопровода,
+              может являться, например, питьевая или техническая вода, пищевые продукты, нефть, газ.
             </p>
           </div>
         </div>
-        <div class="buttons wow fadeIn" data-wow-delay=".5s">
-          <button 
-            class="btn-icon" 
-            data-bs-toggle="modal" 
-            data-bs-target="#modalCallback" 
-            data-modal-title="Скачать прайс-лист" 
-            data-modal-button="Скачать" 
-          >
-          <!-- data-modal-download="<?php echo esc_url(get_template_directory_uri()); ?>/assets/docs/homes-catalog-plotnikof-2023.pdf" -->
-            <span>Скачать прайс-лист</span>
-            <i class="icon icon-pdf"></i>
-          </button>
+
+      </div>
+    </div>
+    <div class="available-products">
+      <div class="available-products__header">
+        <div class="p-arrow">
+          <p>Наименование</p>
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+
+        </div>
+        <p>Количество</p>
+        <p>Единицы измерения</p>
+        <div class="p-arrow">
+          <p>Цена оптовая</p>
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+
+        </div>
+      </div>
+
+      <div class="available-products__line"></div>
+      <div class="available-products__rows">
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class=" ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
+        </div>
+        <div class="available-products__row">
+          <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+          <div class="number-btns">
+            <div class="action">-</div>
+            <div class="number">1</div>
+            <div class="action">+</div>
+          </div>
+          <p>Килограмм (кг)</p>
+          <p>Уточняйте</p>
+
+          <button class="ask-price">Запросить цену</button>
         </div>
       </div>
     </div>
-
-    <div class="services-list">
-      <?php
-          // echo '123'; 
-          $num = 2;
-          while ( $queryServices -> have_posts() ) : $queryServices -> the_post();
-              get_template_part( 'template-parts/service-item', null, array(
-                  'id' => get_the_ID(),
-                  'num' => $num
-              ));
-              $num++;
-              
-          endwhile;
-          wp_reset_postdata();
-      ?>
+    <div class="pages-navigation">
+      <div class="pages-navigation__numbers">
+        <div class="pages-navigation__numbers-block">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+        </div>
+        <div class="pages-navigation__numbers-block active">
+          <p>1</p>
+        </div>
+        <div class="pages-navigation__numbers-block">
+          <p>2</p>
+        </div>
+        <div class="pages-navigation__numbers-block">
+          <p>3</p>
+        </div>
+        <div class="pages-navigation__numbers-block">
+          <p>4</p>
+        </div>
+        <div class="pages-navigation__numbers-block pre-last">
+          <p>5</p>
+        </div>
+        <div class="pages-navigation__numbers-block ">
+          <p>...</p>
+        </div>
+        <div class="pages-navigation__numbers-block last">
+          <p>42</p>
+        </div>
+        <div class="pages-navigation__numbers-block ">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+        </div>
+      </div>
+      <div class="pages-navigation__info">Показаны <span>1–20</span> из 740 товаров</div>
     </div>
+  </div>
+
 </section>
 
-<?php
-// Section - Contacts
-get_template_part('template-parts/section-contacts', null, array(
-  'section-number' => '04',
-  'section-title' => 'Заинтересовало<br/>
-предложение?',
-  'section-subtitle' => 'Запишем на&nbsp;консультацию или<br/> экскурсию на&nbsp;наши строящиеся объекты',
-  'circle-button-text-img' => esc_url(get_template_directory_uri()) . '/assets/images/svg/section-circle-contacts.svg',
-  'circle-button-icon-img' => esc_url(get_template_directory_uri()) . '/assets/images/svg/section-circle-contacts-phone.svg',
-  'mobile-button-text' => 'Записаться',
-));
-?>
 
-<?php
-// Section - Map
-get_template_part('template-parts/section-map');
-?>
+
+<section class="l-page page-about-company">
+
+  <?php
+  // Section - Contacts
+  get_template_part(
+    'template-parts/section-contacts',
+    null,
+    array(
+      'section-number' => '08',
+    )
+  );
+  ?>
+
+  <?php
+  // Section - Map
+  get_template_part('template-parts/section-map');
+  ?>
+</section>
 
 
 
