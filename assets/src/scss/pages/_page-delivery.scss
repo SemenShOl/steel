@@ -1,65 +1,69 @@
 .page-delivery {
   margin-top: 300px;
+  font-family: "PT Root UI";
+  text-align: left;
   padding-bottom: 100px;
   .nwrapper {
-    padding: 0 50px;
+    .ncol-2 {
+      padding-right: 60px;
+      p {
+        font-family: "Consolas";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: right;
+        margin-top: 242px;
+        color: $dark-text;
+      }
+    }
+
     .ncol-10 {
-        padding: 0;
-        .section-title {
-          margin-bottom: 20px;
-        }
-        .payment-info {
+      .section-title {
+        margin-bottom: 60px;
+      }
+      .delivery-description {
+        margin-bottom: 72px;
+      }
+
+      .delivery-block {
+        display: flex;
+        &__info {
+          width: 520px;
           display: flex;
-          justify-content: space-between;
-    
-          margin-bottom: 60px;
-          p {
-            font-family: "PT Root UI";
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25.2px;
-            text-align: left;
-            width: 727px;
-          }
-          .max-sum {
-            width: auto;
-            font-weight: 700;
-            color: $button-background;
-          }
+          flex-direction: column;
+          gap: 40px;
+          margin-right: 160px;
         }
-    
-        .payment-types {
-          display: flex;
-          gap: 87px;
-          &__row {
-            h3 {
-              font-family: "PT Root UI";
-              font-size: 22px;
-              font-weight: 700;
-              line-height: 26.4px;
-              text-align: left;
-              margin-bottom: 20px;
+
+        &__car-brand {
+          .car-brand {
+            &__title {
+              display: grid;
+              grid-template-columns: 218px 210px 242px;
+              margin-bottom: 24px;
+              p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21.6px;
+              }
             }
-            p {
-              font-family: "PT Root UI";
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 22.4px;
-              text-align: left;
+
+            &__row {
+              border-top: 1px solid $dark-text;
+              display: grid;
+              grid-template-columns: 218px 210px 242px;
+              grid-template-rows: 73px;
+              p {
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 23.4px;
+              }
             }
-          }
-    
-          &__img {
-            width: 320px;
-            height: 320px;
-            background: #0a3878;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
           }
         }
       }
+    }
   }
- 
 }

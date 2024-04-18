@@ -24,8 +24,6 @@ get_header(); ?>
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
                         <button>Скачать прайс-лист</button>
-
-
                     </div>
 
                     <div class="price-info__row">
