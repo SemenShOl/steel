@@ -155,7 +155,7 @@
   font-weight: 400;
   line-height: 25.2px;
   text-align: left;
-  color: #766E6C;
+  color: #766e6c;
 }
 
 .pages-navigation {
@@ -258,5 +258,60 @@
     font-weight: 400;
     line-height: 15.6px;
     text-align: left;
+  }
+}
+
+.contact-type {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  font-family: "PT Root UI";
+  text-align: left;
+  width: 320px;
+  height: 287px;
+  background: white;
+
+  &__title {
+    flex: 1 0 auto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    margin-bottom: 30px;
+  }
+  &__info {
+    flex: 1 0 auto;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.4px;
+    margin-bottom: 30px;
+  }
+
+  button {
+    flex: 0 0 auto;
+    background: white;
+    border: 1px solid #1e110e;
+    color: $button-background;
+    width: 240px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.16px;
+    text-align: center;
+  }
+}
+
+.bread-crumbs {
+  margin: 39px 0 30px 0;
+  display: flex;
+  p {
+    font-family: "PT Root UI";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.16px;
+    text-align: left;
+
+    &:last-child {
+      color: $button-background;
+    }
   }
 }

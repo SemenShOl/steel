@@ -564,14 +564,14 @@
   position: relative;
 
   height: 730px;
-  padding-top: 88px;
   padding-bottom: 80px;
   .nwrapper {
     position: relative;
     z-index: 10;
     background: none;
-    margin-top: 60px;
+    // margin-top: 60px;
     .ncol-10 {
+      padding-top: 80px;
       .intro-title {
         display: flex;
         margin-bottom: 86px;
@@ -606,9 +606,10 @@
         width: 100%;
         background: #f9f9f9;
         display: flex;
+        height: 238px;
         .info {
+          width: 388px;
           padding: 40px;
-          width: 20%;
           border-right: 1px solid $dark-text;
           h3 {
             font-family: "PT Root UI";
@@ -635,7 +636,7 @@
           }
         }
         .form-group-set {
-          width: 80%;
+          width: 1152px;
           padding-left: 102px;
           padding-top: 20px;
           padding-right: 50px;
@@ -643,13 +644,16 @@
           grid-template-areas:
             "search search search"
             "city number submit";
-          row-gap: 22px;
+          row-gap: 2px;
           column-gap: 50px;
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: repeat(2, auto);
 
           button {
             margin-top: 35px;
+          }
+          .form-group {
+            height: 78px;
           }
         }
       }
@@ -658,7 +662,7 @@
 
   .bg {
     position: absolute;
-    top:80px;
+    top: 0px;
     left: 0;
     height: 100%;
     z-index: 5;

@@ -3,10 +3,14 @@
 
 get_header(); ?>
 
-<section class="l-page page-about-company">
+<section class="l-page page-price-list">
     <div class="nwrapper">
         <div class="ncol-2"></div>
         <div class="ncol-10">
+            <div class="bread-crumbs">
+                <p>Главная</p>
+                <p>/Прайс-лист</p>
+            </div>
             <h1 class="section-title">Прайс-лист</h1>
 
             <div class="price-info">
@@ -59,32 +63,30 @@ get_header(); ?>
 
 
 
-<?php
-// Section - Contacts
-get_template_part(
-    'template-parts/section-contacts',
-    null,
-    array(
-        'section-number' => '08',
-        'section-title' => 'Познакомимся<br> вживую?',
-        'section-subtitle' => 'Запишитесь на бесплатную консультацию, проведем экскурсию на наши строящиеся объекты. Вы своими глазами оцените наш подход — сделать выбор станет легче и увереннее!',
-    )
-);
+<section class="section-contact-map">
+    <div class="nwrapper">
+        <div class="ncol-2"></div>
+        <div class="ncol-10">
+            <?php
+            // Section - Contacts
+            get_template_part(
+                'template-parts/section-contacts',
+                null,
+                array(
+                    'section-number' => '08',
+                )
+            );
+            ?>
 
-if ($args['section-number'])
-    $sectionNumber = $args['section-number'];
-if ($args['section-title'])
-    $sectionTitle = $args['section-title'];
-if ($args['section-subtitle'])
-    $sectionSubtitle = $args['section-subtitle'];
-if ($args['form-title'])
-    $formTitle = $args['form-title'];
-?>
+            <?php
+            //Section - Map
+            get_template_part('template-parts/section-map');
 
-<?php
-// Section - Map
-get_template_part('template-parts/section-map');
-?>
+            ?>
+        </div>
+    </div>
+
 </section>
+
 
 <?php get_footer(); ?>

@@ -1,6 +1,15 @@
 .section-contact-map {
-    display: flex;
+  .nwrapper {
     background: white;
-    width: 100%;
-    height: auto;
+    .ncol-2 {
+    }
+    .ncol-10 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 520px 910px;
+      grid-template-areas: "contacts map";
+      column-gap: 160px;
+      height: auto;
+    }
+  }
 }

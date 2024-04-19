@@ -11,8 +11,8 @@
 // Home single ---------------------/
 @import "page-single-home";
 
-// About company -------------------/
-@import "page-about-company";
+// // About company -------------------/
+// @import "page-about-company";
 
 // Not found -----------------------/
 @import "page-not-found";
@@ -35,9 +35,6 @@
 // Single blog ---------------------/
 @import "page-blog";
 
-// Contacts ------------------------/
-@import "page-contacts";
-
 // Archive Testimonials ------------/
 @import "page-archive-testimonials";
 
@@ -59,11 +56,20 @@
 //Product-Card --------/
 @import "_page-product-card";
 
-//Payment ------------/
-@import "page-payment";
-
 //Calculator ------------/
 @import "page-calculator";
 
+//Payment ------------/
+@import "page-payment";
+
 //Delivery ------------/
 @import "page-delivery";
+
+//Price-list ------------/
+@import "page-price-list";
+
+//Perforation-metall ------------/
+@import "page-perforation-metall";
+
+// Contacts ------------------------/
+@import "page-contacts";

@@ -95,19 +95,10 @@ if ($args['mobile-button-text'])
                         <!-- <i class="icon icon-arrow-right"></i> -->
                     </button>
                     <div class="privacy" style="grid-area: privacy;">
-                        <!-- <label class="checkbox"> -->
-                            <!-- <input type="checkbox" name="privacy" checked=""> -->
-                            <!-- <i></i> -->
-                        <!-- </label> -->
                         <p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a href="<?php echo home_url('/privacy') ?>"
                                 target="_blank">условиями обработки персональных данных</a></p>
                     </div>
                 </div>
-
-                <input type="hidden" name="form_name" value="Блок - Связь с нами">
-                <input type="hidden" name="modal_success" value="modalSuccess">
-                <input type="hidden" name="ya_metrica_goal_name" value="svyaz">
-                <input type="hidden" name="action" value="send_message">
             </form>
         </div>
         <!-- <div class="bg">

@@ -2,8 +2,8 @@
   grid-area: "contacts";
   font-family: "PT Root UI";
   padding-top: 80px;
-  padding-left: 15%;
-  padding-right: 7%;
+  // padding-left: 15%;
+  // padding-right: 7%;
   background-color: white;
 
   @include mq("md") {
@@ -165,7 +165,8 @@
       position: relative;
       background: inherit;
       height: auto;
-      padding-left: 70px;
+      // padding-left: 70px;
+
       @media only screen and (max-width: 1400px) {
         height: auto;
       }
@@ -207,7 +208,8 @@
         z-index: 1;
         // width: 50%;
         width: 100%;
-        padding: 70px 50px 70px 0;
+        // padding: 70px 50px 70px 0;
+        
         padding-top: 0;
         background-color: #f6f7fa;
         @include mq("lg") {

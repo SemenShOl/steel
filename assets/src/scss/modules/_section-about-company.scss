@@ -1,0 +1,32 @@
+.section-about-company {
+  padding-bottom: 100px;
+  .nwrapper {
+    .ncol-10 {
+      .section-title {
+        margin-bottom: 80px;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(2, 520px);
+        column-gap: 160px;
+        row-gap: 60px;
+        grid-template-areas:
+          "info more-info"
+          "partners more-info";
+        font-family: "PT Root UI";
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 23.4px;
+        text-align: left;
+
+        &__partners {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 20px;
+          row-gap: 31px;
+        }
+      }
+    }
+  }
+}

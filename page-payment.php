@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-<section class="l-page page-partners page-payment">
+<section class="l-page page-payment">
 
 	<div class="nwrapper">
 		<div class="ncol-2">

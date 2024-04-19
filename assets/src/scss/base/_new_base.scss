@@ -6,7 +6,11 @@
   padding-left: 50px;
 }
 .ncol-2 {
-  width: 15%;
+  // width: 15%;\
+  margin-left: -50px;
+  padding-right: 110px;
+  min-width: 330px;
+  width: 330px;
   height: auto;
   .section-number {
     font-family: "Consolas";
@@ -45,9 +49,9 @@
 }
 
 .ncol-10 {
-  width: 80%;
+  // width: 80%;
   padding-right: 50px;
-  padding-left: 50px;
+  // padding-left: 50px;
   height: auto;
   h1 {
     font-family: "Stolzl";

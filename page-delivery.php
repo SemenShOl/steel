@@ -11,6 +11,10 @@ get_header();
             <p>Наши<br> преимущества</p>
         </div>
         <div class="ncol-10">
+            <div class="bread-crumbs">
+                <p>Главная</p>
+                <p>/Оплата</p>
+            </div>
             <h1 class="section-title">Доставка</h1>
             <p class="delivery-description gray-text">Наша компания рада вашим заказам, для вашего комфорта у нас есть
                 собственная служба
@@ -63,22 +67,28 @@ get_header();
 
 
 <section class="section-contact-map">
+    <div class="nwrapper">
+        <div class="ncol-2"></div>
+        <div class="ncol-10">
+            <?php
+            // Section - Contacts
+            get_template_part(
+                'template-parts/section-contacts',
+                null,
+                array(
+                    'section-number' => '08',
+                )
+            );
+            ?>
 
-    <?php
-    // Section - Contacts
-    get_template_part(
-        'template-parts/section-contacts',
-        null,
-        array(
-            'section-number' => '08',
-        )
-    );
-    ?>
+            <?php
+            //Section - Map
+            get_template_part('template-parts/section-map');
 
-    <?php
-    // Section - Map
-    get_template_part('template-parts/section-map');
-    ?>
+            ?>
+        </div>
+    </div>
+
 </section>
 
 
