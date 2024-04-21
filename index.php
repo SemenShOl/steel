@@ -16,7 +16,7 @@
 get_header();
 
 ?>
-
+<!-- 
 <section class="l-page page-calculator page-post-archive">
 	<div class="nwrapper">
 		<div class="ncol-2">
@@ -124,7 +124,7 @@ get_header();
 		</div>
 
 	</div>
-</section>
+</section> -->
 
 
 
