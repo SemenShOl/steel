@@ -1,6 +1,15 @@
 .section-about-company {
   padding-bottom: 100px;
   .nwrapper {
+    .ncol-2 {
+      .section-number {
+        &:nth-child(2) {
+          @media (max-width: 1450px) {
+            margin-bottom: 580px;
+          }
+        }
+      }
+    }
     .ncol-10 {
       .section-title {
         margin-bottom: 80px;
@@ -8,7 +17,7 @@
 
       .content {
         display: grid;
-        grid-template-columns: repeat(2, 520px);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 160px;
         row-gap: 60px;
         grid-template-areas:
@@ -25,6 +34,26 @@
           grid-template-columns: repeat(4, 1fr);
           column-gap: 20px;
           row-gap: 31px;
+        }
+
+        &__more-info {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+        }
+
+        @media (max-width: 1450px) {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "info"
+            "more-info"
+            "partners";
+          gap: 50px;
+          &__more-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+          }
         }
       }
     }

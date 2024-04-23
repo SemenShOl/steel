@@ -10,7 +10,7 @@ get_header(); ?>
 			<div class="ncol-2"></div>
 			<div class="ncol-10">
 				<div class="intro-title">
-					<h1>Поставки <br>
+					<h1 class="section-title">Поставки <br>
 						металлопроката <br>
 						по России и СНГ</h1>
 					<div class="bg-p">
@@ -211,7 +211,7 @@ get_header(); ?>
 			</div>
 			<div class="ncol-10">
 				<div class="help-header">
-					<h2 class="wow fadeInUp " data-wow-delay=".2s">Нужна помощь?</h2>
+					<h2 class="wow fadeInUp section-title" data-wow-delay=".2s">Нужна помощь?</h2>
 					<p>Наши специалисты готовы обсудить любой вопрос! А также проконсультировать Вас по ассортименту
 						нашей продукции</p>
 				</div>

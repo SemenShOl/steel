@@ -571,21 +571,11 @@
     background: none;
     .ncol-10 {
       padding-top: 80px;
-      width: 80%;
+      // width: 100%;
       .intro-title {
         display: flex;
         margin-bottom: 86px;
-        @media (max-width: 1450px) {
-          h1 {
-            margin-right: 60px;
-            font-size: 40px;
-          }
-          .bg-p {
-            p {
-              font-size: 15px;
-            }
-          }
-        }
+
         @media (max-width: 1450px) {
           flex-direction: column;
           h1 {
@@ -599,16 +589,13 @@
           }
         }
         h1 {
-          font-family: "PT Root UI";
-          font-size: 50px;
-          font-weight: 700;
           line-height: 60px;
           text-align: left;
           color: white;
           margin-right: 90px;
         }
         .bg-p {
-          width: 645px;
+          // width: 645px;
           min-height: 198px;
           background: $dark-text;
           opacity: 0.9;
@@ -654,6 +641,18 @@
               "city"
               "number"
               "submit";
+          }
+        }
+
+        @media (max-width:500px) {
+          flex-direction: column;
+          .info {
+            border-bottom: 1px solid $dark-text;
+            width: 100%;
+            p {
+              width: 100%;
+              flex-wrap: wrap;
+            }
           }
         }
         .info {
