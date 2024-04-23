@@ -205,7 +205,7 @@ get_header(); ?>
 	<section class="need-help">
 		<div class="nwrapper">
 			<div class="ncol-2">
-				<div class="section-number wow fadeIn" data-wow-delay=".2s" style="margin-bottom: 178px">
+				<div class="wow fadeIn" data-wow-delay=".2s" style="margin-bottom: 178px">
 					<p class="section-number">02</p>
 				</div>
 			</div>

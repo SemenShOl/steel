@@ -4,6 +4,10 @@
         <div class="blue-part">
 
             <div class="place-info">
+                <div class="more-info">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/more-info.svg">
+
+                </div>
                 <div class="info-part">
                     <img
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
@@ -40,7 +44,7 @@
             </div>
 
         </div>
-        <div class="white-part">
+        <div class="white-part ">
             <div class="logo">
                 <a href="<?php echo home_url('/'); ?>">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
@@ -48,6 +52,8 @@
             </div>
 
             <div class="nav-and-button">
+
+
                 <nav class="nav-pages">
                     <ul>
                         <li>
@@ -87,7 +93,7 @@
             </div>
 
         </div>
-        <div class="blue-part">
+        <div class="blue-part h-footer">
 
             <div class="work-type">
                 <p>Трубозапорная арматура</p>

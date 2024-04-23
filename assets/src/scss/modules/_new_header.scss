@@ -1,6 +1,4 @@
 .nheader {
-  // position: absolute;
-  // z-index: 15;
   width: 100vw;
   .wrapper {
     padding: 0;
@@ -17,19 +15,26 @@
       line-height: 15.6px;
       text-align: left;
       color: white;
+      .more-info {
+        display: none;
+      }
       .place-info {
         display: flex;
         align-items: center;
-        gap: 80px;
+        width: 50%;
         justify-content: space-between;
-
+        // margin-right: 15%;
+        @media (max-width: 1450px) {
+          width: 65%;
+        }
         .info-part {
+          margin-right: 15px;
           display: flex;
           align-items: center;
           gap: 5px;
 
           &:first-child {
-            margin-right: 33px;
+            margin-right: 20px;
           }
         }
       }
@@ -38,13 +43,15 @@
         height: 100%;
         display: flex;
         align-items: center;
-        gap: 30px;
+        // gap: 30px;
+        width: 30%;
         justify-content: space-between;
 
         .info-part {
           display: flex;
           align-items: center;
           gap: 5px;
+          margin-right: 10px;
         }
         button {
           padding: 0;
@@ -61,6 +68,16 @@
       display: flex;
       align-items: center;
       overflow-y: hidden;
+      @media (max-width: 1450px) {
+        .logo {
+          margin-right: 80px;
+        }
+        .nav-and-button {
+          .nav-pages {
+            width: 58%;
+          }
+        }
+      }
       .logo {
         margin-right: 140px;
       }
@@ -71,10 +88,14 @@
         justify-content: space-between;
 
         .nav-pages {
+          width: 45%;
+          max-width: 678px;
+
           ul {
             display: flex;
             align-items: center;
-            gap: 64px;
+            width: 100%;
+            justify-content: space-between;
 
             li {
               display: flex;
@@ -98,7 +119,7 @@
         .form-group-header {
           position: relative;
           display: flex;
-
+          width: 35%;
           img {
             position: absolute;
             width: 10px;
@@ -109,7 +130,8 @@
           }
           input {
             position: relative;
-            width: 470px;
+            width: 80%;
+            // width: 470px;
             border: 1px solid #766e6c;
             padding: 9px 0px;
             color: $dark-text;
@@ -136,10 +158,67 @@
     }
 
     .blue-part {
-      .work-type {
-        color: white;
-        display: flex;
-        gap: 10px;
+      &.h-footer {
+        .work-type {
+          color: white;
+          display: flex;
+          gap: 10px;
+          @media (max-width: 1450px) {
+            gap: 0;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .blue-part {
+        .place-info {
+          .more-info {
+            display: block;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .info-part {
+            visibility: hidden;
+            pointer-events: none;
+          }
+        }
+        .contacts-info {
+          width: 45%;
+
+        }
+
+        &.h-footer {
+          display: none;
+        }
+      }
+      .white-part {
+      //   .logo {
+      //     position: absolute;
+      //     z-index: 20;
+      //     left: 0;
+      //     width: 100%;
+      //     background: transparent;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: start;
+      //   }
+        .nav-and-button {
+          position: relative;
+          justify-content: end;
+          .more-info {
+            display: none;
+            img {
+              height: 40px;
+              width: 20px;
+            }
+          }
+          .nav-pages {
+            display: none;
+          }
+        }
       }
     }
   }

@@ -562,19 +562,42 @@
 
 .section-intro {
   position: relative;
-
-  height: 730px;
+  min-height: 730px;
   padding-bottom: 80px;
+  height: auto;
   .nwrapper {
     position: relative;
     z-index: 10;
     background: none;
-    // margin-top: 60px;
     .ncol-10 {
       padding-top: 80px;
+      width: 80%;
       .intro-title {
         display: flex;
         margin-bottom: 86px;
+        @media (max-width: 1450px) {
+          h1 {
+            margin-right: 60px;
+            font-size: 40px;
+          }
+          .bg-p {
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+        @media (max-width: 1450px) {
+          flex-direction: column;
+          h1 {
+            margin-bottom: 20px;
+            font-size: 40px;
+          }
+          .bg-p {
+            p {
+              font-size: 15px;
+            }
+          }
+        }
         h1 {
           font-family: "PT Root UI";
           font-size: 50px;
@@ -586,11 +609,11 @@
         }
         .bg-p {
           width: 645px;
-          height: 198px;
-          opacity: 0.9px;
+          min-height: 198px;
           background: $dark-text;
           opacity: 0.9;
           padding: 30px;
+
           p {
             font-family: "PT Root UI";
             font-size: 18px;
@@ -606,7 +629,33 @@
         width: 100%;
         background: #f9f9f9;
         display: flex;
-        height: 238px;
+        min-height: 238px;
+        @media (max-width: 1450px) {
+          .info {
+            padding: 25px;
+          }
+          .form-group-set {
+            column-gap: 30px;
+            padding-left: 50px;
+          }
+        }
+        @media (max-width: 1100px) {
+          .info {
+            padding: 25px;
+          }
+          .form-group-set {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            padding-left: 50px;
+            grid-template-areas:
+              "search"
+              "city"
+              "number"
+              "submit";
+          }
+        }
         .info {
           width: 388px;
           padding: 40px;
@@ -630,16 +679,10 @@
             color: #766e6c;
           }
         }
-        @media only screen and (max-width: 1550px) {
-          .info {
-            width: 320px;
-          }
-        }
+
         .form-group-set {
-          width: 1152px;
-          padding-left: 102px;
-          padding-top: 20px;
-          padding-right: 50px;
+          max-width: 1152px;
+          padding: 20px 50px 20px 102px;
           display: grid;
           grid-template-areas:
             "search search search"
@@ -654,6 +697,7 @@
           }
           .form-group {
             height: 78px;
+            width: 100%;
           }
         }
       }
@@ -662,10 +706,11 @@
 
   .bg {
     position: absolute;
+    object-fit: contain;
     top: 0px;
     left: 0;
-    height: 100%;
     z-index: 5;
-    width: 100%;
+    width: auto;
+    min-height: 100%;
   }
 }
