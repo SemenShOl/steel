@@ -8,8 +8,9 @@ get_header(); ?>
 
 <section class="page-catalog-valve">
     <div class="nwrapper">
-        <div class="ncol-2">
-            <h3>Каталог</h3>
+        <div class="ncol-2 moveable">
+            <h3 >Каталог</h3>
+            <h1 class="section-title">Задвижки</h1>
             <ul class="product-types">
                 <li class="product-type">
                     <div class="type-title">
@@ -177,7 +178,7 @@ get_header(); ?>
                             src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                     </div>
                 </div>
-                <div class="pages-navigation__info">Показаны <span>1–20</span> из 740 товаров</div>
+                <div class="pages-navigation__info">Показаны &nbsp; <span>1–20</span>&nbsp; из&nbsp; 740&nbsp; товаров</div>
             </div>
         </div>
 </section>
@@ -185,29 +186,36 @@ get_header(); ?>
 
 
 <section class="section-contact-map">
-    <div class="nwrapper">
-        <div class="ncol-2"></div>
-        <div class="ncol-10">
-            <?php
-            // Section - Contacts
-            get_template_part(
-                'template-parts/section-contacts',
-                null,
-                array(
-                    'section-number' => '08',
-                )
-            );
-            ?>
+		<div class="nwrapper">
+			<div class="contacts">
+				<div class="ncol-2"></div>
+				<div class="ncol-10">
+					<?php
+					// Section - Contacts
+					get_template_part(
+						'template-parts/section-contacts',
+						null,
+						array(
+							'section-number' => '08',
+						)
+					);
+					?>
+				</div>
+			</div>
 
-            <?php
-            //Section - Map
-            get_template_part('template-parts/section-map');
+			<div class="map">
+				<?php
+				//Section - Map
+				get_template_part('template-parts/section-map');
 
-            ?>
-        </div>
-    </div>
+				?>
 
-</section>
+			</div>
+
+		</div>
+
+	</section>
+
 
 <?php
 

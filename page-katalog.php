@@ -8,11 +8,16 @@ get_header(); ?>
 
 <section class="page-catalog">
     <div class="nwrapper">
-        <div class="ncol-2">
-
+        <div class="ncol-2 moveable">
+            <div class="bread-crumbs">
+                <p>Главная</p>
+                <p>/Каталог</p>
+            </div>
             <h3>Каталог</h3>
+            <h1 class="section-title">Трубозапорная арматура</h1>
+
             <ul class="product-types">
-                <li class="product-type">
+                <li class="product-type active">
                     <div class="type-title">
                         <h4>Трубозапорная арматура</h4>
                         <img
@@ -70,6 +75,22 @@ get_header(); ?>
                     </div>
 
                 </li>
+                <li class="product-type">
+                    <div class="type-title">
+                        <h4>Трубозапорная арматура</h4>
+                        <img
+                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+                    </div>
+
+                </li>
+                <li class="product-type">
+                    <div class="type-title">
+                        <h4>Трубозапорная арматура</h4>
+                        <img
+                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+                    </div>
+
+                </li>
             </ul>
         </div>
         <div class="ncol-10">
@@ -77,7 +98,7 @@ get_header(); ?>
                 <p>Главная</p>
                 <p>/Каталог</p>
             </div>
-            <h1>Трубозапорная арматура</h1>
+            <h1 class="section-title">Трубозапорная арматура</h1>
 
             <div class="production-line">
                 <div class="product">
@@ -129,29 +150,35 @@ get_header(); ?>
 
 
 <section class="section-contact-map">
-    <div class="nwrapper">
-        <div class="ncol-2"></div>
-        <div class="ncol-10">
-            <?php
-            // Section - Contacts
-            get_template_part(
-                'template-parts/section-contacts',
-                null,
-                array(
-                    'section-number' => '08',
-                )
-            );
-            ?>
+		<div class="nwrapper">
+			<div class="contacts">
+				<div class="ncol-2"></div>
+				<div class="ncol-10">
+					<?php
+					// Section - Contacts
+					get_template_part(
+						'template-parts/section-contacts',
+						null,
+						array(
+							'section-number' => '08',
+						)
+					);
+					?>
+				</div>
+			</div>
 
-            <?php
-            //Section - Map
-            get_template_part('template-parts/section-map');
+			<div class="map">
+				<?php
+				//Section - Map
+				get_template_part('template-parts/section-map');
 
-            ?>
-        </div>
-    </div>
+				?>
 
-</section>
+			</div>
+
+		</div>
+
+	</section>
 
 <?php
 

@@ -39,7 +39,7 @@
 }
 
 .form-group-set {
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px 0px 0px;
 
   &:focus {
     box-shadow: none;
@@ -199,8 +199,22 @@
   }
 
   &__info {
+    display: flex;
+    align-items: center;
     span {
       color: $button-background;
+    }
+  }
+
+  @media (max-width:850px){
+    font-size: 15px;
+    flex-direction: column;
+    gap: 30px;
+    &__number {
+      &__block {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
@@ -211,6 +225,20 @@
   .product-type {
     padding: 15px 19px;
     position: relative;
+    &.active {
+      background: #0a3878;
+      .type-title {
+        img {
+          transform: rotate(0deg);
+        }
+        h4 {
+          color: white;
+          margin-right: 10px;
+        }
+        margin-bottom: 20px;
+      }
+    }
+
     .type-title {
       display: flex;
       justify-content: space-between;
@@ -226,6 +254,7 @@
         transform: rotate(-90deg);
       }
     }
+
     &::after {
       position: absolute;
       bottom: 0;
@@ -235,25 +264,12 @@
       height: 1px;
       background: hsla(12, 4%, 44%, 0.302);
     }
-    &:first-child {
-      background: #0a3878;
-      h4 {
-        margin-bottom: 20px;
-        color: white;
-      }
-      .type-title {
-        img {
-          transform: rotate(0deg);
-        }
-      }
-    }
   }
 }
-
 .link {
-  border-bottom: 1px solid #f9f9f9;
+  border-top: 1px solid #f9f9f9;
   display: flex;
-  height: 40px;
+  padding: 15px 0;
   align-items: center;
   p {
     color: white;

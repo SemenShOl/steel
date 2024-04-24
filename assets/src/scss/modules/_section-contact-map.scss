@@ -1,15 +1,34 @@
 .section-contact-map {
   .nwrapper {
     background: white;
-    .ncol-2 {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-areas: "contacts map";
+    column-gap: 10%;
+    height: auto;
+    @media (max-width: 1450px) {
+      .ncol-10 {
+        padding-right: 50px;
+      }
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "map"
+        "contacts";
     }
-    .ncol-10 {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 520px 910px;
-      grid-template-areas: "contacts map";
-      column-gap: 160px;
-      height: auto;
+    .contacts {
+      display: flex;
+      @media (max-width:1450px) {
+        .ncol-2 {
+          display: none;
+        }
+        .ncol-10 {
+          width: 100%;
+        }
+      }
+    }
+    .map {
+      margin-left: -50px;
     }
   }
 }

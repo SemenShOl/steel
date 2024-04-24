@@ -1,8 +1,8 @@
 <footer class="footer">
 	<div class="block-main">
-		<div class="wrapper">
-			<div class="row pc-border">
-				<div class="col-2">
+		<div class="nwrapper">
+			<!-- <div class="row pc-border"> -->
+				<div class="ncol-2">
 					<div class="block-main-logo">
 						<a href="<?php echo home_url('/'); ?>">
 							<!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_logo.pnh"> -->
@@ -13,21 +13,21 @@
 					</div>
 				</div>
 				<!-- &nbsp -->
-				<div class="col-10">
+				<div class="ncol-10">
 					<div class="block-main-menu menu-desktop">
 						<ul class="inner">
 							<li><a href="<?php echo home_url('/production'); ?>" class="link" style="">Продукция</a>
 							</li>
-							<li><a href="<?php echo home_url('/oplata-i-dostavka'); ?>" class="link"
+							<li><a href="<?php echo home_url('/payment'); ?>" class="link"
 									style="">Оплата</a></li>
 							<li><a href="<?php echo home_url('/services'); ?>" class="link" style="">Услуги</a></li>
 							<li><a href="<?php echo home_url('/calculator'); ?>" class="link" style="">Калькулятор</a>
 							</li>
-							<li><a href="<?php echo home_url('/o-kompanii'); ?>" class="link" style="">О компании</a>
+							<li><a href="<?php echo home_url('/about-company'); ?>" class="link" style="">О компании</a>
 							</li>
-							<li><a href="<?php echo home_url('/oplata-i-dostavka'); ?>" class="link"
+							<li><a href="<?php echo home_url('/delivery'); ?>" class="link"
 									style="">Доставка</a></li>
-							<li><a href="<?php echo home_url('/kontakty'); ?>" class="link" style="">Контакты</a></li>
+							<li><a href="<?php echo home_url('/contcats'); ?>" class="link" style="">Контакты</a></li>
 							<li><a href="<?php echo home_url('/price-list'); ?>" class="link" style="">Прайс-лист</a>
 							</li>
 

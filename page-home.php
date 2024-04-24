@@ -268,19 +268,16 @@ get_header(); ?>
 	<section class="l-page section-about-company">
 
 		<div class="nwrapper">
-			<div class="ncol-2">
-				<div class="section-number wow fadeIn" data-wow-delay=".2s" style="margin-bottom: 178px">
+
+			<div class="about-part info" style="grid-area: info">
+				<div class="ncol-2">
 					<p class="section-number">04</p>
 					<p>Компания <br> Сталь-Н</p>
 				</div>
-				<div class="section-number wow fadeIn" data-wow-delay=".2s">
-					<p>Наши <br> партнеры</p>
-				</div>
-			</div>
-			<div class="ncol-10">
-				<h1 class="section-title">О компании</h1>
-				<div class="content">
-					<div class="content__info" style="grid-area: info">
+				<div class="ncol-10">
+					<h1 class="section-title">О компании</h1>
+
+					<div class="content">
 						<div class="item">
 							<p>
 								Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере
@@ -292,8 +289,14 @@ get_header(); ?>
 
 						</div>
 					</div>
+				</div>
 
-					<div class="content__more-info" style="grid-area: more-info">
+			</div>
+
+			<div class="about-part more-info" style="grid-area: more-info">
+				<div class="ncol-2"></div>
+				<div class="ncol-10">
+					<div class="content">
 						<p>Мы работаем напрямую с обширной сетью поставщиков по всей России, на наших складах
 							всегда в наличии широкий ассортимент металлопроката (более 8000 наименований) Вся
 							продукция изготовлена по ГОСТам и ТУ и имеет все необходимые сертификаты качества,
@@ -307,7 +310,15 @@ get_header(); ?>
 							оформят доставку. Специалисты помогут сократить ваши расходы, подобрав оптимальный
 							вариант.</p>
 					</div>
-					<div class="content__partners" style="grid-area: partners">
+				</div>
+			</div>
+
+			<div class="about-part partners" style="grid-area: partners">
+				<div class="ncol-2">
+					<p>Наши <br> партнеры</p>
+				</div>
+				<div class="ncol-10">
+					<div class="content">
 						<div class="item wow fadeIn" data-wow-delay=".2s">
 							<a target="_blank">
 								<div class="img">
@@ -421,38 +432,40 @@ get_header(); ?>
 							</a>
 						</div>
 					</div>
+
 				</div>
-
-
-
-
 			</div>
 
-		</div>
 		</div>
 	</section>
 
 	<section class="section-contact-map">
 		<div class="nwrapper">
-			<div class="ncol-2"></div>
-			<div class="ncol-10">
-				<?php
-				// Section - Contacts
-				get_template_part(
-					'template-parts/section-contacts',
-					null,
-					array(
-						'section-number' => '08',
-					)
-				);
-				?>
+			<div class="contacts">
+				<div class="ncol-2"></div>
+				<div class="ncol-10">
+					<?php
+					// Section - Contacts
+					get_template_part(
+						'template-parts/section-contacts',
+						null,
+						array(
+							'section-number' => '08',
+						)
+					);
+					?>
+				</div>
+			</div>
 
+			<div class="map">
 				<?php
 				//Section - Map
 				get_template_part('template-parts/section-map');
 
 				?>
+
 			</div>
+
 		</div>
 
 	</section>

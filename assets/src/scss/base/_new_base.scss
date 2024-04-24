@@ -4,7 +4,12 @@
   height: auto;
   display: flex;
   padding-left: 50px;
-  
+  @media (max-width: 450px) {
+    padding-left: 30px;
+    .ncol-10 {
+      padding-right: 30px;
+    }
+  }
 }
 .ncol-2 {
   margin-left: -50px;
@@ -40,6 +45,13 @@
   @media only screen and (max-width: 850px) {
     display: none;
   }
+  &.moveable {
+    @media only screen and (max-width: 850px) {
+      display: block;
+    }
+  }
+  
+
 }
 
 .ncol-10 {
@@ -52,7 +64,6 @@
 
   @media only screen and (max-width: 850px) {
     width: 100%;
-
   }
   h1 {
     font-family: "Stolzl";

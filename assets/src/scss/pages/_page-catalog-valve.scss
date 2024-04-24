@@ -1,9 +1,52 @@
 .page-catalog-valve {
   margin-bottom: 80px;
   .nwrapper {
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      .ncol-2 {
+        width: 100%;
+        margin-bottom: 100px;
+        padding-right: 0px;
+        h3 {
+          display: none;
+        }
+        .section-title {
+          display: block;
+          margin-bottom: 40px;
+          margin-top: 30px;
+        }
+        .bread-crumbs {
+          display: block;
+        }
+        .product-types {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 10px;
+          row-gap: 30px;
+          grid-template-rows: auto;
+          .product-type {
+            &::after {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 650px) {
+      .ncol-2 {
+        .product-types {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
     .ncol-2 {
       padding-left: 50px;
       padding-right: 50px;
+      .section-title {
+        display: none;
+        margin-bottom: 40px;
+      }
       h3 {
         font-family: "PT Root UI";
         font-size: 22px;
@@ -61,12 +104,16 @@
     }
 
     .ncol-10 {
-      h1 {
-        font-family: "PT Root UI";
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 80px;
-        text-align: left;
+      @media (max-width: 1100px) {
+        width: 100%;
+        .bread-crumbs {
+          display: none;
+        }
+        .section-title {
+          display: none;
+        }
+      }
+      .section-title {
         margin-bottom: 40px;
         margin-top: -10px;
       }
@@ -82,9 +129,9 @@
             height: 320px;
             margin-bottom: 20px;
 
-            @media only screen and (max-width: 1550px) {
-              width: 200px;
-              height: 200px;
+            @media only screen and (max-width: 1450px) {
+              width: 250px;
+              height: 250px;
             }
           }
 
@@ -100,6 +147,11 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            @media (max-width:1450px) {
+              p {
+                font-size: 15px;
+              }
+            }
             p {
               &:first-child {
                 color: $button-background;
@@ -137,8 +189,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            // border: 2px solid red;
-            // margin-right: 43px;
             margin-right: 9px;
 
             &:first-child {
