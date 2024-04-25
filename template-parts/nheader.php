@@ -5,8 +5,7 @@
 
             <div class="place-info">
                 <div class="more-info">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/more-info.svg">
-
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/menu.png">
                 </div>
                 <div class="info-part">
                     <img
@@ -52,7 +51,9 @@
             </div>
 
             <div class="nav-and-button">
-
+                <button class="header-more-info">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/menu.png">
+                </button>
 
                 <nav class="nav-pages">
                     <ul>
@@ -145,4 +146,24 @@
         </div>
 
     </div>
+
+    <div class="mobile-part">
+
+    </div>
+   
 </header>
+
+<script>
+        const moreInfo = document.querySelector('.header-more-info');
+        const mobilePart = document.querySelector('.mobile-part');
+        const nheader = document.querySelector('.nheader');
+
+        console.log(moreInfo)
+
+        moreInfo.addEventListener('click', () => {
+            console.log("Работай")
+            alert("sdnsfdnsdf")
+        } )
+
+      
+    </script>

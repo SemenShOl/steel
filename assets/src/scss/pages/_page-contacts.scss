@@ -2,86 +2,53 @@
   .nwrapper {
     padding-bottom: 100px;
     .ncol-2 {
-      padding-top: 100px;
-      width: 270px;
       margin: 0;
+      &.first {
+        padding-top: 210px;
+      }
       p {
-        margin-top: 90px;
         width: 170px;
       }
     }
     .ncol-10 {
-      padding: 0;
       margin: 0;
-      .contact-grid {
+      width: 100%;
+      .section-title {
+        margin-bottom: 60px;
+      }
+      .other-cities {
         width: 100%;
-        .places {
-          width: 100%;
+        .cities-list {
           display: flex;
-          gap: 87px;
-          .contact-type {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            padding: 40px;
+          flex-wrap: wrap;
+          column-gap: 80px;
+          row-gap: 40px;
+          margin-bottom: 60px;
+          u {
             font-family: "PT Root UI";
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
             text-align: left;
-            width: 320px;
-            height: 287px;
-            background: white;
+            border-bottom: #1e110e;
 
-            &__title {
-              flex: 1 0 auto;
-              font-size: 22px;
-              font-weight: 700;
-              line-height: 26.4px;
-              margin-bottom: 30px;
-            }
-            &__info {
-              flex: 1 0 auto;
-
-              font-size: 18px;
-              font-weight: 500;
-              line-height: 23.4px;
-              margin-bottom: 30px;
-            }
-
-            button {
-              flex: 0 0 auto;
-              background: white;
-              border: 1px solid #1e110e;
+            &.active {
               color: $button-background;
-              width: 240px;
-              font-size: 16px;
-              font-weight: 700;
-              line-height: 20.16px;
-              text-align: center;
             }
           }
         }
-        .other-cities {
-          width: 100%;
-          .cities-list {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 80px;
-            row-gap: 40px;
-
-            margin-bottom: 60px;
-            u {
-              font-family: "PT Root UI";
-              font-size: 22px;
-              font-weight: 700;
-              line-height: 26.4px;
-              text-align: left;
-              border-bottom: #1e110e;
-
-              &.active {
-                color: $button-background;
-              }
-            }
-          }
-        }
+        // .contact-type {
+        //   display: flex;
+        //   width: 320px;
+        //   @media (max-width: 1100px) {
+        //     flex-grow: 1;
+        //     align-items: center;
+        //     width: 320px;
+        //     &__info {
+        //       text-align: center;
+        //     }
+        //   }
+        // }
       }
     }
   }
@@ -303,8 +270,62 @@
   }
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-rows: 287px 417px 1fr;
-  row-gap: 80px;
+.places {
+  width: 100%;
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  @media (max-width: 1100px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 50px;
+    .contact-type {
+      flex-grow: 1;
+      align-items: center;
+
+      &__info {
+        text-align: center;
+      }
+    }
+  }
+  .contact-type {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 40px;
+    font-family: "PT Root UI";
+    text-align: left;
+    flex: 0 1 320px;
+    height: 287px;
+    background: white;
+
+    &__title {
+      flex: 1 0 auto;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 26.4px;
+      margin-bottom: 30px;
+    }
+    &__info {
+      flex: 1 0 auto;
+
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 23.4px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      flex: 0 0 auto;
+      background: white;
+      border: 1px solid #1e110e;
+      color: $button-background;
+      width: 240px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20.16px;
+      text-align: center;
+    }
+  
+  }
 }

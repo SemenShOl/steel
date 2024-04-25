@@ -1,0 +1,149 @@
+.nfooter {
+  .nwrapper {
+    padding: 100px 50px 50px 50px;
+    @media (max-width: 850px) {
+      padding-top: 50px;
+    }
+    .ncol-2 {
+      .logo {
+        margin-bottom: 192px;
+        a {
+          img {
+            width: 170px;
+            height: 48px;
+          }
+        }
+      }
+      margin-left: 0;
+    }
+
+    .ncol-10 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .logo {
+        display: none;
+      }
+      @media (max-width: 850px) {
+        padding-right: 0;
+        align-items: center;
+        .logo {
+          display: block;
+          margin-bottom: 25px;
+          padding-bottom: 25px;
+
+          width: 100%;
+          border-bottom: 1px solid $dark-text;
+          a {
+            display: block;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .top-part {
+        display: flex;
+        @media (max-width: 850px) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 25px;
+          padding-bottom: 25px;
+          border-bottom: 1px solid $dark-text;
+
+          &__contacts {
+            width: 100%;
+            order: 1;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            .contacts__phone {
+              margin-bottom: 24px;
+            }
+
+            .nbtn {
+                height: 60px;
+            }
+            border-bottom: 1px solid $dark-text;
+          }
+          &__nav-list {
+            row-gap: 30px;
+            order: 2;
+            margin-right: 0;
+          }
+
+        }
+        &__nav-list {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+
+          font-family: "PT Root UI";
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 26.4px;
+          text-align: left;
+          margin-right: 125px;
+
+          @media (max-width: 1450px) {
+            column-gap: 50px;
+            justify-content: start;
+          }
+        }
+
+        &__contacts {
+          width: 270px;
+          .contacts {
+            font-family: "PT Root UI";
+            text-align: left;
+            &__phone {
+              font-family: "PT Root UI";
+
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 36px;
+              margin-bottom: 48px;
+            }
+
+            &__email {
+              display: block;
+              font-family: "PT Root UI";
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 33px;
+              margin-bottom: 24px;
+            }
+
+            .nbtn {
+              width: 211px;
+              height: 50px;
+            }
+          }
+        }
+      }
+
+      .bottom-part {
+        .privacy-footer {
+          &.top {
+            display: none;
+            @media (max-width: 850px) {
+              display: block;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.privacy-footer {
+  font-family: "PT Root UI";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19.6px;
+  text-align: left;
+  color: #1e110e;
+}

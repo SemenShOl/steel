@@ -48,6 +48,9 @@
           @media (max-width: 1450px) {
             display: block;
           }
+          @media (max-width: 850px) {
+            display: none;
+          }
         }
 
         .ncol-10 {
