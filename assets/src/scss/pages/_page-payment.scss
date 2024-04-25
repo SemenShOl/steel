@@ -1,65 +1,85 @@
 .page-payment {
-  margin-top: 300px;
+  // margin-top: 300px;
   padding-bottom: 100px;
   .nwrapper {
     padding: 0 50px;
     .ncol-10 {
-        padding: 0;
-        .section-title {
-          margin-bottom: 20px;
+      padding: 0;
+      .section-title {
+        margin-bottom: 20px;
+      }
+      .payment-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        @media (max-width: 1450px) {
+          flex-wrap: wrap;
         }
-        .payment-info {
-          display: flex;
-          justify-content: space-between;
-    
-          margin-bottom: 60px;
-          p {
-            font-family: "PT Root UI";
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25.2px;
-            text-align: left;
-            width: 727px;
-          }
-          .max-sum {
-            width: auto;
-            font-weight: 700;
-            color: $button-background;
-          }
+        p {
+          font-family: "PT Root UI";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 25.2px;
+          text-align: left;
+          width: 727px;
         }
-    
-        .payment-types {
-          display: flex;
-          gap: 87px;
-          &__row {
-            h3 {
-              font-family: "PT Root UI";
-              font-size: 22px;
-              font-weight: 700;
-              line-height: 26.4px;
-              text-align: left;
-              margin-bottom: 20px;
-            }
-            p {
-              font-family: "PT Root UI";
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 22.4px;
-              text-align: left;
-            }
-          }
-    
-          &__img {
-            width: 320px;
-            height: 320px;
-            background: #0a3878;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-          }
+        .max-sum {
+          width: auto;
+          font-weight: 700;
+          color: $button-background;
         }
       }
+
+      .payment-types {
+        display: flex;
+        gap: 86px;
+        width: 100%;
+
+        @media (max-width: 1450px) {
+          flex-wrap: wrap;
+          &__row {
+            width: calc(50% - 43px);
+          }
+          &__img {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 650px) {
+          flex-direction: column;
+          &__row {
+            width: 100%;
+          }
+        }
+        &__row {
+          h3 {
+            font-family: "PT Root UI";
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+            text-align: left;
+            margin-bottom: 20px;
+          }
+          p {
+            font-family: "PT Root UI";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+          }
+        }
+
+        &__img {
+          // width: 320px;
+          height: 320px;
+          background: #0a3878;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
- 
 }

@@ -9,6 +9,10 @@ get_header(); ?>
 		<div class="ncol-2">
 		</div>
 		<div class="ncol-10">
+			<div class="bread-crumbs">
+				<p>Главная</p>
+				<p>/Каталог</p>
+			</div>
 			<h1 class="section-title">Оплата</h1>
 
 			<div class="payment-info">
@@ -67,23 +71,35 @@ get_header(); ?>
 
 </section>
 
-<section class="l-page page-about-company">
+<section class="section-contact-map">
+	<div class="nwrapper">
+		<div class="contacts">
+			<div class="ncol-2"></div>
+			<div class="ncol-10">
+				<?php
+				// Section - Contacts
+				get_template_part(
+					'template-parts/section-contacts',
+					null,
+					array(
+						'section-number' => '08',
+					)
+				);
+				?>
+			</div>
+		</div>
 
-	<?php
-	// Section - Contacts
-	get_template_part(
-		'template-parts/section-contacts',
-		null,
-		array(
-			'section-number' => '08',
-		)
-	);
-	?>
+		<div class="map">
+			<?php
+			//Section - Map
+			get_template_part('template-parts/section-map');
 
-	<?php
-	// Section - Map
-	get_template_part('template-parts/section-map');
-	?>
+			?>
+
+		</div>
+
+	</div>
+
 </section>
 
 

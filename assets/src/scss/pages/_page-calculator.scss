@@ -2,11 +2,56 @@
   .nwrapper {
     width: 100%;
     padding-bottom: 100px;
+    padding-right: 50px;
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      .ncol-2 {
+        width: calc(100vw - 50px);
+        padding-right: 0px;
+        padding-top: 0;
+        h3 {
+          display: none;
+        }
+        .section-title {
+          display: block;
+          margin-bottom: 60px;
+          margin-top: 30px;
+        }
+        .bread-crumbs {
+          display: block;
+        }
+        .product-types {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+
+      .ncol-10 {
+        .section-title {
+          display: none;
+        }
+        .bread-crumbs {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+      .ncol-2 {
+        width: 100vw;
+      }
+    }
     .ncol-2 {
       padding: 50px;
       .product-types {
-        margin-top: 135px;
-
+        margin-top: 160px;
+      }
+      .section-title {
+        display: none;
+        margin-bottom: 40px;
+      }
+      .bread-crumbs {
+        display: none;
       }
     }
 
@@ -15,11 +60,25 @@
 
       padding-right: 0px;
       .metall-types {
-        display: flex;
         margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.6fr;
+
+        @media (max-width: 1450px) {
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        @media (max-width: 950px) {
+          &__item {
+            font-size: 14px;
+          }
+        }
+        @media (max-width: 650px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(6, 1fr);
+        }
 
         &__item {
-          width: 252px;
+          width: 100%;
           height: 40px;
           display: flex;
           align-items: center;
@@ -27,6 +86,9 @@
           color: $dark-text;
           background: #f5f5f5;
           border-bottom: 1px solid #766e6c4d;
+          &:first-child {
+            min-width: 200px;
+          }
           &.active {
             background: $button-background;
             color: white;
@@ -34,71 +96,112 @@
           }
         }
       }
-
+      .section-title {
+        margin-bottom: 61px;
+      }
       .metall-info {
-        display: flex;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 3fr 2fr;
+        column-gap: 50px;
+        @media (max-width: 1450px) {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+            "scheme description"
+            "inputs inputs ";
+          row-gap: 50px;
+        }
+        @media (max-width: 950px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas:
+            "scheme "
+            "description"
+            "inputs";
+          row-gap: 50px;
+        }
         &__scheme {
+          grid-area: scheme;
           margin-right: 58px;
-          margin-top: -45px;
           display: flex;
           align-items: start;
+          width: 100%;
           img {
-            width: 549px;
-            height: 440px;
+            width: 100%;
+            height: auto;
           }
         }
 
         &__inputs {
+          grid-area: inputs;
           display: grid;
-          grid-template-columns: repeat(2, 300px);
+          grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(4, 78px);
           row-gap: 30px;
           column-gap: 50px;
           margin-right: 50px;
           align-items: end;
-          .form-group {
-            font-family: "PT Root UI";
-            font-weight: 500;
-            text-align: left;
+          width: 100%;
 
-            input {
-              width: 100%;
+          @media (max-width: 650px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            > div {
+              &:nth-child(6) {
+                display: none;
+              }
+            }
+            .form-group {
+              font-family: "PT Root UI";
+              font-weight: 500;
+              text-align: left;
+
+              input {
+                width: 100%;
+                height: 50px;
+                background-color: transparent;
+                font-size: 16px;
+                line-height: 1.2;
+                border-radius: 0;
+                transition: 0.2s ease;
+                border: 2px solid #1e110e;
+              }
+
+              label {
+                font-size: 18px;
+                line-height: 1.1;
+                transition: 0.2s ease;
+                white-space: nowrap;
+                margin-bottom: 15px;
+              }
+            }
+
+            button {
               height: 50px;
-              background-color: transparent;
-              font-size: 16px;
-              line-height: 1.2;
-              border-radius: 0;
-              transition: 0.2s ease;
-              border: 2px solid #1e110e;
-            }
-
-            label {
-              font-size: 18px;
-              line-height: 1.1;
-              transition: 0.2s ease;
-              white-space: nowrap;
-              margin-bottom: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
 
-          button {
-            width: 300px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
+          &__description {
+            grid-area: description;
 
-        &__description {
-          width: 230px;
-          font-family: "PT Root UI";
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 22.4px;
-          text-align: left;
+            width: 100%;
+            font-family: "PT Root UI";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+          }
         }
       }
     }
+  }
+}
+.link {
+  &.not-bordered {
+    border-top: none;
+    padding-top: 0;
   }
 }

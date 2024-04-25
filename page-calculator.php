@@ -7,14 +7,19 @@ get_header();
 
 <section class="l-page page-calculator ">
     <div class="nwrapper">
-        <div class="ncol-2">
-            <ul class="product-types">
-                <li class="product-type">
+        <div class="ncol-2 moveable">
+            <div class="bread-crumbs">
+                <p>Главная</p>
+                <p>/Каталог</p>
+            </div>
+            <h1 class="section-title">Калькулятор металлопроката</h1>
 
+            <ul class="product-types">
+                <li class="product-type active">
                     <nav сlass="certain-product">
                         <ul>
                             <li>
-                                <a class="link">
+                                <a class="link not-bordered">
                                     <p>Вентили (клапаны)</p>
                                 </a>
                             </li>
@@ -120,27 +125,34 @@ get_header();
 
 
 
+
 <section class="section-contact-map">
     <div class="nwrapper">
-        <div class="ncol-2"></div>
-        <div class="ncol-10">
-            <?php
-            // Section - Contacts
-            get_template_part(
-                'template-parts/section-contacts',
-                null,
-                array(
-                    'section-number' => '08',
-                )
-            );
-            ?>
+        <div class="contacts">
+            <div class="ncol-2"></div>
+            <div class="ncol-10">
+                <?php
+                // Section - Contacts
+                get_template_part(
+                    'template-parts/section-contacts',
+                    null,
+                    array(
+                        'section-number' => '08',
+                    )
+                );
+                ?>
+            </div>
+        </div>
 
+        <div class="map">
             <?php
             //Section - Map
             get_template_part('template-parts/section-map');
 
             ?>
+
         </div>
+
     </div>
 
 </section>
