@@ -80,6 +80,8 @@ $queryServices = new WP_Query(
 
             </div>
         </div>
+
+        
         <div class="available-products">
             <div class="available-products__header">
                 <div class="p-arrow">
@@ -97,7 +99,6 @@ $queryServices = new WP_Query(
 
                 </div>
             </div>
-
             <div class="available-products__line"></div>
             <div class="available-products__rows">
                 <div class="available-products__row">
@@ -181,7 +182,6 @@ $queryServices = new WP_Query(
                     </div>
                     <p>Килограмм (кг)</p>
                     <p>Уточняйте</p>
-
                     <button class="ask-price">Запросить цену</button>
                 </div>
                 <div class="available-products__row">
@@ -193,9 +193,116 @@ $queryServices = new WP_Query(
                     </div>
                     <p>Килограмм (кг)</p>
                     <p>Уточняйте</p>
-
                     <button class="ask-price">Запросить цену</button>
+
                 </div>
+            </div>
+        </div>
+
+        <div class="available-products mobile">
+            <div class="available-products__card">
+                <div class="product-info-pair">
+                    <p class="gray-text">Наименование</p>
+                    <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Количество</p>
+                    <div class="number-btns">
+                        <div class="action">-</div>
+                        <div class="number">1</div>
+                        <div class="action">+</div>
+                    </div>
+
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Единицы измерения</p>
+                    <p>Килограмм (кг)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Цена оптовая</p>
+                    <p>Уточняйте</p>
+                </div>
+
+                <button class="ask-price">Запросить цену</button>
+
+            </div>
+            <div class="available-products__card">
+                <div class="product-info-pair">
+                    <p class="gray-text">Наименование</p>
+                    <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Количество</p>
+                    <div class="number-btns">
+                        <div class="action">-</div>
+                        <div class="number">1</div>
+                        <div class="action">+</div>
+                    </div>
+
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Единицы измерения</p>
+                    <p>Килограмм (кг)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Цена оптовая</p>
+                    <p>Уточняйте</p>
+                </div>
+
+                <button class="ask-price">Запросить цену</button>
+
+            </div>
+            <div class="available-products__card">
+                <div class="product-info-pair">
+                    <p class="gray-text">Наименование</p>
+                    <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Количество</p>
+                    <div class="number-btns">
+                        <div class="action">-</div>
+                        <div class="number">1</div>
+                        <div class="action">+</div>
+                    </div>
+
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Единицы измерения</p>
+                    <p>Килограмм (кг)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Цена оптовая</p>
+                    <p>Уточняйте</p>
+                </div>
+
+                <button class="ask-price">Запросить цену</button>
+
+            </div>
+            <div class="available-products__card">
+                <div class="product-info-pair">
+                    <p class="gray-text">Наименование</p>
+                    <p>Задвижка стальная 30лс15нж (PN 40, DN 50-350)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Количество</p>
+                    <div class="number-btns">
+                        <div class="action">-</div>
+                        <div class="number">1</div>
+                        <div class="action">+</div>
+                    </div>
+
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Единицы измерения</p>
+                    <p>Килограмм (кг)</p>
+                </div>
+                <div class="product-info-pair">
+                    <p class="gray-text">Цена оптовая</p>
+                    <p>Уточняйте</p>
+                </div>
+
+                <button class="ask-price">Запросить цену</button>
+
             </div>
         </div>
         <div class="pages-navigation">
@@ -230,7 +337,9 @@ $queryServices = new WP_Query(
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                 </div>
             </div>
-            <div class="pages-navigation__info">Показаны <span>1–20</span> из 740 товаров</div>
+            <div class="pages-navigation__info">Показаны &nbsp; <span>1–20</span>&nbsp; из &nbsp;740&nbsp;
+                товаров
+            </div>
         </div>
     </div>
 
@@ -239,29 +348,34 @@ $queryServices = new WP_Query(
 
 <section class="section-contact-map">
     <div class="nwrapper">
-        <div class="ncol-2"></div>
-        <div class="ncol-10">
-            <?php
-            // Section - Contacts
-            get_template_part(
-                'template-parts/section-contacts',
-                null,
-                array(
-                    'section-number' => '08',
-                )
-            );
-            ?>
+        <div class="contacts">
+            <div class="ncol-2"></div>
+            <div class="ncol-10">
+                <?php
+                // Section - Contacts
+                get_template_part(
+                    'template-parts/section-contacts',
+                    null,
+                    array(
+                        'section-number' => '08',
+                    )
+                );
+                ?>
+            </div>
+        </div>
 
+        <div class="map">
             <?php
             //Section - Map
             get_template_part('template-parts/section-map');
 
             ?>
+
         </div>
+
     </div>
 
 </section>
-
 
 
 <?php get_footer(); ?>

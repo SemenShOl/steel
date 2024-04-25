@@ -111,6 +111,7 @@
 .number-btns {
   display: flex;
   gap: 10px;
+  align-items: center;
   .action {
     color: $button-background;
     width: 25px;
@@ -160,6 +161,10 @@
   line-height: 25.2px;
   text-align: left;
   color: #766e6c;
+
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
 }
 
 .pages-navigation {
@@ -206,7 +211,7 @@
     }
   }
 
-  @media (max-width:850px){
+  @media (max-width: 850px) {
     font-size: 15px;
     flex-direction: column;
     gap: 30px;
