@@ -13,11 +13,33 @@
       .price-info {
         display: flex;
         gap: 160px;
-
+        @media (max-width: 1450px) {
+          flex-direction: column;
+          gap: 50px;
+          .description {
+            width: 100%;
+          }
+          &__rows {
+            width: 100%;
+          }
+        }
+        @media (max-width:450px) {
+          &__row {
+            .title {
+              font-size: 15px;
+            }
+          }
+        }
+        .description {
+          width: 40%;
+        }
+        &__rows {
+          width: 60%;
+        }
         &__row {
           position: relative;
           height: 30px;
-          width: 670px;
+          width: 100%;
           display: flex;
           justify-content: space-between;
           margin-bottom: 18px;

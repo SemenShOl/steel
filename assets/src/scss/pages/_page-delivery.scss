@@ -23,10 +23,22 @@
       }
       .delivery-description {
         margin-bottom: 72px;
+        @media (max-width: 1450px) {
+          margin-bottom: 50px;
+        }
       }
 
       .delivery-block {
         display: flex;
+        @media (max-width: 1450px) {
+          flex-direction: column;
+          &__info {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 70px;
+            gap: 20px;
+          }
+        }
         &__info {
           width: 520px;
           display: flex;
@@ -39,7 +51,7 @@
           .car-brand {
             &__title {
               display: grid;
-              grid-template-columns: 218px 210px 242px;
+              grid-template-columns: repeat(3, 1fr);
               margin-bottom: 24px;
               p {
                 font-size: 18px;
@@ -51,7 +63,7 @@
             &__row {
               border-top: 1px solid $dark-text;
               display: grid;
-              grid-template-columns: 218px 210px 242px;
+              grid-template-columns: repeat(3, 1fr);
               grid-template-rows: 73px;
               p {
                 display: flex;

@@ -67,29 +67,35 @@ get_header();
 
 
 <section class="section-contact-map">
-    <div class="nwrapper">
-        <div class="ncol-2"></div>
-        <div class="ncol-10">
-            <?php
-            // Section - Contacts
-            get_template_part(
-                'template-parts/section-contacts',
-                null,
-                array(
-                    'section-number' => '08',
-                )
-            );
-            ?>
+		<div class="nwrapper">
+			<div class="contacts">
+				<div class="ncol-2"></div>
+				<div class="ncol-10">
+					<?php
+					// Section - Contacts
+					get_template_part(
+						'template-parts/section-contacts',
+						null,
+						array(
+							'section-number' => '08',
+						)
+					);
+					?>
+				</div>
+			</div>
 
-            <?php
-            //Section - Map
-            get_template_part('template-parts/section-map');
+			<div class="map">
+				<?php
+				//Section - Map
+				get_template_part('template-parts/section-map');
 
-            ?>
-        </div>
-    </div>
+				?>
 
-</section>
+			</div>
+
+		</div>
+
+	</section>
 
 
 <?php get_footer(); ?>
