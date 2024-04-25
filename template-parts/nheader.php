@@ -4,9 +4,6 @@
         <div class="blue-part">
 
             <div class="place-info">
-                <div class="more-info">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/menu.png">
-                </div>
                 <div class="info-part">
                     <img
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
