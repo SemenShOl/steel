@@ -134,3 +134,9 @@
 		}
 	}
 }
+
+.l-page {
+	&.hidden {
+		display: none;
+	}
+}

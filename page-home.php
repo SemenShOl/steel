@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-<section class="l-page">
+<section class="l-page ">
 
 	<section class="section-intro">
 		<div class="nwrapper">
@@ -157,6 +157,21 @@ get_header(); ?>
 		btnAskPrice.addEventListener('click', () => {
 			onOpenModalMain();
 		})
+	</script>
+
+	<script>
+		const moreInfo = document.querySelector('.header-more-info');
+		const lPage = document.querySelector('.l-page');
+		const mobilePart = document.querySelector('.mobile-part');
+		const nheader = document.querySelector('.nheader');
+
+
+		moreInfo.addEventListener('click', () => {
+			lPage.classList.toggle('hidden');
+			mobilePart.classList.toggle('active');
+		})
+
+
 	</script>
 
 	<?php
