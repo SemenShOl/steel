@@ -23,7 +23,7 @@
                             <p>Вентили (клапаны)</p>
                         </a>
                     </div>
-                    <div class="product">
+                    <div class="product ">
                         <a href="#">
                             <img class=""
                                 src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_2.png">
@@ -45,12 +45,44 @@
                             <p>Вентили (клапаны)</p>
                         </a>
                     </div>
+                    <div class="product">
+                        <a href="#">
+                            <img class=""
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_4.png">
+
+                            <p>Вентили (клапаны)</p>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="#">
+                            <img class=""
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_4.png">
+
+                            <p>Вентили (клапаны)</p>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="#">
+                            <img class=""
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_4.png">
+
+                            <p>Вентили (клапаны)</p>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="#">
+                            <img class=""
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_4.png">
+
+                            <p>Вентили (клапаны)</p>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="show-line">
                     <div class="line"></div>
                     <p>Свернуть </p>
-                    <img
+                    <img class="rotate"
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                     <div class="line"></div>
 
@@ -110,7 +142,7 @@
                 <div class="show-line">
                     <div class="line"></div>
                     <p>Свернуть </p>
-                    <img
+                    <img class="rotate"
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                     <div class="line"></div>
 
@@ -119,3 +151,68 @@
         </div>
     </div>
 </section>
+
+<script>
+    function countProductsInFirstRow() {
+        const products = document.querySelectorAll('.product');
+        let counter = {}
+        products.forEach((col) => {
+            let offset = col.offsetTop
+            counter[offset] = counter[offset] ? counter[offset] + 1 : 1
+        })
+        return Object.values(counter)[0]
+    }
+
+    const productTypes = Array.from(document.querySelectorAll('.product-type'));
+    const productsGrid = [];
+    const showLinesMore = [];
+    productTypes.forEach((productType) => {
+        productsGrid.push(productType.querySelectorAll('.ncol-10 .production-line .product'))
+        showLinesMore.push(productType.querySelector('.ncol-10 .show-line'))
+    })
+
+    let productsInFirstRow = countProductsInFirstRow();
+    let isClosed = false;
+
+    // window.addEventListener('resize', () => {
+    //     productsInFirstRow = countProductsInFirstRow();
+    //     showLinesMore.forEach((showLine, index) => {
+    //         !isClosed ? openExtraProducts(index) : closeExtraProducts(index);
+    //     })
+    // });
+
+    function closeExtraProducts(index) {
+        for (let i = productsInFirstRow; i < productsGrid[index].length; i++) {
+            productsGrid[index][i].classList.add('hidden')
+        }
+    }
+    function openExtraProducts(index) {
+        for (let i = productsInFirstRow; i < productsGrid[index].length; i++) {
+            productsGrid[index][i].classList.remove('hidden')
+        }
+    }
+
+    showLinesMore.forEach((showLine, index) => {
+        const showLineMoreText = showLine.querySelector('p');
+        const showLineMoreImg = showLine.querySelector('img');
+        console.log(showLineMoreImg)
+        showLine.addEventListener('click', () => {
+            // isClosed ? openExtraProducts(index) : closeExtraProducts(index);
+            for (let i = productsInFirstRow; i < productsGrid[index].length; i++) {
+                productsGrid[index][i].classList.toggle('hidden')
+            }
+            if (isClosed) {
+                showLineMoreText.textContent = 'Свернуть'
+                showLineMoreImg.classList.add('rotate');
+            }
+            else {
+                showLineMoreText.textContent = 'Развернуть'
+                showLineMoreImg.classList.remove('rotate');
+            }
+            isClosed = !isClosed;
+        })
+    })
+
+
+
+</script>
