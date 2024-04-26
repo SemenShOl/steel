@@ -6,7 +6,7 @@ $categories = get_the_category();
 get_header(); ?>
 
 
-<section class="page-catalog-valve">
+<section class="l-page page-catalog-valve">
     <div class="nwrapper">
         <div class="ncol-2 moveable">
             <h3 >Каталог</h3>
@@ -216,6 +216,73 @@ get_header(); ?>
 	</section>
 
 
+
+	<script>
+		const btnAskPrice = document.querySelector('.ask-price');
+
+		const sendedModal = document.querySelector('.sended-modal');
+		const sendedModalBg = document.querySelector('.sended-modal__bg');
+		const sendedModalClose = document.querySelector('.sended-close-btn');
+		const sendedModalContent = document.querySelector('.sended-modal__content');
+
+
+		const mainModal = document.querySelector('.main-modal');
+		const mainModalBg = document.querySelector('.main-modal__bg');
+		const mainModalClose = document.querySelector('.main-close-btn');
+		const mainModalContent = document.querySelector('.main-modal__content');
+		const btnModalSend = document.querySelector('.send-btn'); // btnModalSend
+
+		const onCloseModalMain = () => {
+			mainModal.classList.remove('open');
+			mainModalBg.removeEventListener('click', onCloseModalMain)
+			mainModalClose.removeEventListener('click', onCloseModalMain)
+		}
+
+		const onCloseModalSended = () => {
+			sendedModal.classList.remove('open');
+			sendedModalBg.removeEventListener('click', onCloseModalSended)
+			sendedModalClose.removeEventListener('click', onCloseModalSended)
+		}
+
+		const onOpenModalSended = () => {
+			// console.log(sendedModal)
+			onCloseModalMain();
+			sendedModal.classList.add('open');
+			sendedModalBg.addEventListener('click', onCloseModalSended);
+			sendedModalClose.addEventListener('click', onCloseModalSended);
+
+		}
+
+		const onOpenModalMain = () => {
+			mainModal.classList.add('open');
+			mainModalBg.addEventListener('click', onCloseModalMain)
+			mainModalClose.addEventListener('click', onCloseModalMain)
+			mainModalContent.addEventListener('click', e => e.stopPropagation())
+			btnModalSend.addEventListener('click', onOpenModalSended)
+		}
+
+
+		btnAskPrice.addEventListener('click', () => {
+			onOpenModalMain();
+		})
+	</script>
+
+	<script>
+		const moreInfo = document.querySelector('.header-more-info');
+		const lPage = document.querySelector('.l-page');
+		const mobilePart = document.querySelector('.mobile-part');
+		const nheader = document.querySelector('.nheader');
+
+
+		moreInfo.addEventListener('click', () => {
+			lPage.classList.toggle('hidden');
+			mobilePart.classList.toggle('active');
+		})
+
+
+	</script>
+
 <?php
+
 
 get_footer(); ?>
