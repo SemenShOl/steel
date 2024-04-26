@@ -13,7 +13,7 @@ get_header();
             <div class="ncol-10">
                 <div class="bread-crumbs">
                     <p>Главная</p>
-                    <p>/Оплата</p>
+                    <p>/Доставка</p>
                 </div>
                 <h1 class="section-title">Доставка</h1>
                 <p class="delivery-description gray-text">Наша компания рада вашим заказам, для вашего комфорта у нас
