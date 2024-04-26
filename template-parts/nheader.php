@@ -57,6 +57,7 @@
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/menu.png">
                 </button>
 
+
                 <nav class="nav-pages">
                     <ul>
                         <li>
@@ -100,7 +101,11 @@
                         </li>
                     </ul>
                 </nav>
-
+                <div class="logo">
+                    <a href="<?php echo home_url('/'); ?>">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
+                    </a>
+                </div>
                 <div class="form-group-header">
                     <div class="search-part">
                         <input type="text" name="search" placeholder="Труба ВГП 15x2,5">
