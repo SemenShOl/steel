@@ -3,10 +3,10 @@
 
         <div class="blue-part">
             <div class="place-info">
-                <div class="info-part">
+                <div class="info-part city">
                     <img
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
-                    <p>Ваш город: <span>Новосибирск</span></p>
+                    <p class="chosen-city">Ваш город: <span>Новосибирск</span></p>
                     <div class="dropdown-city">
                         <p>Москва</p>
                         <p>Санкт-Петербург</p>
@@ -309,6 +309,8 @@
 
 </header>
 
+
+<!-- Поиск трубы -->
 <script>
     const searchMetall = document.querySelector('.search-metall');
     const dropdownSearch = document.querySelector('.dropdown-search');
@@ -319,4 +321,21 @@
 
     })
 
+</script>
+
+<!-- Выбор города -->
+<script>
+    const dropdownCity = document.querySelector('.dropdown-city');
+    const cities = dropdownCity.querySelectorAll('p');
+    const chosenCity = document.querySelector('.chosen-city span');
+
+    cities.forEach(city => {
+        city.addEventListener('click', () => {
+            chosenCity.textContent = city.textContent
+            cities.forEach(city => {
+                city.classList.remove('active')
+            })
+            city.classList.add('active')
+        })
+    })
 </script>

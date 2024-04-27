@@ -40,13 +40,16 @@
           }
 
           .service {
+            display: block;
             width: 320px;
             height: 390px;
             background: white;
             position: relative;
             padding-top: 40px;
             padding-left: 40px;
-
+            &.hidden {
+              display: none;
+            }
             @media only screen and (max-width: 1550px) {
               width: 200px;
             }
@@ -68,6 +71,7 @@
           display: flex;
           width: 100%;
           align-items: center;
+          cursor: pointer;
           .line {
             width: 40%;
             height: 1px;
