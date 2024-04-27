@@ -67,9 +67,16 @@
 
       .button-and-privacy {
         margin-top: 36px;
-        p {
-          color: white;
+        color: white;
+        font-family: "PT Root UI";
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 16.8px;
+        text-align: left;
+        .nbtn {
+          margin-bottom: 22px;
         }
+        p,
         a {
           color: white;
           font-family: "PT Root UI";
@@ -81,5 +88,4 @@
       }
     }
   }
-
 }

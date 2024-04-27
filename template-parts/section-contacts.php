@@ -31,10 +31,7 @@ if ($args['mobile-button-text'])
 ?>
 
 <section class="section-contacts" style="grid-area: contacts;">
-<div class="ncol-2"></div>
-<div class="ncol-10">
-    
-</div>
+    <!-- <div class="ncol-2"></div> -->
     <h2 class="section-title"><?php echo $formTitle; ?></h2>
     <div class="contacts-list">
         <div class="item fadeIn" data-wow-delay=".3s" style="grid-area: position;">
@@ -52,7 +49,7 @@ if ($args['mobile-button-text'])
         </div>
         <div class="item fadeIn" data-wow-delay=".6s" style="grid-area: address;">
             <p class="gray">
-                г. Новосибирск, 
+                г. Новосибирск,
                 <!-- <br> -->
                 ул. Союза Молодежи
                 <!-- <br> -->
@@ -97,5 +94,6 @@ if ($args['mobile-button-text'])
             </div>
         </div>
     </form>
+
 
 </section>

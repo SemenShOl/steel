@@ -18,14 +18,14 @@
     }
     .contacts {
       display: flex;
-      @media (max-width:1450px) {
-        .ncol-2 {
-          display: none;
-        }
-        .ncol-10 {
-          width: 100%;
-        }
-      }
+      // @media (max-width:1450px) {
+      //   .ncol-2 {
+      //     display: none;
+      //   }
+      //   .ncol-10 {
+      //     width: 100%;
+      //   }
+      // }
     }
     .map {
       margin-left: -50px;

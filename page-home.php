@@ -216,7 +216,6 @@ get_header(); ?>
 	);
 	?>
 
-
 	<section class="need-help">
 		<div class="nwrapper">
 			<div class="ncol-2">
@@ -251,7 +250,7 @@ get_header(); ?>
 						</div>
 
 						<div class="button-and-privacy">
-							<button class="btn-icon submit" style="grid-area: submit;">
+							<button class=".nbtn" style="grid-area: submit;">
 								<span>Отправить заявку</span>
 							</button>
 							<div class="privacy" style="grid-area: privacy;">

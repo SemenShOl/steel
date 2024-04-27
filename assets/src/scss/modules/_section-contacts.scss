@@ -4,79 +4,80 @@
   flex-direction: column;
   gap: 70px;
 
-  .contacts-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      "position ."
-      "address phone"
-      "time email";
-    row-gap: 30px;
-    column-gap: 80px;
-
-    @media (max-width: 650px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 1fr);
-      grid-template-areas:
-        "position"
-        "address"
-        "phone"
-        "time"
-        "email";
-    }
-
-    .item {
-      height: auto;
-      &:first-child {
-        font-family: "PT Root UI";
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 33px;
-        text-align: left;
-      }
-      a {
-        font-family: "PT Root UI";
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 36px;
-        text-align: left;
-      }
-    }
-  }
-
-  .common-form {
-    h4 {
-      font-family: "PT Root UI";
-      font-size: 30px;
-      font-weight: 500;
-      line-height: 36px;
-      text-align: left;
-      margin-bottom: 40px;
-    }
-    .form-group-set {
+    .contacts-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-template-areas:
-        "name phone"
-        "comment comment"
-        "submit privacy";
-      column-gap: 40px;
-      row-gap: 20px;
+        "position ."
+        "address phone"
+        "time email";
+      row-gap: 30px;
+      column-gap: 80px;
+
       @media (max-width: 650px) {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
         grid-template-areas:
-          "name"
+          "position"
+          "address"
           "phone"
-          "comment"
-          "submit"
-          "privacy";
+          "time"
+          "email";
       }
-      .submit {
-        height: 50px;
+
+      .item {
+        height: auto;
+        &:first-child {
+          font-family: "PT Root UI";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 33px;
+          text-align: left;
+        }
+        a {
+          font-family: "PT Root UI";
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+          text-align: left;
+        }
+      }
+    }
+
+    .common-form {
+      h4 {
+        font-family: "PT Root UI";
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: left;
+        margin-bottom: 40px;
+      }
+      .form-group-set {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+          "name phone"
+          "comment comment"
+          "submit privacy";
+        column-gap: 40px;
+        row-gap: 20px;
+        @media (max-width: 650px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(5, 1fr);
+          grid-template-areas:
+            "name"
+            "phone"
+            "comment"
+            "submit"
+            "privacy";
+        }
+        .submit {
+          height: 50px;
+        }
       }
     }
   }
-}
+

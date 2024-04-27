@@ -686,7 +686,7 @@
           grid-template-areas:
             "search search search"
             "city number submit";
-          row-gap: 2px;
+          row-gap: 20px;
           column-gap: 50px;
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: repeat(2, auto);
