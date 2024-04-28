@@ -42,7 +42,10 @@
 
 					</div>
 					<a class="contacts__email" href=" mailto:met@gkmtk.pro">met<span>@</span>gkmtk.pro</a>
-					<button class="nbtn ask-price" data-bs-toggle="modal" data-bs-target="#modalCallback">
+					<!-- <button class="nbtn ask-price" data-bs-toggle="modal" data-bs-target="#modalCallback">
+						<span>Заказать звонок</span>
+					</button> -->
+					<button class="nbtn ask-price">
 						<span>Заказать звонок</span>
 					</button>
 				</div>
