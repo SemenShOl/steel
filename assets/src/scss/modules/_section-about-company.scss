@@ -19,6 +19,7 @@
     }
     .about-part {
       display: flex;
+      //what
       &.info {
         .ncol-2 {
           .section-number {
@@ -87,6 +88,13 @@
             grid-template-columns: repeat(4, 1fr);
             column-gap: 20px;
             row-gap: 31px;
+
+            @media (max-width: 500px) {
+              grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: 450px) {
+              grid-template-columns: repeat(2, 1fr);
+            }
           }
         }
       }

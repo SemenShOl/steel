@@ -14,7 +14,8 @@ get_header(); ?>
 						металлопроката <br>
 						по России и СНГ</h1>
 					<div class="bg-p">
-						<p>Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере продаж
+						<p class="t-s">Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере
+							продаж
 							металлопроката. Мы работаем напрямую с обширной сетью поставщиков, поэтому на наших складах
 							всегда в наличии широкий ассортимент, налажены партнерские отношения с большинством ведущих
 							отечественных производителей труб, листа, швеллера и других видов металлопродукции.</p>
@@ -23,7 +24,7 @@ get_header(); ?>
 				<div class="intro-form">
 					<div class="info">
 						<h3>Оставьте заявку на расчёт стоимости</h3>
-						<p>
+						<p class="t-s">
 							Сделаем расчет стоимости в течении 15 минут
 						</p>
 					</div>
@@ -47,7 +48,7 @@ get_header(); ?>
 						</div>
 
 						<!-- <div class="btn"> -->
-						<button class="btn-icon submit ask-price" style="grid-area: submit;">
+						<button class="ask-price nbtn" style="grid-area: submit;">
 							<span>Запросить стоимость</span>
 						</button>
 						<!-- </div> -->
@@ -108,7 +109,7 @@ get_header(); ?>
 		</div>
 	</section>
 
-
+	<!-- Модально окно -->
 	<script>
 		const btnAskPrice = document.querySelector('.ask-price');
 
@@ -159,20 +160,8 @@ get_header(); ?>
 		})
 	</script>
 
-	<script>
-		const moreInfo = document.querySelector('.header-more-info');
-		const lPage = document.querySelector('.l-page');
-		const mobilePart = document.querySelector('.mobile-part');
-		const nheader = document.querySelector('.nheader');
 
 
-		moreInfo.addEventListener('click', () => {
-			lPage.classList.toggle('hidden');
-			mobilePart.classList.toggle('active');
-		})
-
-
-	</script>
 
 	<?php
 	// Section - Technologies construction
@@ -226,7 +215,8 @@ get_header(); ?>
 			<div class="ncol-10">
 				<div class="help-header">
 					<h2 class="wow fadeInUp section-title" data-wow-delay=".2s">Нужна помощь?</h2>
-					<p>Наши специалисты готовы обсудить любой вопрос! А также проконсультировать Вас по ассортименту
+					<p class="t-s">Наши специалисты готовы обсудить любой вопрос! А также проконсультировать Вас по
+						ассортименту
 						нашей продукции</p>
 				</div>
 				<form class="common-form wow fadeIn" data-wow-delay=".6s" data-toggle="validator" role="form"
@@ -250,7 +240,7 @@ get_header(); ?>
 						</div>
 
 						<div class="button-and-privacy">
-							<button class=".nbtn" style="grid-area: submit;">
+							<button class="nbtn" style="grid-area: submit;">
 								<span>Отправить заявку</span>
 							</button>
 							<div class="privacy" style="grid-area: privacy;">
@@ -293,7 +283,7 @@ get_header(); ?>
 
 					<div class="content">
 						<div class="item">
-							<p>
+							<p class="t-s">
 								Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере
 								продаж металлопроката. Мы работаем напрямую с обширной сетью поставщиков,
 								поэтому на наших складах всегда в наличии широкий ассортимент, налажены
@@ -310,7 +300,7 @@ get_header(); ?>
 			<div class="about-part more-info" style="grid-area: more-info">
 				<div class="ncol-2"></div>
 				<div class="ncol-10">
-					<div class="content">
+					<div class="content t-s">
 						<p>Мы работаем напрямую с обширной сетью поставщиков по всей России, на наших складах
 							всегда в наличии широкий ассортимент металлопроката (более 8000 наименований) Вся
 							продукция изготовлена по ГОСТам и ТУ и имеет все необходимые сертификаты качества,
@@ -487,3 +477,21 @@ get_header(); ?>
 </section>
 
 <?php get_footer(); ?>
+
+<!-- Мобильное меню header -->
+<script>
+	const moreInfo = document.querySelector('.header-more-info');
+	const lPage = document.querySelector('.l-page');
+	const footer = document.querySelector('.nfooter');
+	const mobilePart = document.querySelector('.mobile-part');
+	const nheader = document.querySelector('.nheader');
+
+
+	moreInfo.addEventListener('click', () => {
+		lPage.classList.toggle('hidden');
+		footer.classList.toggle('hidden');
+		mobilePart.classList.toggle('active');
+	})
+
+
+</script>

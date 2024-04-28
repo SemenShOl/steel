@@ -18,14 +18,14 @@
       width: 100%;
       height: 50px;
       background-color: transparent;
-      font-size: 16px;
+      font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1.2;
       border-radius: 0;
       transition: 0.2s ease;
     }
 
     label {
-      font-size: 18px;
+      font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
       line-height: 1.1;
       transition: 0.2s ease;
       white-space: nowrap;
@@ -39,7 +39,7 @@
 }
 
 .form-group-set {
-  padding: 0px 20px 0px 0px;
+  // padding: 0px 20px 0px 0px;
 
   &:focus {
     box-shadow: none;
@@ -48,8 +48,7 @@
 
 .form-group {
   font-family: "PT Root UI";
-  font-family: PT Root UI;
-  font-size: 18px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 500;
   line-height: 21.6px;
   text-align: left;
@@ -58,14 +57,15 @@
     width: 100%;
     height: 50px;
     background-color: transparent;
-    font-size: 16px;
+    font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
+
     line-height: 1.2;
     border-radius: 0;
     transition: 0.2s ease;
   }
 
   label {
-    font-size: 18px;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
     line-height: 1.1;
     transition: 0.2s ease;
     white-space: nowrap;
@@ -75,11 +75,17 @@
 
 .nbtn {
   width: 100%;
-  padding: 10px 20px 10px 20px;
+  padding: 0 20px;
+  height: 50px;
   background: #ff3000;
   color: white;
   border: none;
   outline: none;
+  font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+
+  span {
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+  }
 }
 
 .p-arrow {
@@ -88,7 +94,7 @@
   align-items: center;
   p {
     font-family: "PT Root UI";
-    font-size: 22px;
+    font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 500;
     line-height: 26.4px;
     text-align: left;
@@ -103,7 +109,7 @@
 .text-red {
   color: $button-background;
   font-family: "PT Root UI";
-  font-size: 18px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 500;
   line-height: 21.6px;
   text-align: left;
@@ -132,7 +138,8 @@
     color: $dark-text;
     border: 1px solid $dark-text;
     font-family: "PT Root UI";
-    font-size: 18px;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+
     font-weight: 400;
     line-height: 25.2px;
     text-align: center;
@@ -140,15 +147,11 @@
 }
 .section-title {
   font-family: "PT Root UI";
-  font-size: 50px;
+  font-size: calc(28px + (50 - 28) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 700;
   line-height: 60px;
   text-align: left;
   color: $t-color;
-
-  @media (max-width: 1100px) {
-    font-size: 40px;
-  }
 }
 .attetion-p {
   color: $button-background;
@@ -156,7 +159,8 @@
 
 .gray-text {
   font-family: "PT Root UI";
-  font-size: 18px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+
   font-weight: 400;
   line-height: 25.2px;
   text-align: left;
@@ -279,7 +283,7 @@
   p {
     color: white;
     font-family: "PT Root UI";
-    font-size: 13px;
+    font-size: calc(10px + (13 - 10) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 400;
     line-height: 15.6px;
     text-align: left;
@@ -298,15 +302,16 @@
 
   &__title {
     flex: 1 0 auto;
-    font-size: 22px;
+    font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
+
     font-weight: 700;
     line-height: 26.4px;
     margin-bottom: 30px;
   }
   &__info {
     flex: 1 0 auto;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
 
-    font-size: 18px;
     font-weight: 500;
     line-height: 23.4px;
     margin-bottom: 30px;
@@ -318,7 +323,7 @@
     border: 1px solid #1e110e;
     color: $button-background;
     width: 240px;
-    font-size: 16px;
+    font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
     font-weight: 700;
     line-height: 20.16px;
     text-align: center;
@@ -339,4 +344,25 @@
       color: $button-background;
     }
   }
+}
+
+.privacy {
+  font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320))) !important;
+
+}
+
+//txt sizes
+.t-xs {
+  font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320))) !important;
+}
+.t-s {
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320))) !important;
+}
+
+.t-m {
+  font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320))) !important;
+}
+
+.t-l {
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320))) !important;
 }

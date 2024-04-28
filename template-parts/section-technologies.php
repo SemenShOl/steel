@@ -15,7 +15,7 @@
                 <p>Трубозапорная арматура</p>
             </div>
             <div class="ncol-10">
-                <div class="production-line">
+                <div class="production-line t-m">
                     <div class="product">
                         <a href="">
                             <img class=""
@@ -81,7 +81,7 @@
 
                 <div class="show-line">
                     <div class="line"></div>
-                    <p>Свернуть </p>
+                    <p class="t-m">Свернуть </p>
                     <img class="rotate"
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                     <div class="line"></div>
@@ -94,7 +94,7 @@
                 <p>Трубозапорная арматура</p>
             </div>
             <div class="ncol-10">
-                <div class="production-line">
+                <div class="production-line t-m">
                     <div class="product">
                         <a href="">
                             <img class=""
@@ -141,7 +141,7 @@
 
                 <div class="show-line">
                     <div class="line"></div>
-                    <p>Свернуть </p>
+                    <p class="t-m">Свернуть </p>
                     <img class="rotate"
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
                     <div class="line"></div>

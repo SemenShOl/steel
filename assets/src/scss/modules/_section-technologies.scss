@@ -35,6 +35,9 @@
             }
 
             p {
+              font-size: calc(
+                15px + (22 - 15) * ((100vw - 320px) / (1920 - 320))
+              ) !important;
               text-align: end;
             }
           }
