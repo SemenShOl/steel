@@ -40,7 +40,7 @@
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
                     <p>+7 (962) 828-87-77</p>
                 </div>
-                <button class="nbtn">Заказать звонок</button>
+                <button class="nbtn ask-price">Заказать звонок</button>
 
             </div>
 

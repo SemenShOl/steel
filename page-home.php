@@ -81,7 +81,7 @@ get_header(); ?>
 						<label>Номер телефона</label>
 						<input type="text" class="form-control" name="phone" minlength="2" required placeholder="+7">
 					</div>
-					<button class="btn-icon submit send-btn">
+					<button class="nbtn submit send-btn">
 						<span>Перезвони мне</span>
 					</button>
 					<div class="privacy">
@@ -109,56 +109,7 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<!-- Модально окно -->
-	<script>
-		const btnAskPrice = document.querySelector('.ask-price');
 
-		const sendedModal = document.querySelector('.sended-modal');
-		const sendedModalBg = document.querySelector('.sended-modal__bg');
-		const sendedModalClose = document.querySelector('.sended-close-btn');
-		const sendedModalContent = document.querySelector('.sended-modal__content');
-
-
-		const mainModal = document.querySelector('.main-modal');
-		const mainModalBg = document.querySelector('.main-modal__bg');
-		const mainModalClose = document.querySelector('.main-close-btn');
-		const mainModalContent = document.querySelector('.main-modal__content');
-		const btnModalSend = document.querySelector('.send-btn'); // btnModalSend
-
-		const onCloseModalMain = () => {
-			mainModal.classList.remove('open');
-			mainModalBg.removeEventListener('click', onCloseModalMain)
-			mainModalClose.removeEventListener('click', onCloseModalMain)
-		}
-
-		const onCloseModalSended = () => {
-			sendedModal.classList.remove('open');
-			sendedModalBg.removeEventListener('click', onCloseModalSended)
-			sendedModalClose.removeEventListener('click', onCloseModalSended)
-		}
-
-		const onOpenModalSended = () => {
-			// console.log(sendedModal)
-			onCloseModalMain();
-			sendedModal.classList.add('open');
-			sendedModalBg.addEventListener('click', onCloseModalSended);
-			sendedModalClose.addEventListener('click', onCloseModalSended);
-
-		}
-
-		const onOpenModalMain = () => {
-			mainModal.classList.add('open');
-			mainModalBg.addEventListener('click', onCloseModalMain)
-			mainModalClose.addEventListener('click', onCloseModalMain)
-			mainModalContent.addEventListener('click', e => e.stopPropagation())
-			btnModalSend.addEventListener('click', onOpenModalSended)
-		}
-
-
-		btnAskPrice.addEventListener('click', () => {
-			onOpenModalMain();
-		})
-	</script>
 
 
 
@@ -240,7 +191,7 @@ get_header(); ?>
 						</div>
 
 						<div class="button-and-privacy">
-							<button class="nbtn" style="grid-area: submit;">
+							<button class="nbtn ask-price" style="grid-area: submit;">
 								<span>Отправить заявку</span>
 							</button>
 							<div class="privacy" style="grid-area: privacy;">
@@ -493,5 +444,58 @@ get_header(); ?>
 		mobilePart.classList.toggle('active');
 	})
 
+
+</script>
+
+<!-- Модально окно -->
+<script>
+	const btnsAskPrice = document.querySelectorAll('.ask-price');
+
+	const sendedModal = document.querySelector('.sended-modal');
+	const sendedModalBg = document.querySelector('.sended-modal__bg');
+	const sendedModalClose = document.querySelector('.sended-close-btn');
+	const sendedModalContent = document.querySelector('.sended-modal__content');
+
+
+	const mainModal = document.querySelector('.main-modal');
+	const mainModalBg = document.querySelector('.main-modal__bg');
+	const mainModalClose = document.querySelector('.main-close-btn');
+	const mainModalContent = document.querySelector('.main-modal__content');
+	const btnModalSend = document.querySelector('.send-btn'); // btnModalSend
+
+	const onCloseModalMain = () => {
+		mainModal.classList.remove('open');
+		mainModalBg.removeEventListener('click', onCloseModalMain)
+		mainModalClose.removeEventListener('click', onCloseModalMain)
+	}
+
+	const onCloseModalSended = () => {
+		sendedModal.classList.remove('open');
+		sendedModalBg.removeEventListener('click', onCloseModalSended)
+		sendedModalClose.removeEventListener('click', onCloseModalSended)
+	}
+
+	const onOpenModalSended = () => {
+		// console.log(sendedModal)
+		onCloseModalMain();
+		sendedModal.classList.add('open');
+		sendedModalBg.addEventListener('click', onCloseModalSended);
+		sendedModalClose.addEventListener('click', onCloseModalSended);
+
+	}
+
+	const onOpenModalMain = () => {
+		mainModal.classList.add('open');
+		mainModalBg.addEventListener('click', onCloseModalMain)
+		mainModalClose.addEventListener('click', onCloseModalMain)
+		mainModalContent.addEventListener('click', e => e.stopPropagation())
+		btnModalSend.addEventListener('click', onOpenModalSended)
+	}
+
+	btnsAskPrice.forEach(btn => {
+		btn.addEventListener('click', () => {
+			onOpenModalMain();
+		})
+	})
 
 </script>

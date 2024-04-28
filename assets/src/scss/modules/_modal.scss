@@ -30,9 +30,14 @@
     position: relative;
     z-index: 60;
     background: white;
-    height: 500px;
+    height: auto;
     width: 526px;
     padding: 50px;
+
+    @media (max-width: 550px) {
+      width: 310px;
+      padding: 25px;
+    }
 
     .main-close-btn {
       position: absolute;
@@ -46,7 +51,8 @@
       }
     }
     .modal-title {
-      font-size: 28px;
+      font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+
       font-weight: 700;
       line-height: 33.6px;
       margin-bottom: 20px;
@@ -57,7 +63,18 @@
       flex-direction: column;
       gap: 20px;
       padding: 0;
-
+      @media (max-width: 550px) {
+        width: 310px;
+        .form-group {
+          width: 260px;
+        }
+        button {
+          width: 260px;
+        }
+        .privacy {
+          width: 260px;
+        }
+      }
       .form-group {
         width: 426px;
       }
@@ -66,10 +83,10 @@
       }
 
       .privacy {
-        // margin-top: -10px;
         margin-top: 10px;
-        width: 242px;
-        font-size: 12px;
+        width: 426px;
+        font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+
         font-weight: 300;
         line-height: 16.8px;
         color: #766e6c;
@@ -138,7 +155,8 @@
       }
     }
     .modal-title {
-      font-size: 28px;
+      font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+
       font-weight: 700;
       line-height: 33.6px;
       margin-bottom: 30px;
@@ -146,7 +164,8 @@
 
     p {
       font-family: "PT Root UI";
-      font-size: 16px;
+      font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
+
       font-weight: 400;
       line-height: 19.2px;
       text-align: center;

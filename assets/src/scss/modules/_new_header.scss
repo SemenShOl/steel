@@ -518,8 +518,7 @@
       cursor: pointer;
       color: white;
       font-family: "PT Root UI";
-      font-size: 13px;
-      font-weight: 700;
+      font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
       line-height: 16.38px;
       text-align: left;
       padding-bottom: 12px;

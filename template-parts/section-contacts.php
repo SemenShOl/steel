@@ -84,7 +84,7 @@ if ($args['mobile-button-text'])
                 <label>Комментарий</label>
                 <input type="text" class="form-control" name="comment" placeholder="Введите ваш вопрос" required>
             </div>
-            <button class="nbtn submit" style="grid-area: submit;">
+            <button class="nbtn submit ask-price" style="grid-area: submit;">
                 <span>Перезвоните мне</span>
                 <!-- <i class="icon icon-arrow-right"></i> -->
             </button>
