@@ -33,18 +33,18 @@ get_header(); ?>
 						<div class="form-group" style="grid-area: search;">
 							<label>Что ищем?</label>
 							<input type="text" class="form-control" name="search" minlength="2" required
-								placeholder="Введите ваше имя">
+								placeholder="Например, труба ВГП 15x2,5">
 						</div>
 						<div class="form-group" style="grid-area: city;">
 							<label>Город доставки</label>
 							<input type="text" class="form-control" name="city" minlength="2" required
-								placeholder="Введите ваше имя">
+								placeholder="Например, Новосибирск">
 						</div>
 
 						<div class="form-group" style="grid-area: number;">
 							<label>Количество тон</label>
 							<input type="text" class="form-control" name="number" minlength="2" required
-								placeholder="Введите ваше имя">
+								placeholder="Например, 17">
 						</div>
 
 						<!-- <div class="btn"> -->

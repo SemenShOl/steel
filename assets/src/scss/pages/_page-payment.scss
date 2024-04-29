@@ -1,5 +1,4 @@
 .page-payment {
-  // margin-top: 300px;
   padding-bottom: 100px;
   .nwrapper {
     padding: 0 50px;
@@ -60,6 +59,10 @@
             line-height: 26.4px;
             text-align: left;
             margin-bottom: 20px;
+            // &:hover {
+            //   color: $button-background;
+            // }
+            
           }
           p {
             font-family: "PT Root UI";

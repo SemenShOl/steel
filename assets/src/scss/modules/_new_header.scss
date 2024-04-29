@@ -42,6 +42,7 @@
           .chosen-city {
             width: 180px;
           }
+
           p {
             font-family: "PT Root UI";
             font-size: 13px;
@@ -61,8 +62,6 @@
           }
           &:hover {
             .dropdown-city {
-              // visibility: visible;
-              // pointer-events: all;
               display: flex;
               position: fixed;
               top: 35px;
@@ -72,19 +71,6 @@
               padding: 16px 50px 0px 50px;
               background: #0a3878;
               flex-direction: column;
-              // @media (max-width: 1670px) {
-              //   width: 170px;
-              //   padding: 16px 25px 0 25px;
-              // }
-              // @media (max-width: 1450px) {
-              //   width: 267px;
-              //   padding: 16px 50px 0px 50px;
-              // }
-
-              // @media (max-width: 1308px) {
-              //   width: 170px;
-              //   padding: 16px 25px 0 25px;
-              // }
 
               p {
                 cursor: pointer;
@@ -97,7 +83,9 @@
                 padding-bottom: 12px;
                 border-bottom: 1px solid white;
                 margin-bottom: 16px;
-
+                &:hover {
+                  color: $button-background;
+                }
                 &.active {
                   color: $button-background;
                 }
@@ -116,7 +104,8 @@
         align-items: center;
         width: 30%;
         justify-content: space-between;
-
+        .info-part {
+        }
         button {
           padding: 0;
           width: 138px;
@@ -447,6 +436,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  &:hover {
+    p {
+      color: $button-background;
+    }
+  }
   p {
     font-family: "PT Root UI";
     font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
@@ -474,15 +468,34 @@
   align-items: center;
   gap: 10px;
   margin-right: 10px;
+  cursor: pointer;
+  &:hover {
+    p {
+      color: $button-background;
+    }
+    a {
+      color: $button-background;
+    }
+  }
   p {
     font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+  }
+  a {
+    font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+    font-family: "PT Root UI";
+    font-weight: 500;
+    line-height: 15.6px;
+    text-align: left;
+    color: white;
   }
   @media (max-width: 1100px) {
     align-items: start;
     p {
       font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
     }
-
+    a {
+      font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
     img {
       width: 30px;
       height: 30px;
@@ -492,12 +505,17 @@
 
 .work-type {
   color: white;
+  cursor: pointer;
   display: flex;
   gap: 10px;
   height: 100%;
   align-items: center;
   position: relative;
   font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+
+  &:hover {
+    color: $button-background;
+  }
 
   &:hover {
     .dropdown-work-type {
@@ -514,6 +532,7 @@
     flex-direction: column;
     z-index: 50;
     background: #0a3878;
+
     p {
       cursor: pointer;
       color: white;
@@ -524,6 +543,9 @@
       padding-bottom: 12px;
       border-bottom: 1px solid white;
       margin-bottom: 16px;
+      &:hover {
+        color: $button-background;
+      }
     }
   }
 

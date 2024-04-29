@@ -19,7 +19,7 @@
                     <div class="product">
                         <a href="">
                             <img class=""
-                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/1_1.png">
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/Pipe_parts/1.png">
                             <p>Вентили (клапаны)</p>
                         </a>
                     </div>
@@ -89,6 +89,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="product-type">
             <div class="ncol-2">
                 <p>Трубозапорная арматура</p>

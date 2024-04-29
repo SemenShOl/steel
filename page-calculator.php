@@ -62,7 +62,7 @@ get_header();
                 </div>
                 <h1 class="section-title">Калькулятор металлопроката</h1>
 
-                <div class="metall-types">
+                <!-- <div class="metall-types">
                     <div class="metall-types__item active">Нержавеющая сталь</div>
                     <div class="metall-types__item">Алюминий</div>
                     <div class="metall-types__item">Медь</div>
@@ -119,7 +119,17 @@ get_header();
                         полезным для вас. Если у вас возникнут вопросы или потребуется дополнительная информация, не
                         стесняйтесь обращаться!
                     </p>
-                </div>
+                </div> -->
+
+                <div name="metal-calculator-widget" data-mediumwidget data-siteid="DRP16HE6R1QARWYVMHGJ"></div>
+                <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//metal-calculator.ru/assets/widget.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, "script", "metal-calculator-widget-script"));</script>
+
             </div>
 
         </div>

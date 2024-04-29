@@ -60,7 +60,9 @@ $opengraph_image_height = fw_get_db_settings_option('ul_general_opengraph_image_
 	<?php if ($favicon != '') : ?>
 		<link rel="icon" type="image/png" href="<?php esc_attr_e($favicon['url']); ?>" />
 	<?php else : ?>
-		<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.png" />
+		<!-- <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon.png" /> -->
+		<link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/favicon_new.svg" />
+
 	<?php endif; ?>
 
 	<!-- Open Graph -->

@@ -101,13 +101,19 @@
             column-gap: 50px;
             justify-content: start;
           }
+
+          li {
+            a {
+              &:hover {
+                color: $button-background;
+              }
+            }
+          }
         }
 
         &__contacts {
-          width: 270px;
           .contacts {
-            font-family: "PT Root UI";
-            text-align: left;
+            text-align: right;
             &__phone {
               font-family: "PT Root UI";
               font-size: calc(
@@ -116,6 +122,16 @@
               font-weight: 700;
               line-height: 36px;
               margin-bottom: 48px;
+              text-wrap: nowrap;
+              text-align: right;
+              a {
+                color: $dark-text;
+              }
+              &:hover {
+                a {
+                  color: $button-background;
+                }
+              }
             }
 
             &__email {
@@ -126,11 +142,15 @@
               ) !important;
               font-weight: 700;
               line-height: 33px;
+              text-align: right;
               margin-bottom: 24px;
+              &:hover {
+                color: $button-background;
+              }
             }
 
             .nbtn {
-              width: 211px;
+              // width: 211px;
               height: 50px;
               font-size: 16px;
               span {

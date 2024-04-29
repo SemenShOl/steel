@@ -33,14 +33,20 @@
                 <div class="info-part">
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/mail.svg">
 
-                    <p>steel-n2@bk.ru</p>
+
+                    <a href="mailto:steel-n2@bk.ru">steel-n2@bk.ru</a>
+
                 </div>
                 <div class="info-part">
                     <img
                         src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
-                    <p>+7 (962) 828-87-77</p>
+
+                    <a href="tel:79628288777">
+                        +7 (962) 828-87-77
+                    </a>
+
                 </div>
-                <button class="nbtn ask-price">Заказать звонок</button>
+                <button class="nbtn blue-bg ask-price">Заказать звонок</button>
 
             </div>
 
@@ -48,7 +54,7 @@
         <div class="white-part ">
             <div class="logo">
                 <a href="<?php echo home_url('/'); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Dark_logo.svg">
                 </a>
             </div>
 
