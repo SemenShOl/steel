@@ -49,12 +49,15 @@
       }
       h3 {
         font-family: "PT Root UI";
-        font-size: 22px;
+        font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 700;
         line-height: 27.72px;
         text-align: left;
         margin-bottom: 60px;
         margin-top: 90px;
+        &:hover {
+          color: $button-background;
+        }
       }
       .bread-crumbs {
         display: none;

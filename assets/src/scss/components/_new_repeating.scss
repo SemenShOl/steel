@@ -81,6 +81,7 @@
   color: white;
   border: calc(1px + (2 - 1) * ((100vw - 320px) / (1920 - 320))) solid #ff3000;
   outline: none;
+  font-family: "PT Root UI";
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   transition: all 0.2s ease-in;
   &:hover {
@@ -91,6 +92,7 @@
     }
   }
   span {
+    font-family: "PT Root UI";
     font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   }
 
@@ -98,12 +100,17 @@
     &:hover {
       background: transparent;
       color: white;
-      border: calc(1px + (2 - 1) * ((100vw - 320px) / (1920 - 320))) solid white;
+      border: calc(0.5px + (1.2 - 0.5) * ((100vw - 320px) / (1920 - 320))) solid
+        white;
 
       span {
         color: white;
       }
     }
+  }
+
+  &.sm {
+    font-size: 90%;
   }
 }
 
@@ -146,6 +153,12 @@
     justify-content: center;
     border: 1px solid $dark-text;
     font-weight: 700;
+    cursor: pointer;
+    &:hover {
+      background: $button-background;
+      color: white;
+      border: $button-background;
+    }
   }
 
   .number {
@@ -204,17 +217,26 @@
       margin-right: 9px;
 
       &:first-child {
-        img {
-          transform: rotate(90deg);
-        }
+        cursor: pointer;
         border: 2px solid $dark-text;
+        transform: rotate(180deg);
+        color: $button-background;
+        &:hover {
+          background: $button-background;
+          color: white;
+          border: $button-background;
+        }
       }
 
       &:last-child {
-        img {
-          transform: rotate(-90deg);
-        }
+        cursor: pointer;
         border: 2px solid $dark-text;
+        color: $button-background;
+        &:hover {
+          background: $button-background;
+          color: white;
+          border: $button-background;
+        }
       }
 
       &.active {
@@ -271,12 +293,16 @@
       display: flex;
       justify-content: space-between;
       h4 {
+        cursor: pointer;
         font-family: "PT Root UI";
-        font-size: 16px;
+        font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 700;
         line-height: 20.16px;
         text-align: left;
         color: $dark-text;
+        &:hover {
+          color: $button-background;
+        }
       }
       img {
         transform: rotate(-90deg);
@@ -299,6 +325,12 @@
   display: flex;
   padding: 15px 0;
   align-items: center;
+  cursor: pointer;
+  &:hover {
+    p {
+      color: $button-background;
+    }
+  }
   p {
     color: white;
     font-family: "PT Root UI";

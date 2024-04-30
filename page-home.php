@@ -82,7 +82,7 @@ get_header(); ?>
 						<input type="text" class="form-control" name="phone" minlength="2" required placeholder="+7">
 					</div>
 					<button class="nbtn submit send-btn">
-						<span>Перезвони мне</span>
+						<span>Перезвоните мне</span>
 					</button>
 					<div class="privacy">
 						<p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a href="<?php echo home_url('/privacy') ?>"
@@ -108,10 +108,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-
-
-
-
 
 
 	<?php

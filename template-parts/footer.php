@@ -19,10 +19,12 @@
 			</div>
 			<div class="top-part">
 				<ul class="top-part__nav-list">
-					<li><a href="<?php echo home_url('/katalog'); ?>">Каталог</a>
+					<li><a href="<?php echo home_url('/katalog'); ?>">Продукция</a>
 					</li>
 					<li><a href="<?php echo home_url('/payment'); ?>">Оплата</a></li>
+					<li><a href="<?php echo home_url('/perforation-metall'); ?>">Услуги</a>
 					<li><a href="<?php echo home_url('/calculator'); ?>">Калькулятор</a>
+					<li><a href="<?php echo home_url('/about'); ?>">О компании</a>
 					<li><a href="<?php echo home_url('/delivery'); ?>">Доставка</a></li>
 					<li><a href="<?php echo home_url('/contcats'); ?>">Контакты</a></li>
 					<li><a href="<?php echo home_url('/price-list'); ?>">Прайс-лист</a>

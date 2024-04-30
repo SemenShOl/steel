@@ -36,7 +36,9 @@ $queryServices = new WP_Query(
                     <div class="short-info">
                         <div class="short-info__column">
                             <p>Розничная цена</p>
-                            от <b>146</b> руб.кг
+                            <span>
+                                от <b>146</b> руб.кг
+                            </span>
                         </div>
 
                         <div class="short-info__column">
@@ -49,7 +51,7 @@ $queryServices = new WP_Query(
                         </div>
                     </div>
 
-                    <button class="nbtn">Быстрый заказ</button>
+                    <button class="nbtn ask-price">Быстрый заказ</button>
 
                     <div class="description-block">
                         <div class="description-block__header">
@@ -57,7 +59,7 @@ $queryServices = new WP_Query(
                             <button>Характеристики</button>
 
                         </div>
-                        <p class="description-block__info">
+                        <p class="description-block__info t-s">
                             Для управления потоком, движущимся в трубопроводах различного назначения, применяется
                             специальная
                             арматура.
@@ -308,8 +310,12 @@ $queryServices = new WP_Query(
         <div class="pages-navigation">
             <div class="pages-navigation__numbers">
                 <div class="pages-navigation__numbers-block">
-                    <img
-                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+                    <!-- <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg"> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                        <path d="M8 7L1.74073 1L0.999999 1.70459L6.56606 7L1 12.2953L1.74073 13L8 7Z"
+                            fill="currentColor" stroke="currentColor" />
+                    </svg>
                 </div>
                 <div class="pages-navigation__numbers-block active">
                     <p>1</p>
@@ -333,8 +339,10 @@ $queryServices = new WP_Query(
                     <p>42</p>
                 </div>
                 <div class="pages-navigation__numbers-block ">
-                    <img
-                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/production/arrow-down.svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                        <path d="M8 7L1.74073 1L0.999999 1.70459L6.56606 7L1 12.2953L1.74073 13L8 7Z"
+                            fill="currentColor" stroke="currentColor" />
+                    </svg>
                 </div>
             </div>
             <div class="pages-navigation__info">Показаны &nbsp; <span>1–20</span>&nbsp; из &nbsp;740&nbsp;
@@ -343,6 +351,52 @@ $queryServices = new WP_Query(
         </div>
     </div>
 
+</section>
+
+
+<section class="main-modal">
+    <div class="main-modal__bg">
+        <div class="main-modal__content">
+            <button class="main-close-btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/modal-close.svg">
+            </button>
+            <h3 class="modal-title">Оставьте заявку, мы перезвоним Вам в ближайшее время</h3>
+
+            <div class="form-group-set dark">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" class="form-control" name="name" minlength="2" required
+                        placeholder="Например, Иван">
+                </div>
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="text" class="form-control" name="phone" minlength="2" required placeholder="+7">
+                </div>
+                <button class="nbtn submit send-btn">
+                    <span>Перезвоните мне</span>
+                </button>
+                <div class="privacy">
+                    <p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a href="<?php echo home_url('/privacy') ?>"
+                            target="_blank">условиями обработки персональных данных</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="sended-modal">
+    <div class="sended-modal__bg">
+        <div class="sended-modal__content">
+            <button class="sended-close-btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/modal-close.svg">
+            </button>
+            <h3 class="modal-title">Ваша заявка принята!</h3>
+            <p>Менеджер свяжется в ближайшее время</p>
+        </div>
+    </div>
 </section>
 
 
@@ -378,8 +432,31 @@ $queryServices = new WP_Query(
 </section>
 
 
+<?php get_footer(); ?>
+
+<!-- Мобильное меню header -->
 <script>
-    const btnAskPrice = document.querySelector('.ask-price');
+    const moreInfo = document.querySelector('.header-more-info');
+    const lPage = document.querySelector('.l-page');
+    const footer = document.querySelector('.nfooter');
+    const contactsAndMap = document.querySelector('.section-contact-map')
+    const mobilePart = document.querySelector('.mobile-part');
+    const nheader = document.querySelector('.nheader');
+
+
+    moreInfo.addEventListener('click', () => {
+        lPage.classList.toggle('hidden');
+        footer.classList.toggle('hidden');
+        contactsAndMap.classList.toggle('hidden')
+        mobilePart.classList.toggle('active');
+    })
+
+
+</script>
+
+<!-- Модально окно -->
+<script>
+    const btnsAskPrice = document.querySelectorAll('.ask-price');
 
     const sendedModal = document.querySelector('.sended-modal');
     const sendedModalBg = document.querySelector('.sended-modal__bg');
@@ -422,25 +499,10 @@ $queryServices = new WP_Query(
         btnModalSend.addEventListener('click', onOpenModalSended)
     }
 
-
-    btnAskPrice.addEventListener('click', () => {
-        onOpenModalMain();
-    })
-</script>
-
-<script>
-    const moreInfo = document.querySelector('.header-more-info');
-    const lPage = document.querySelector('.l-page');
-    const mobilePart = document.querySelector('.mobile-part');
-    const nheader = document.querySelector('.nheader');
-
-
-    moreInfo.addEventListener('click', () => {
-        lPage.classList.toggle('hidden');
-        mobilePart.classList.toggle('active');
+    btnsAskPrice.forEach(btn => {
+        btn.addEventListener('click', () => {
+            onOpenModalMain();
+        })
     })
 
-
 </script>
-
-<?php get_footer(); ?>

@@ -27,32 +27,32 @@ get_header(); ?>
                 <div class="price-info__rows">
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
 
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
 
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
 
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
 
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
 
                     <div class="price-info__row">
                         <p class="title">Нержавеющий прокат</p>
-                        <button>Скачать прайс-лист</button>
+                        <button class="download-price-list">Скачать прайс-лист</button>
                     </div>
                 </div>
             </div>
@@ -157,6 +157,20 @@ get_header(); ?>
     })
 
 
+</script>
+
+<script>
+    const btnGetPritceLists = document.querySelectorAll('.download-price-list');
+
+    btnGetPritceLists.forEach(btn => {
+        btn.addEventListener('click', () => {
+            var link = document.createElement('a');
+            link.setAttribute('href', '<?php echo esc_url(get_template_directory_uri()); ?>/assets/price-list/empty-file.txt');
+            link.setAttribute('download', 'price-list.txt');
+
+            link.click();
+        })
+    })
 </script>
 
 

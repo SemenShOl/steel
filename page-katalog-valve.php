@@ -219,10 +219,78 @@ get_header(); ?>
 
 </section>
 
+<section class="main-modal">
+    <div class="main-modal__bg">
+        <div class="main-modal__content">
+            <button class="main-close-btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/modal-close.svg">
+            </button>
+            <h3 class="modal-title">Оставьте заявку, мы перезвоним Вам в ближайшее время</h3>
+
+            <div class="form-group-set dark">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" class="form-control" name="name" minlength="2" required
+                        placeholder="Например, Иван">
+                </div>
+                <div class="form-group">
+                    <label>Номер телефона</label>
+                    <input type="text" class="form-control" name="phone" minlength="2" required placeholder="+7">
+                </div>
+                <button class="nbtn submit send-btn">
+                    <span>Перезвоните мне</span>
+                </button>
+                <div class="privacy">
+                    <p>Нажимая на кнопку, я соглашаюсь с&nbsp;<a href="<?php echo home_url('/privacy') ?>"
+                            target="_blank">условиями обработки персональных данных</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="sended-modal">
+    <div class="sended-modal__bg">
+        <div class="sended-modal__content">
+            <button class="sended-close-btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/modal-close.svg">
+            </button>
+            <h3 class="modal-title">Ваша заявка принята!</h3>
+            <p>Менеджер свяжется в ближайшее время</p>
+        </div>
+    </div>
+</section>
+<?php
 
 
+get_footer(); ?>
+
+<!-- Мобильное меню header -->
 <script>
-    const btnAskPrice = document.querySelector('.ask-price');
+    const moreInfo = document.querySelector('.header-more-info');
+    const lPage = document.querySelector('.l-page');
+    const footer = document.querySelector('.nfooter');
+    const contactsAndMap = document.querySelector('.section-contact-map')
+    const mobilePart = document.querySelector('.mobile-part');
+    const nheader = document.querySelector('.nheader');
+
+
+    moreInfo.addEventListener('click', () => {
+        lPage.classList.toggle('hidden');
+        footer.classList.toggle('hidden');
+        contactsAndMap.classList.toggle('hidden')
+        mobilePart.classList.toggle('active');
+    })
+
+
+</script>
+
+<!-- Модально окно -->
+<script>
+    const btnsAskPrice = document.querySelectorAll('.ask-price');
 
     const sendedModal = document.querySelector('.sended-modal');
     const sendedModalBg = document.querySelector('.sended-modal__bg');
@@ -265,28 +333,10 @@ get_header(); ?>
         btnModalSend.addEventListener('click', onOpenModalSended)
     }
 
-
-    btnAskPrice.addEventListener('click', () => {
-        onOpenModalMain();
-    })
-</script>
-
-<script>
-    const moreInfo = document.querySelector('.header-more-info');
-    const lPage = document.querySelector('.l-page');
-    const mobilePart = document.querySelector('.mobile-part');
-    const nheader = document.querySelector('.nheader');
-
-
-    moreInfo.addEventListener('click', () => {
-        lPage.classList.toggle('hidden');
-        mobilePart.classList.toggle('active');
+    btnsAskPrice.forEach(btn => {
+        btn.addEventListener('click', () => {
+            onOpenModalMain();
+        })
     })
 
-
 </script>
-
-<?php
-
-
-get_footer(); ?>

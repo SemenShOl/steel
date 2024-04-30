@@ -42,10 +42,12 @@
           width: 100%;
           border-bottom: 1px solid $dark-text;
           a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             img {
-              width: 100%;
+              width: 70%;
             }
           }
         }
@@ -85,8 +87,13 @@
         }
         &__nav-list {
           width: 100%;
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          @media (max-width: 1250px) {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
           justify-content: space-between;
           font-family: "PT Root UI";
           font-size: calc(
@@ -104,6 +111,7 @@
 
           li {
             a {
+              text-wrap: nowrap;
               &:hover {
                 color: $button-background;
               }
@@ -114,6 +122,7 @@
         &__contacts {
           .contacts {
             text-align: right;
+
             &__phone {
               font-family: "PT Root UI";
               font-size: calc(
@@ -132,6 +141,9 @@
                   color: $button-background;
                 }
               }
+              @media (max-width: 850px) {
+                text-align: center;
+              }
             }
 
             &__email {
@@ -146,6 +158,9 @@
               margin-bottom: 24px;
               &:hover {
                 color: $button-background;
+              }
+              @media (max-width: 850px) {
+                text-align: center;
               }
             }
 

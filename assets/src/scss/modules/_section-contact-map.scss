@@ -6,10 +6,10 @@
     grid-template-areas: "contacts map";
     column-gap: 10%;
     height: auto;
+    &.hidden {
+      display: none;
+    }
     @media (max-width: 1450px) {
-      .ncol-10 {
-        // padding-right: 50px;
-      }
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
       grid-template-areas:

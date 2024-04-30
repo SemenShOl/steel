@@ -46,7 +46,7 @@
                     </a>
 
                 </div>
-                <button class="nbtn blue-bg ask-price">Заказать звонок</button>
+                <button class="nbtn blue-bg sm ask-price">Заказать звонок</button>
 
             </div>
 
@@ -109,7 +109,7 @@
                 </nav>
                 <div class="logo">
                     <a href="<?php echo home_url('/'); ?>">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Blue_logo.png">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/n_Dark_logo.svg">
                     </a>
                 </div>
                 <div class="form-group-header">

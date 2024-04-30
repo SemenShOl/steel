@@ -120,8 +120,7 @@ get_header();
                         стесняйтесь обращаться!
                     </p>
                 </div> -->
-
-                <div name="metal-calculator-widget" data-mediumwidget data-siteid="DRP16HE6R1QARWYVMHGJ"></div>
+                <div name="metal-calculator-widget" class="metal-calculator-widget" data-siteid="DRP16HE6R1QARWYVMHGJ"></div>
                 <script>(function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
                         if (d.getElementById(id)) return;

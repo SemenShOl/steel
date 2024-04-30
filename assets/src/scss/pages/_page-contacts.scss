@@ -25,30 +25,21 @@
           row-gap: 40px;
           margin-bottom: 60px;
           u {
+            cursor: pointer;
             font-family: "PT Root UI";
             font-size: 22px;
             font-weight: 700;
             line-height: 26.4px;
             text-align: left;
             border-bottom: #1e110e;
-
+            &:hover {
+              color: $button-background;
+            }
             &.active {
               color: $button-background;
             }
           }
         }
-        // .contact-type {
-        //   display: flex;
-        //   width: 320px;
-        //   @media (max-width: 1100px) {
-        //     flex-grow: 1;
-        //     align-items: center;
-        //     width: 320px;
-        //     &__info {
-        //       text-align: center;
-        //     }
-        //   }
-        // }
       }
     }
   }
@@ -325,7 +316,12 @@
       font-weight: 700;
       line-height: 20.16px;
       text-align: center;
+
+      &:hover {
+        background: $button-background;
+        color: white;
+        border: 1px solid $button-background;
+      }
     }
-  
   }
 }

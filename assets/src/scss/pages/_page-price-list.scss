@@ -50,6 +50,9 @@
             font-weight: 500;
             line-height: 15.6px;
             color: $button-background;
+            &:hover {
+              color: $dark-text;
+            }
           }
           &::after {
             content: "";

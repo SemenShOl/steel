@@ -76,72 +76,124 @@ get_header();
 
 </section>
 
+<section class="sended-modal">
+    <div class="sended-modal__bg">
+        <div class="sended-modal__content">
+            <button class="sended-close-btn">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/metall/modal-close.svg">
+            </button>
+            <h3 class="modal-title">Ваша заявка принята!</h3>
+            <p>Менеджер свяжется в ближайшее время</p>
+        </div>
+    </div>
+</section>
 
 
-<script>
-	const btnAskPrice = document.querySelector('.ask-price');
+<section class="section-contact-map">
+    <div class="nwrapper">
+        <div class="contacts">
+            <div class="ncol-2"></div>
+            <div class="ncol-10">
+                <?php
+                // Section - Contacts
+                get_template_part(
+                    'template-parts/section-contacts',
+                    null,
+                    array(
+                        'section-number' => '08',
+                    )
+                );
+                ?>
+            </div>
+        </div>
 
-	const sendedModal = document.querySelector('.sended-modal');
-	const sendedModalBg = document.querySelector('.sended-modal__bg');
-	const sendedModalClose = document.querySelector('.sended-close-btn');
-	const sendedModalContent = document.querySelector('.sended-modal__content');
+        <div class="map">
+            <?php
+            //Section - Map
+            get_template_part('template-parts/section-map');
 
+            ?>
 
-	const mainModal = document.querySelector('.main-modal');
-	const mainModalBg = document.querySelector('.main-modal__bg');
-	const mainModalClose = document.querySelector('.main-close-btn');
-	const mainModalContent = document.querySelector('.main-modal__content');
-	const btnModalSend = document.querySelector('.send-btn'); // btnModalSend
+        </div>
 
-	const onCloseModalMain = () => {
-		mainModal.classList.remove('open');
-		mainModalBg.removeEventListener('click', onCloseModalMain)
-		mainModalClose.removeEventListener('click', onCloseModalMain)
-	}
+    </div>
 
-	const onCloseModalSended = () => {
-		sendedModal.classList.remove('open');
-		sendedModalBg.removeEventListener('click', onCloseModalSended)
-		sendedModalClose.removeEventListener('click', onCloseModalSended)
-	}
-
-	const onOpenModalSended = () => {
-		// console.log(sendedModal)
-		onCloseModalMain();
-		sendedModal.classList.add('open');
-		sendedModalBg.addEventListener('click', onCloseModalSended);
-		sendedModalClose.addEventListener('click', onCloseModalSended);
-
-	}
-
-	const onOpenModalMain = () => {
-		mainModal.classList.add('open');
-		mainModalBg.addEventListener('click', onCloseModalMain)
-		mainModalClose.addEventListener('click', onCloseModalMain)
-		mainModalContent.addEventListener('click', e => e.stopPropagation())
-		btnModalSend.addEventListener('click', onOpenModalSended)
-	}
+</section>
 
 
-	btnAskPrice.addEventListener('click', () => {
-		onOpenModalMain();
-	})
-</script>
-
-<script>
-	const moreInfo = document.querySelector('.header-more-info');
-	const lPage = document.querySelector('.l-page');
-	const mobilePart = document.querySelector('.mobile-part');
-	const nheader = document.querySelector('.nheader');
-
-
-	moreInfo.addEventListener('click', () => {
-		lPage.classList.toggle('hidden');
-		mobilePart.classList.toggle('active');
-	})
-
-
-</script>
 
 
 <?php get_footer(); ?>
+
+<!-- Мобильное меню header -->
+<script>
+    const moreInfo = document.querySelector('.header-more-info');
+    const lPage = document.querySelector('.l-page');
+    const footer = document.querySelector('.nfooter');
+    const contactsAndMap = document.querySelector('.section-contact-map')
+    const mobilePart = document.querySelector('.mobile-part');
+    const nheader = document.querySelector('.nheader');
+
+
+    moreInfo.addEventListener('click', () => {
+        lPage.classList.toggle('hidden');
+        footer.classList.toggle('hidden');
+        contactsAndMap.classList.toggle('hidden')
+        mobilePart.classList.toggle('active');
+    })
+
+
+</script>
+
+<!-- Модально окно -->
+<script>
+    const btnsAskPrice = document.querySelectorAll('.ask-price');
+
+    const sendedModal = document.querySelector('.sended-modal');
+    const sendedModalBg = document.querySelector('.sended-modal__bg');
+    const sendedModalClose = document.querySelector('.sended-close-btn');
+    const sendedModalContent = document.querySelector('.sended-modal__content');
+
+
+    const mainModal = document.querySelector('.main-modal');
+    const mainModalBg = document.querySelector('.main-modal__bg');
+    const mainModalClose = document.querySelector('.main-close-btn');
+    const mainModalContent = document.querySelector('.main-modal__content');
+    const btnModalSend = document.querySelector('.send-btn'); // btnModalSend
+
+    const onCloseModalMain = () => {
+        mainModal.classList.remove('open');
+        mainModalBg.removeEventListener('click', onCloseModalMain)
+        mainModalClose.removeEventListener('click', onCloseModalMain)
+    }
+
+    const onCloseModalSended = () => {
+        sendedModal.classList.remove('open');
+        sendedModalBg.removeEventListener('click', onCloseModalSended)
+        sendedModalClose.removeEventListener('click', onCloseModalSended)
+    }
+
+    const onOpenModalSended = () => {
+        // console.log(sendedModal)
+        onCloseModalMain();
+        sendedModal.classList.add('open');
+        sendedModalBg.addEventListener('click', onCloseModalSended);
+        sendedModalClose.addEventListener('click', onCloseModalSended);
+
+    }
+
+    const onOpenModalMain = () => {
+        mainModal.classList.add('open');
+        mainModalBg.addEventListener('click', onCloseModalMain)
+        mainModalClose.addEventListener('click', onCloseModalMain)
+        mainModalContent.addEventListener('click', e => e.stopPropagation())
+        btnModalSend.addEventListener('click', onOpenModalSended)
+    }
+
+    btnsAskPrice.forEach(btn => {
+        btn.addEventListener('click', () => {
+            onOpenModalMain();
+        })
+    })
+
+</script>
