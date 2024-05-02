@@ -3,7 +3,14 @@
 
 get_header(); ?>
 
+<!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
 <section class="l-page ">
+	<!-- <div id="app">
+		{{message}} 
+		<comp />
+	</div> -->
+
 
 	<section class="section-intro">
 		<div class="nwrapper">
@@ -16,8 +23,10 @@ get_header(); ?>
 					<div class="bg-p">
 						<p class="t-s">Компания «СТАЛЬ-Н» является ведущим предприятием в Сибирском регионе в сфере
 							продаж
-							металлопроката. Мы работаем напрямую с обширной сетью поставщиков, поэтому на наших складах
-							всегда в наличии широкий ассортимент, налажены партнерские отношения с большинством ведущих
+							металлопроката. Мы работаем напрямую с обширной сетью поставщиков, поэтому на наших
+							складах
+							всегда в наличии широкий ассортимент, налажены партнерские отношения с большинством
+							ведущих
 							отечественных производителей труб, листа, швеллера и других видов металлопродукции.</p>
 					</div>
 				</div>
@@ -423,6 +432,8 @@ get_header(); ?>
 
 </section>
 
+
+
 <?php get_footer(); ?>
 
 <!-- Мобильное меню header -->
@@ -495,3 +506,35 @@ get_header(); ?>
 	})
 
 </script>
+
+<!-- Vue.js -->
+
+<!-- <section id="test-template">
+	{{message2}}
+</section>
+
+<script type='module'>
+
+	const { createApp, component } = Vue;
+	const app = createApp(
+		// App
+		{
+			data() {
+				return {
+					message: "HI!",
+				};
+			},
+		}
+	)
+
+	app.component('comp', {
+		template: '#test-template',
+		data() {
+			return {
+				message2: 'Wordpress говно'
+			}
+		}
+	})
+
+	app.mount("#app");
+</script> -->

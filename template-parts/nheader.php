@@ -1,6 +1,5 @@
 <header class="nheader">
     <div class="wrapper">
-
         <div class="blue-part">
             <div class="place-info">
                 <div class="info-part city">
@@ -136,116 +135,10 @@
             </div>
 
         </div>
-        <div class="blue-part h-footer">
-
-            <div class="work-type">
-                <p>Трубозапорная арматура</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Детали трубопроводов</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Сортовой прокат</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Листовой прокат</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Метизная продукция</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Нержавеющая сталь</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Цветной металлопрокат</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Металлообработка</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
+        <div id="app">
+            <dropdowns />
         </div>
+
     </div>
 
     <div class="mobile-part ">
@@ -372,6 +265,7 @@
             <button class="nbtn">Заказать звонок</button>
 
         </div>
+
     </div>
 
 </header>
@@ -405,4 +299,298 @@
             city.classList.add('active')
         })
     })
+</script>
+
+
+<!-- Vue.js -->
+<section id="header-dropdown">
+    <div class="blue-part">
+        <div class="work-type" v-for="productType in productTypes">
+            <p>{{productType.title}} </p>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+            <div class="product-container">
+                <div class="dropdown-work-type" v-for="product in productType.products">
+                    <p>{{product.title}} </p>
+
+                    <div class="sub-product-container">
+                        <div class="sub-product" v-for="subProduct in product.subProducts">
+                            <a :href="subProduct.ref">{{subProduct.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section id="blue-part-v">
+
+</section>
+
+<section id="white-part-v">
+
+</section>
+
+
+<script type='module'>
+    const { createApp, component } = Vue;
+    const app = createApp({
+
+    })
+
+    app.component('blue-part', {
+        template: '#blue-part-v'
+    })
+    app.component('white-part', {
+        template: '#white-part-v'
+    })
+    app.component('dropdowns', {
+        template: '#header-dropdown',
+        data() {
+            return {
+                productTypes: [
+                    {
+                        title: 'Трубозапорная арматура',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Детали трубопроводов',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Сортовой прокат',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Листовой прокат',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Метизная продукция',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Нержавеющая сталь',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Цветной металлопрокат',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Металлообработка',
+                        products: [
+                            {
+                                title: "Вентили(клапаны)",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Клапаны синие" },
+                                    { ref: 'http://project/product-card', title: "Клапаны красные" },
+                                    { ref: 'http://project/product-card', title: "Клапаны зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Гайки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Гайки синие" },
+                                    { ref: 'http://project/product-card', title: "Гайки красные" },
+                                    { ref: 'http://project/product-card', title: "Гайки зеленые" }
+                                ]
+                            },
+                            {
+                                title: "Сетки",
+                                subProducts: [
+                                    { ref: 'http://project/product-card', title: "Сетки синие" },
+                                    { ref: 'http://project/product-card', title: "Сетки красные" },
+                                    { ref: 'http://project/product-card', title: "Сетки зеленые" }
+                                ]
+                            },
+                        ]
+                    },
+
+                ]
+            }
+        }
+    })
+
+
+
+    app.mount("#app");
 </script>

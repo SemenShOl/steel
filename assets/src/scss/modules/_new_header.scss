@@ -3,6 +3,7 @@
   position: relative;
   .wrapper {
     padding: 0;
+    // #app {
     .blue-part {
       padding: 0 50px;
       height: 40px;
@@ -374,6 +375,7 @@
         }
       }
     }
+    // }
   }
 
   .mobile-part {
@@ -521,6 +523,7 @@
   height: 100%;
   align-items: center;
   position: relative;
+
   font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
 
   &:hover {
@@ -528,33 +531,72 @@
   }
 
   &:hover {
-    .dropdown-work-type {
+    .product-container {
       display: flex;
     }
   }
-  .dropdown-work-type {
+  .product-container {
     display: none;
     position: absolute;
-    width: calc(100% + 40px);
     top: 40px;
     left: -20px;
-    padding: 20px 22px 20px 22px;
     flex-direction: column;
     z-index: 50;
     background: #0a3878;
+    width: calc(100% + 40px);
+    padding: 20px 0px;
+    .dropdown-work-type {
+      position: relative;
+      padding: 0px 22px;
+      p {
+        cursor: pointer;
+        color: white;
+        font-family: "PT Root UI";
+        font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+        line-height: 16.38px;
+        text-align: left;
+        padding-bottom: 12px;
+        border-bottom: 1px solid white;
+        margin-bottom: 16px;
+        &:hover {
+          color: $button-background;
+        }
+      }
 
-    p {
-      cursor: pointer;
-      color: white;
-      font-family: "PT Root UI";
-      font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
-      line-height: 16.38px;
-      text-align: left;
-      padding-bottom: 12px;
-      border-bottom: 1px solid white;
-      margin-bottom: 16px;
       &:hover {
-        color: $button-background;
+        .sub-product-container {
+          display: flex;
+        }
+      }
+      .sub-product-container {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        top: -20px;
+        flex-direction: column;
+        background: #0a3878;
+        padding: 20px 0px;
+        .sub-product {
+          padding: 0 22px;
+          a {
+            display: block;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            color: white;
+            font-family: "PT Root UI";
+            font-size: calc(
+              10px + (12 - 10) * ((100vw - 320px) / (1920 - 320))
+            );
+            line-height: 16.38px;
+            text-align: left;
+            border-bottom: 1px solid white;
+            &:hover {
+              color: $button-background;
+            }
+          }
+        }
       }
     }
   }
@@ -571,4 +613,16 @@
       font-size: calc(15px + (22 - 15) * ((100vw - 320px) / (1920 - 320)));
     }
   }
+}
+
+#header-dropdown {
+  display: none;
+}
+
+#blue-part-v {
+  display: none;
+}
+
+#white-part-v {
+  display: none;
 }
