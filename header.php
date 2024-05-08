@@ -98,8 +98,9 @@ $opengraph_image_height = fw_get_db_settings_option('ul_general_opengraph_image_
 		})(window, document, 'script', 'dataLayer', 'GTM-PHCTTVC');</script>
 	<!-- End Google Tag Manager -->
 	<!-- <script src="https://unpkg.com/vue@next"></script> -->
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+	<!-- <script src="https://unpkg.com/vue@2/dist/vue.global.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

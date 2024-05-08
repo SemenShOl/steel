@@ -71,6 +71,10 @@ get_header(); ?>
 
 	</section>
 
+
+	<div id="app2">
+		<white-part></white-part>
+	</div>
 	<section class="main-modal">
 		<div class="main-modal__bg">
 			<div class="main-modal__content">
@@ -538,3 +542,10 @@ get_header(); ?>
 
 	app.mount("#app");
 </script> -->
+
+<?php
+// Section - Dropdown
+get_template_part(
+	'template-parts/section-dropdown'
+);
+?>
