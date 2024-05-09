@@ -35,16 +35,20 @@
 				<div class="top-part__contacts">
 					<div class="contacts__phone">
 						<?php /* if (count(fw_get_db_settings_option('ul_general_phone_list')) > 0) {
-													  echo '<div class="block-main-right-phone">';
-													  echo '<a href="tel:+' . preg_replace('/[^0-9]+/', '', fw_get_db_settings_option('ul_general_phone_list')[0]['phone']) . '" class="change-phone">';
-													  echo '<span>' . fw_get_db_settings_option('ul_general_phone_list')[0]['phone'] . '</span>';
-													  echo '</a>';
-													  echo '</div>'; 
-												  } */
+																																				 echo '<div class="block-main-right-phone">';
+																																				 echo '<a href="tel:+' . preg_replace('/[^0-9]+/', '', fw_get_db_settings_option('ul_general_phone_list')[0]['phone']) . '" class="change-phone">';
+																																				 echo '<span>' . fw_get_db_settings_option('ul_general_phone_list')[0]['phone'] . '</span>';
+																																				 echo '</a>';
+																																				 echo '</div>'; 
+																																			 } */
 						?>
-						<a href="tel:79628288777" class="change-phone">+7 (962) 828-87-77</a>
+						<!-- <a href="tel:79628288777" class="change-phone">+7 (962) 828-87-77</a> -->
+						<a :href="'tel:' + chosenPlace.phone" class="change-phone">{{chosenPlace.phone[0]}}</a>
+
 					</div>
-					<a class="contacts__email" href=" mailto:steel-n2@bk.ru">steel-n2<span>@</span>bk.ru</a>
+					<!-- <a class="contacts__email" :href="'mailto:' + chosenPlace.email">steel-n2<span>@</span>bk.ru</a> -->
+					<a class="contacts__email" :href="'mailto:' + chosenPlace.email">{{chosenPlace.email}}</a>
+
 					<!-- <button class="nbtn ask-price" data-bs-toggle="modal" data-bs-target="#modalCallback">
 						<span>Заказать звонок</span>
 					</button> -->

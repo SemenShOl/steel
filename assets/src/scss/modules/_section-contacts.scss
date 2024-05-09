@@ -3,48 +3,48 @@
   display: flex;
   flex-direction: column;
   gap: 70px;
-
-  .contacts-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      "position ."
-      "address phone"
-      "time email";
-    row-gap: 30px;
-    column-gap: 80px;
-
-    @media (max-width: 650px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 1fr);
+  #contacts {
+    .contacts-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       grid-template-areas:
-        "position"
-        "address"
-        "phone"
-        "time"
-        "email";
-    }
+        "position ."
+        "address phone"
+        "time email";
+      row-gap: 30px;
+      column-gap: 80px;
 
-    .item {
-      height: auto;
-      &:first-child {
-        font-family: "PT Root UI";
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 33px;
-        text-align: left;
+      @media (max-width: 650px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+          "position"
+          "address"
+          "phone"
+          "time"
+          "email";
       }
-      a {
-        font-family: "PT Root UI";
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 36px;
-        text-align: left;
+
+      .item {
+        height: auto;
+        &:first-child {
+          font-family: "PT Root UI";
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 33px;
+          text-align: left;
+        }
+        a {
+          font-family: "PT Root UI";
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 36px;
+          text-align: left;
+        }
       }
     }
   }
-
   .common-form {
     h4 {
       font-family: "PT Root UI";

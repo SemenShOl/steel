@@ -7,14 +7,18 @@ import { WindowScroll } from "./modules/window-scroll.js";
 import { WindowResize } from "./modules/window-resize.js";
 import { VVue } from "./modules/vue.js";
 import { cityVue } from "./modules/cityVue.js";
+import { contactVue } from "./modules/contactVue.js";
+import { footerVue } from "./modules/footerVue.js";
 (function ($) {
   $(document).ready(function () {
     Common(jQuery);
     Sliders(jQuery);
     Modals(jQuery);
     Forms(jQuery);
-    VVue();
+    // VVue();
     cityVue();
+    contactVue();
+    footerVue();
     // VVue2();
   });
 

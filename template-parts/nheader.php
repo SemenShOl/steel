@@ -1,64 +1,56 @@
 <header class="nheader">
     <div class="wrapper">
         <div id="header">
-
-            <!-- <div class="blue-part">
+            <div class="blue-part">
                 <div class="place-info">
-                    <!-- <div class="info-part city">
+                    <div class="info-part city">
                         <img
                             src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
-                        <p class="chosen-city">Ваш город: <span>Новосибирск</span></p>
+                        <p class="chosen-city">Ваш город: <span>{{chosenPlace.city}}</span></p>
                         <div class="dropdown-city">
-                            <p>Москва</p>
-                            <p>Санкт-Петербург</p>
-                            <p class="active">Новосибирск</p>
-                            <p>Екатеринбург</p>
-                            <p>Омск</p>
-                            <p>Ярославль</p>
+                            <p v-for="place in places" @click="changePlace(place)">{{place.city}}</p>
                         </div>
-                    </div> -->
-            <!-- <city></city> -->
-
-            <!-- <div class="info-part">
+                    </div>
+                    <div class="info-part">
                         <img
                             src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/home.svg">
-                        <p>Самовывоз: г. Новосибирск, ул. 2-я Союза Молодежи,д 31, офис 357</p>
-                    </div> 
+                        <p>{{chosenPlace.adress}}</p>
+                    </div>
 
-            <adress></adress>
 
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/clock.svg">
+                    <div class="info-part">
+                        <img
+                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/clock.svg">
 
-                <p>Пн-Пт 09:00 - 18:00</p>
+                        <p>Пн-Пт 09:00 - 18:00</p>
+                    </div>
+                </div>
+
+                <div class="contacts-info">
+                    <div class="info-part">
+                        <img
+                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/mail.svg">
+
+
+                        <a href="mailto:steel-n2@bk.ru">steel-n2@bk.ru</a>
+
+                    </div>
+                    <div class="info-part">
+                        <img
+                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
+
+                        <a href="tel:79628288777">
+                            +7 (962) 828-87-77
+                        </a>
+
+                    </div>
+                    <button class="nbtn blue-bg sm ask-price">Заказать звонок</button>
+
+                </div>
+
             </div>
-        </div>
-
-        <div class="contacts-info">
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/mail.svg">
 
 
-                <a href="mailto:steel-n2@bk.ru">steel-n2@bk.ru</a>
-
-            </div>
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
-
-                <a href="tel:79628288777">
-                    +7 (962) 828-87-77
-                </a>
-
-            </div>
-            <button class="nbtn blue-bg sm ask-price">Заказать звонок</button>
-
-        </div>
-
-    </div> -->
-
-            <!-- <white-part></white-part> -->
-            <city />
-            <adress />
             <div class="white-part ">
                 <div class="logo">
                     <a href="<?php echo home_url('/'); ?>">
@@ -149,135 +141,138 @@
             <!-- <white-part></white-part>
             <blue-part></blue-part> -->
 
-        </div>
-    </div>
-
-    <div class="mobile-part ">
-        <nav class="nav-pages">
-            <ul class="t-m">
-                <li>
-                    <a class="page-link" href="<?php echo home_url('/payment'); ?>">
-                        <img
-                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/pay.svg">
-                        <p>Оплата</p>
-                    </a>
-
-                </li>
-                <li>
-                    <a class="page-link" href="<?php echo home_url('/calculator'); ?>">
-                        <img
-                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/calc.svg">
-                        <p>Калькулятор</p>
-                    </a>
-
-                </li>
-                <li>
-                    <a class="page-link" href="<?php echo home_url('/delivery'); ?>">
-                        <img
-                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/car.svg">
-                        <p>Доставка</p>
-                    </a>
-
-                </li>
-                <li>
-                    <a class="page-link" href="<?php echo home_url('/price-list'); ?>">
-                        <img
-                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/rect.svg">
-                        <p>Прайс-лист</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="page-link" href="<?php echo home_url('/contacts'); ?>">
-                        <img
-                            src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/contact.svg">
-                        <p>Контакты</p>
-                    </a>
-
-                </li>
-            </ul>
-        </nav>
-
-        <div class="metall-types t-s">
-            <div class="work-type">
-                <p>Трубозапорная арматура</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Детали трубопроводов</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Сортовой прокат</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Листовой прокат</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Метизная продукция</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Нержавеющая сталь</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Цветной металлопрокат</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
-            <div class="work-type">
-                <p>Металлообработка</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-            </div>
+            <!-- </div> -->
         </div>
 
-        <div class="contacts t-m">
-            <div class=" info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
+        <div class="mobile-part ">
+            <nav class="nav-pages">
+                <ul class="t-m">
+                    <li>
+                        <a class="page-link" href="<?php echo home_url('/payment'); ?>">
+                            <img
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/pay.svg">
+                            <p>Оплата</p>
+                        </a>
 
-                <p>Ваш город: Новосибирск</p>
-            </div>
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/home.svg">
+                    </li>
+                    <li>
+                        <a class="page-link" href="<?php echo home_url('/calculator'); ?>">
+                            <img
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/calc.svg">
+                            <p>Калькулятор</p>
+                        </a>
 
-                <p>Самовывоз: г. Новосибирск, ул. 2-я Союза Молодежи,д 31, офис 357</p>
+                    </li>
+                    <li>
+                        <a class="page-link" href="<?php echo home_url('/delivery'); ?>">
+                            <img
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/car.svg">
+                            <p>Доставка</p>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a class="page-link" href="<?php echo home_url('/price-list'); ?>">
+                            <img
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/rect.svg">
+                            <p>Прайс-лист</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="<?php echo home_url('/contacts'); ?>">
+                            <img
+                                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/contact.svg">
+                            <p>Контакты</p>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="metall-types t-s">
+                <div class="work-type">
+                    <p>Трубозапорная арматура</p>
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Детали трубопроводов</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Сортовой прокат</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Листовой прокат</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Метизная продукция</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Нержавеющая сталь</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Цветной металлопрокат</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
+                <div class="work-type">
+                    <p>Металлообработка</p>
+
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                </div>
             </div>
 
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/clock.svg">
+            <div class="contacts t-m">
+                <div class=" info-part">
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/place.svg">
 
-                <p>Пн-Пт 09:00 - 18:00</p>
-            </div>
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/mail.svg">
+                    <p>Ваш город: Новосибирск</p>
+                </div>
+                <div class="info-part">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/home.svg">
 
-                <p>steel-n2@bk.ru</p>
+                    <p>Самовывоз: г. Новосибирск, ул. 2-я Союза Молодежи,д 31, офис 357</p>
+                </div>
+
+                <div class="info-part">
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/clock.svg">
+
+                    <p>Пн-Пт 09:00 - 18:00</p>
+                </div>
+                <div class="info-part">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/mail.svg">
+
+                    <p>steel-n2@bk.ru</p>
+                </div>
+                <div class="info-part">
+                    <img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
+                    <p>+7 (962) 828-87-77</p>
+                </div>
+                <button class="nbtn">Заказать звонок</button>
+
             </div>
-            <div class="info-part">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/phone.svg">
-                <p>+7 (962) 828-87-77</p>
-            </div>
-            <button class="nbtn">Заказать звонок</button>
 
         </div>
-
-    </div>
 
 </header>
 
@@ -323,7 +318,6 @@ get_template_part(
 <?php
 
 get_template_part(
-    'template-parts/component-city'
+    'template-parts/section-city'
 )
-
     ?>
