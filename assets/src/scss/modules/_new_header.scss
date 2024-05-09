@@ -3,726 +3,379 @@
   position: relative;
   .wrapper {
     padding: 0;
-    #header {
-      .blue-part {
-        padding: 0 50px;
-        height: 40px;
-        background: #0a3878;
+    // #app {
+    .blue-part {
+      padding: 0 50px;
+      height: 40px;
+      background: #0a3878;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: "PT Root UI";
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 15.6px;
+      text-align: left;
+      color: white;
+      .header-more-info {
+        display: none;
+      }
+      .place-info {
         display: flex;
         align-items: center;
+        width: 50%;
+        height: 100%;
         justify-content: space-between;
-        font-family: "PT Root UI";
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 15.6px;
-        text-align: left;
-        color: white;
-        .header-more-info {
-          display: none;
+        min-width: 830px;
+        @media (max-width: 1450px) {
+          width: 65%;
+          min-width: 0px;
         }
-        .place-info {
+        .info-part {
+          &.city {
+            height: 100%;
+          }
+          position: relative;
+          margin-right: 15px;
           display: flex;
           align-items: center;
-          width: 50%;
-          height: 100%;
-          justify-content: space-between;
-          min-width: 830px;
-          @media (max-width: 1450px) {
-            width: 65%;
-            min-width: 0px;
+          gap: 5px;
+          .chosen-city {
+            width: 180px;
           }
-          .info-part {
-            &.city {
-              height: 100%;
-              .chosen-city {
-                width: 180px;
-              }
-            }
-            position: relative;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-    #header {
-      .blue-part {
-        padding: 0 50px;
-        height: 40px;
-        background: #0a3878;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-family: "PT Root UI";
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 15.6px;
-        text-align: left;
-        color: white;
-        .header-more-info {
-          display: none;
-        }
-        .place-info {
-          display: flex;
-          align-items: center;
-          width: 50%;
-          height: 100%;
-          justify-content: space-between;
-          min-width: 830px;
-          @media (max-width: 1450px) {
-            width: 65%;
-            min-width: 0px;
-          }
-          .info-part {
-            &.city {
-              height: 100%;
-              .chosen-city {
-                width: 180px;
-              }
-            }
-            position: relative;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
 
-            p {
+          p {
+            font-family: "PT Root UI";
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 15.6px;
+            text-align: left;
+            span {
               font-family: "PT Root UI";
               font-size: 13px;
-              font-weight: 500;
+              font-weight: 700;
               line-height: 15.6px;
               text-align: left;
-              span {
+            }
+          }
+          &:first-child {
+            margin-right: 20px;
+          }
+          &:hover {
+            .dropdown-city {
+              display: flex;
+              position: fixed;
+              top: 35px;
+              left: 0;
+              z-index: 30;
+              width: 267px;
+              padding: 16px 50px 0px 50px;
+              background: #0a3878;
+              flex-direction: column;
+
+              p {
+                cursor: pointer;
+                color: white;
                 font-family: "PT Root UI";
                 font-size: 13px;
                 font-weight: 700;
-                line-height: 15.6px;
-                text-align: left;
-              }
-            }
-            &:first-child {
-              margin-right: 20px;
-            }
-            &:hover {
-              .dropdown-city {
-                display: flex;
-                position: fixed;
-                top: 35px;
-                left: 0;
-                z-index: 31;
-                width: 267px;
-                padding: 16px 50px 0px 50px;
-                background: #0a3878;
-                flex-direction: column;
-            p {
-              font-family: "PT Root UI";
-              font-size: 13px;
-              font-weight: 500;
-              line-height: 15.6px;
-              text-align: left;
-              span {
-                font-family: "PT Root UI";
-                font-size: 13px;
-                font-weight: 700;
-                line-height: 15.6px;
-                text-align: left;
-              }
-            }
-            &:first-child {
-              margin-right: 20px;
-            }
-            &:hover {
-              .dropdown-city {
-                display: flex;
-                position: fixed;
-                top: 35px;
-                left: 0;
-                z-index: 31;
-                width: 267px;
-                padding: 16px 50px 0px 50px;
-                background: #0a3878;
-                flex-direction: column;
-
-                p {
-                  cursor: pointer;
-                  color: white;
-                  font-family: "PT Root UI";
-                  font-size: 13px;
-                  font-weight: 700;
-                  line-height: 16.38px;
-                  text-align: right;
-                  padding-bottom: 12px;
-                  border-bottom: 1px solid white;
-                  margin-bottom: 16px;
-                  &:hover {
-                    color: $button-background;
-                  }
-                  &.active {
-                    color: $button-background;
-                  }
+                line-height: 16.38px;
+                text-align: right;
+                padding-bottom: 12px;
+                border-bottom: 1px solid white;
+                margin-bottom: 16px;
+                &:hover {
+                  color: $button-background;
+                }
+                &.active {
+                  color: $button-background;
                 }
               }
             }
-            .dropdown-city {
-              display: none;
-            }
+          }
+          .dropdown-city {
+            display: none;
           }
         }
-                p {
-                  cursor: pointer;
-                  color: white;
-                  font-family: "PT Root UI";
-                  font-size: 13px;
-                  font-weight: 700;
-                  line-height: 16.38px;
-                  text-align: right;
-                  padding-bottom: 12px;
-                  border-bottom: 1px solid white;
-                  margin-bottom: 16px;
-                  &:hover {
-                    color: $button-background;
-                  }
-                  &.active {
-                    color: $button-background;
-                  }
-                }
-              }
-            }
-            .dropdown-city {
-              display: none;
-            }
+      }
+
+      .contacts-info {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        width: 30%;
+        justify-content: space-between;
+        .info-part {
+        }
+        button {
+          padding: 0;
+          width: 138px;
+          height: 26px;
+        }
+      }
+    }
+
+    .white-part {
+      z-index: 50;
+      padding: 0 50px;
+      height: 80px;
+      background: white;
+      display: flex;
+      align-items: center;
+      overflow-y: hidden;
+      @media (max-width: 1450px) {
+        .logo {
+          margin-right: 80px;
+        }
+        .nav-and-button {
+          .nav-pages {
+            width: 58%;
+          }
+        }
+      }
+      .logo {
+        margin-right: 140px;
+        @media (max-width: 1100px) {
+          display: none;
+        }
+      }
+      .nav-and-button {
+        z-index: 30;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          display: none;
+          @media (max-width: 1100px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
 
-        .contacts-info {
-          height: 100%;
+        .header-more-info {
+          display: none;
+        }
+        .nav-pages {
+          width: 45%;
+          max-width: 678px;
+
+          ul {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+
+        .form-group-header {
           display: flex;
-          align-items: center;
-          width: 30%;
-          justify-content: space-between;
-          .info-part {
-            a {
+          width: 545px;
+          @media (max-width: 1700px) {
+            max-width: 500px;
+          }
+          @media (max-width: 1500px) {
+            max-width: 450px;
+          }
+          @media (max-width: 1450px) {
+            max-width: 350px;
+          }
+          @media (max-width: 1300px) {
+            max-width: 250px;
+          }
+          @media (max-width: 850px) {
+            max-width: 200px;
+          }
+          .search-part {
+            position: relative;
+            display: flex;
+            width: 100%;
+
+            input {
+              width: 80%;
+              position: relative;
+              border: 1px solid #766e6c;
+              padding: 0px 25px;
+              color: $dark-text;
+              font-family: "PT Root UI";
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 14.4px;
+              display: flex;
+              justify-content: start;
+              align-items: center;
+            }
+            .search-icon {
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              bottom: 9px;
+              left: 8px;
+              z-index: 25;
+            }
+            .search-metall {
+              background: #0a3878;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              width: 20%;
+              min-width: 77px;
+              height: 26px;
+              border: 1px solid #0a3878;
+              border-left: 0px;
+              cursor: pointer;
               &:hover {
+                background: transparent;
+                span {
+                  color: #0a3878;
+                }
+              }
+              &.to-close {
                 background: $button-background;
-              }
-            }
-          }
-          button {
-            padding: 0;
-            width: 138px;
-            height: 26px;
-          }
-        }
-      }
-
-      .white-part {
-        z-index: 50;
-        padding: 0 50px;
-        height: 80px;
-        background: white;
-        display: flex;
-        align-items: center;
-        overflow-y: hidden;
-        @media (max-width: 1450px) {
-          .logo {
-            margin-right: 80px;
-          }
-          .nav-and-button {
-            .nav-pages {
-              width: 58%;
-            }
-          }
-        }
-        .logo {
-          margin-right: 140px;
-          @media (max-width: 1100px) {
-            display: none;
-          }
-        }
-        .nav-and-button {
-          z-index: 30;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-      .white-part {
-        z-index: 50;
-        padding: 0 50px;
-        height: 80px;
-        background: white;
-        display: flex;
-        align-items: center;
-        overflow-y: hidden;
-        @media (max-width: 1450px) {
-          .logo {
-            margin-right: 80px;
-          }
-          .nav-and-button {
-            .nav-pages {
-              width: 58%;
-            }
-          }
-        }
-        .logo {
-          margin-right: 140px;
-          @media (max-width: 1100px) {
-            display: none;
-          }
-        }
-        .nav-and-button {
-          z-index: 30;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          .logo {
-            display: none;
-            @media (max-width: 1100px) {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
-          .logo {
-            display: none;
-            @media (max-width: 1100px) {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          }
-
-          .header-more-info {
-            display: none;
-          }
-          .nav-pages {
-            width: 45%;
-            max-width: 678px;
-          .header-more-info {
-            display: none;
-          }
-          .nav-pages {
-            width: 45%;
-            max-width: 678px;
-
-            ul {
-              display: flex;
-              align-items: center;
-              width: 100%;
-              justify-content: space-between;
-            }
-          }
-            ul {
-              display: flex;
-              align-items: center;
-              width: 100%;
-              justify-content: space-between;
-            }
-          }
-
-          .form-group-header {
-            display: flex;
-            width: 545px;
-            @media (max-width: 1700px) {
-              max-width: 500px;
-            }
-            @media (max-width: 1500px) {
-              max-width: 450px;
-            }
-            @media (max-width: 1450px) {
-              max-width: 350px;
-            }
-            @media (max-width: 1300px) {
-              max-width: 250px;
-            }
-            @media (max-width: 850px) {
-              max-width: 200px;
-            }
-            .search-part {
-              position: relative;
-              display: flex;
-              width: 100%;
-          .form-group-header {
-            display: flex;
-            width: 545px;
-            @media (max-width: 1700px) {
-              max-width: 500px;
-            }
-            @media (max-width: 1500px) {
-              max-width: 450px;
-            }
-            @media (max-width: 1450px) {
-              max-width: 350px;
-            }
-            @media (max-width: 1300px) {
-              max-width: 250px;
-            }
-            @media (max-width: 850px) {
-              max-width: 200px;
-            }
-            .search-part {
-              position: relative;
-              display: flex;
-              width: 100%;
-
-              input {
-                width: 80%;
-                position: relative;
-                border: 1px solid #766e6c;
-                padding: 0px 25px;
-                color: $dark-text;
-                font-family: "PT Root UI";
-                font-size: 12px;
-                font-weight: 500;
-                line-height: 14.4px;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-              }
-              .search-icon {
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                bottom: 9px;
-                left: 8px;
-                z-index: 25;
-              }
-              .search-metall {
-                background: #0a3878;
+                border: 1px solid $button-background;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: none;
-                width: 20%;
-                min-width: 77px;
-                height: 26px;
-                border: 1px solid #0a3878;
-                border-left: 0px;
-                cursor: pointer;
-                &:hover {
-                  background: transparent;
-                  span {
-                    color: #0a3878;
-                  }
-                }
-                &.to-close {
-                  background: $button-background;
-                  border: 1px solid $button-background;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  .img-close {
-                    display: block;
-                    width: 14px;
-                    height: 14px;
-                  }
-                  span {
-                    display: none;
-                  }
-                }
                 .img-close {
-                  display: none;
+                  display: block;
+                  width: 14px;
+                  height: 14px;
                 }
                 span {
-                  color: white;
-                  font-family: "PT Root UI";
-                  font-size: 13px;
-                  font-weight: 500;
-                  line-height: 15.6px;
-                  text-align: left;
-                  padding: 10px 20px 10px 20px;
-                  text-align: center;
+                  display: none;
                 }
               }
-            }
-            .dropdown-search {
-              &.active {
-                display: flex;
+              .img-close {
+                display: none;
               }
-              display: none;
-              position: absolute;
-              width: 545px;
-              top: 91px;
-              padding: 20px 77px 20px 22px;
-              flex-direction: column;
-              z-index: 50;
-              background: #0a3878;
-              @media (max-width: 1700px) {
-                width: 500px;
-              }
-              @media (max-width: 1500px) {
-                width: 450px;
-              }
-              @media (max-width: 1450px) {
-                width: 350px;
-              }
-              @media (max-width: 1300px) {
-                width: 250px;
-              }
-              @media (max-width: 1100px) {
-                top: 52px;
-                padding: 20px 50px 15px 20px;
-              }
-              @media (max-width: 850px) {
-                width: 200px;
-              }
-              input {
-                width: 80%;
-                position: relative;
-                border: 1px solid #766e6c;
-                padding: 0px 25px;
-                color: $dark-text;
+              span {
+                color: white;
                 font-family: "PT Root UI";
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: 500;
-                line-height: 14.4px;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-              }
-              .search-icon {
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                bottom: 9px;
-                left: 8px;
-                z-index: 25;
-              }
-              .search-metall {
-                background: #0a3878;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: none;
-                width: 20%;
-                min-width: 77px;
-                height: 26px;
-                border: 1px solid #0a3878;
-                border-left: 0px;
-                cursor: pointer;
-                &:hover {
-                  background: transparent;
-                  span {
-                    color: #0a3878;
-                  }
-                }
-                &.to-close {
-                  background: $button-background;
-                  border: 1px solid $button-background;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  .img-close {
-                    display: block;
-                    width: 14px;
-                    height: 14px;
-                  }
-                  span {
-                    display: none;
-                  }
-                }
-                .img-close {
-                  display: none;
-                }
-                span {
-                  color: white;
-                  font-family: "PT Root UI";
-                  font-size: 13px;
-                  font-weight: 500;
-                  line-height: 15.6px;
-                  text-align: left;
-                  padding: 10px 20px 10px 20px;
-                  text-align: center;
-                }
-              }
-            }
-            .dropdown-search {
-              &.active {
-                display: flex;
-              }
-              display: none;
-              position: absolute;
-              width: 545px;
-              top: 91px;
-              padding: 20px 77px 20px 22px;
-              flex-direction: column;
-              z-index: 50;
-              background: #0a3878;
-              @media (max-width: 1700px) {
-                width: 500px;
-              }
-              @media (max-width: 1500px) {
-                width: 450px;
-              }
-              @media (max-width: 1450px) {
-                width: 350px;
-              }
-              @media (max-width: 1300px) {
-                width: 250px;
-              }
-              @media (max-width: 1100px) {
-                top: 52px;
-                padding: 20px 50px 15px 20px;
-              }
-              @media (max-width: 850px) {
-                width: 200px;
-              }
-
-              p {
-                cursor: pointer;
-                color: white;
-                font-family: "PT Root UI";
-                font-size: 13px;
-                font-weight: 700;
-                line-height: 16.38px;
+                line-height: 15.6px;
                 text-align: left;
-                padding-bottom: 12px;
-                border-bottom: 1px solid white;
-                margin-bottom: 16px;
+                padding: 10px 20px 10px 20px;
+                text-align: center;
               }
             }
           }
-        }
-      }
-              p {
-                cursor: pointer;
-                color: white;
-                font-family: "PT Root UI";
-                font-size: 13px;
-                font-weight: 700;
-                line-height: 16.38px;
-                text-align: left;
-                padding-bottom: 12px;
-                border-bottom: 1px solid white;
-                margin-bottom: 16px;
-              }
+          .dropdown-search {
+            &.active {
+              display: flex;
             }
-          }
-        }
-      }
-
-      @media (max-width: 1100px) {
-        .blue-part {
-          display: none;
-          .place-info {
-            .info-part {
-              visibility: hidden;
-              pointer-events: none;
-            }
-          }
-          .contacts-info {
-            width: 45%;
-          }
-      @media (max-width: 1100px) {
-        .blue-part {
-          display: none;
-          .place-info {
-            .info-part {
-              visibility: hidden;
-              pointer-events: none;
-            }
-          }
-          .contacts-info {
-            width: 45%;
-          }
-
-          &.h-footer {
-            .work-type {
-              display: none;
-            }
-          }
-        }
-        .white-part {
-          border-bottom: 1px solid #766e6c;
-          &.h-footer {
-            .work-type {
-              display: none;
-            }
-          }
-        }
-        .white-part {
-          border-bottom: 1px solid #766e6c;
-
-          .logo {
             display: none;
-          }
-          .nav-and-button {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            width: 100%;
-            .header-more-info {
-              display: block;
-              justify-self: start;
-              img {
-                height: 40px;
-                width: 50px;
-              }
+            position: absolute;
+            width: 545px;
+            top: 91px;
+            padding: 20px 77px 20px 22px;
+            flex-direction: column;
+            z-index: 50;
+            background: #0a3878;
+            @media (max-width: 1700px) {
+              width: 500px;
             }
-            .nav-pages {
-              display: none;
+            @media (max-width: 1500px) {
+              width: 450px;
             }
-          .logo {
-            display: none;
-          }
-          .nav-and-button {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            width: 100%;
-            .header-more-info {
-              display: block;
-              justify-self: start;
-              img {
-                height: 40px;
-                width: 50px;
-              }
+            @media (max-width: 1450px) {
+              width: 350px;
             }
-            .nav-pages {
-              display: none;
+            @media (max-width: 1300px) {
+              width: 250px;
+            }
+            @media (max-width: 1100px) {
+              top: 52px;
+              padding: 20px 50px 15px 20px;
+            }
+            @media (max-width: 850px) {
+              width: 200px;
             }
 
-            .form-group-header {
-              justify-self: end;
-            }
-          }
-        }
-      }
-            .form-group-header {
-              justify-self: end;
-            }
-          }
-        }
-      }
-
-      @media (max-width: 700px) {
-        .white-part {
-          .nav-and-button {
-            grid-template-columns: repeat(2, 1fr);
-      @media (max-width: 700px) {
-        .white-part {
-          .nav-and-button {
-            grid-template-columns: repeat(2, 1fr);
-
-            .form-group-header {
-              display: none;
-            }
-            .logo {
-              justify-content: end;
-              margin-right: 0;
+            p {
+              cursor: pointer;
+              color: white;
+              font-family: "PT Root UI";
+              font-size: 13px;
+              font-weight: 700;
+              line-height: 16.38px;
+              text-align: left;
+              padding-bottom: 12px;
+              border-bottom: 1px solid white;
+              margin-bottom: 16px;
             }
           }
         }
       }
     }
-            .form-group-header {
-              display: none;
+
+    @media (max-width: 1100px) {
+      .blue-part {
+        display: none;
+        .place-info {
+          .info-part {
+            visibility: hidden;
+            pointer-events: none;
+          }
+        }
+        .contacts-info {
+          width: 45%;
+        }
+
+        &.h-footer {
+          .work-type {
+            display: none;
+          }
+        }
+      }
+      .white-part {
+        border-bottom: 1px solid #766e6c;
+
+        .logo {
+          display: none;
+        }
+        .nav-and-button {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          width: 100%;
+          .header-more-info {
+            display: block;
+            justify-self: start;
+            img {
+              height: 40px;
+              width: 50px;
             }
-            .logo {
-              justify-content: end;
-              margin-right: 0;
-            }
+          }
+          .nav-pages {
+            display: none;
+          }
+
+          .form-group-header {
+            justify-self: end;
           }
         }
       }
     }
+
+    @media (max-width: 700px) {
+      .white-part {
+        .nav-and-button {
+          grid-template-columns: repeat(2, 1fr);
+
+          .form-group-header {
+            display: none;
+          }
+          .logo {
+            justify-content: end;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    // }
   }
 
   .mobile-part {
@@ -828,22 +481,14 @@
   gap: 10px;
   margin-right: 10px;
   cursor: pointer;
-  // &:hover {
-  //   p {
-  //     color: $button-background;
-  //   }
-  //   a {
-  //     color: $button-background;
-  //   }
-  // }
-  // &:hover {
-  //   p {
-  //     color: $button-background;
-  //   }
-  //   a {
-  //     color: $button-background;
-  //   }
-  // }
+  &:hover {
+    p {
+      color: $button-background;
+    }
+    a {
+      color: $button-background;
+    }
+  }
   p {
     font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
   }
@@ -867,140 +512,6 @@
       width: 30px;
       height: 30px;
     }
-  }
-}
-
-.info-part {
-  &.city {
-    height: 100%;
-    .chosen-city {
-      width: 180px;
-    }
-  }
-  position: relative;
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  p {
-    font-family: "PT Root UI";
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.6px;
-    text-align: left;
-    span {
-      font-family: "PT Root UI";
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 15.6px;
-      text-align: left;
-    }
-  }
-  &:first-child {
-    margin-right: 20px;
-  }
-  &:hover {
-    .dropdown-city {
-      display: flex;
-      position: fixed;
-      top: 35px;
-      left: 0;
-      z-index: 30;
-      width: 267px;
-      padding: 16px 50px 0px 50px;
-      background: #0a3878;
-      flex-direction: column;
-
-      p {
-        cursor: pointer;
-        color: white;
-        font-family: "PT Root UI";
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 16.38px;
-        text-align: right;
-        padding-bottom: 12px;
-        border-bottom: 1px solid white;
-        margin-bottom: 16px;
-        &:hover {
-          color: $button-background;
-        }
-        &.active {
-          color: $button-background;
-        }
-      }
-    }
-  }
-  .dropdown-city {
-    display: none;
-  }
-}
-
-.info-part {
-  &.city {
-    height: 100%;
-    .chosen-city {
-      width: 180px;
-    }
-  }
-  position: relative;
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  p {
-    font-family: "PT Root UI";
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 15.6px;
-    text-align: left;
-    span {
-      font-family: "PT Root UI";
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 15.6px;
-      text-align: left;
-    }
-  }
-  &:first-child {
-    margin-right: 20px;
-  }
-  &:hover {
-    .dropdown-city {
-      display: flex;
-      position: fixed;
-      top: 35px;
-      left: 0;
-      z-index: 30;
-      width: 267px;
-      padding: 16px 50px 0px 50px;
-      background: #0a3878;
-      flex-direction: column;
-
-      p {
-        cursor: pointer;
-        color: white;
-        font-family: "PT Root UI";
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 16.38px;
-        text-align: right;
-        padding-bottom: 12px;
-        border-bottom: 1px solid white;
-        margin-bottom: 16px;
-        &:hover {
-          color: $button-background;
-        }
-        &.active {
-          color: $button-background;
-        }
-      }
-    }
-  }
-  .dropdown-city {
-    display: none;
   }
 }
 
