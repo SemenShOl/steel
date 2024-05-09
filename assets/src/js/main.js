@@ -8,6 +8,7 @@ import { WindowResize } from "./modules/window-resize.js";
 import { VVue } from "./modules/vue.js";
 import { cityVue } from "./modules/cityVue.js";
 import { contactVue } from "./modules/contactVue.js";
+import { productsVue } from "./modules/productsVue.js";
 import { footerVue } from "./modules/footerVue.js";
 (function ($) {
   $(document).ready(function () {
@@ -19,6 +20,7 @@ import { footerVue } from "./modules/footerVue.js";
     cityVue();
     contactVue();
     footerVue();
+    productsVue();
     // VVue2();
   });
 

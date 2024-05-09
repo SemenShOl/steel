@@ -1,7 +1,7 @@
 <header class="nheader">
     <div class="wrapper">
         <!-- <div id="header"> -->
-        <div class="blue-part">
+        <div class="blue-part header-top">
             <div class="place-info">
                 <div class="info-part city">
                     <img
@@ -134,119 +134,23 @@
             </div>
 
         </div>
-        <!-- <div>Дргугая разметка</div> -->
-        <!-- <white-part></white-part>
-            <blue-part></blue-part> -->
+        <div class="blue-part header-bottom">
+            <div class="work-type" v-for="productType in productTypes">
+                <p>{{productType.title}} </p>
+                <img
+                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
+                <div class="product-container">
+                    <div class="dropdown-work-type" v-for="product in productType.products">
+                        <p>{{product.title}} </p>
 
-        <!-- </div> -->
-        <div class="blue-part h-footer">
+                        <div class="sub-product-container">
+                            <div class="sub-product" v-for="subProduct in product.subProducts">
+                                <a :href="subProduct.ref">{{subProduct.title}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="work-type">
-                <p>Трубозапорная арматура</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Детали трубопроводов</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Сортовой прокат</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Листовой прокат</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Метизная продукция</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Нержавеющая сталь</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Цветной металлопрокат</p>
-
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
-            </div>
-            <div class="work-type">
-                <p>Металлообработка</p>
-                <img
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/header-icons/arrow-down.svg">
-                <div class="dropdown-work-type">
-                    <p>Вентили (клапаны)</p>
-                    <p>Задвижки</p>
-                    <p>Затворы</p>
-                    <p>Клапаны обратные</p>
-                    <p>Затворы</p>
-                    <p>Затворы</p>
-                </div>
             </div>
         </div>
     </div>

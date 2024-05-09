@@ -95,7 +95,7 @@ export function cityVue() {
   });
 
   new Vue({
-    el: ".nheader",
+    el: ".header-top",
     data: () => ({
       places: [
         {
