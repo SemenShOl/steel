@@ -67,7 +67,7 @@
               position: fixed;
               top: 35px;
               left: 0;
-              z-index: 30;
+              z-index: 31;
               width: 267px;
               padding: 16px 50px 0px 50px;
               background: #0a3878;
@@ -106,6 +106,14 @@
         width: 30%;
         justify-content: space-between;
         .info-part {
+          &:hover {
+            p {
+              color: $button-background;
+            }
+            a {
+              color: $button-background;
+            }
+          }
         }
         button {
           padding: 0;
@@ -481,14 +489,14 @@
   gap: 10px;
   margin-right: 10px;
   cursor: pointer;
-  &:hover {
-    p {
-      color: $button-background;
-    }
-    a {
-      color: $button-background;
-    }
-  }
+  // &:hover {
+  //   p {
+  //     color: $button-background;
+  //   }
+  //   a {
+  //     color: $button-background;
+  //   }
+  // }
   p {
     font-size: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
   }
