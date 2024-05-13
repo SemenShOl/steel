@@ -9,7 +9,6 @@
                 <h1>Наша продукция</h1>
             </div>
         </div>
-
         <div class="product-type">
             <div class="ncol-2">
                 <p>Трубозапорная арматура</p>
@@ -225,26 +224,44 @@
             productsGrid[index][i].classList.remove('hidden')
         }
     }
+    function changeProductsVisibility(index, showLineMoreText, showLineMoreImg) {
+        productsInFirstRow = countProductsInFirstRow();
+        isClosed[index] ? openExtraProducts(index) : closeExtraProducts(index);
 
+
+        if (isClosed[index]) {
+            showLineMoreText.textContent = 'Свернуть'
+            showLineMoreImg.classList.add('rotate');
+        }
+        else {
+            showLineMoreText.textContent = 'Развернуть'
+            showLineMoreImg.classList.remove('rotate');
+        }
+        isClosed[index] = !isClosed[index];
+    }
     showLinesMore.forEach((showLine, index) => {
         //Проходимся по всем showLine-м и добавляем слушатель клика на каждую линию, а также берем текст и иконку, чтобы менять их при сворачивании
         const showLineMoreText = showLine.querySelector('p');
         const showLineMoreImg = showLine.querySelector('img');
         showLine.addEventListener('click', () => {
-            productsInFirstRow = countProductsInFirstRow();
-            isClosed[index] ? openExtraProducts(index) : closeExtraProducts(index);
+            // productsInFirstRow = countProductsInFirstRow();
+            // isClosed[index] ? openExtraProducts(index) : closeExtraProducts(index);
 
 
-            if (isClosed[index]) {
-                showLineMoreText.textContent = 'Свернуть'
-                showLineMoreImg.classList.add('rotate');
-            }
-            else {
-                showLineMoreText.textContent = 'Развернуть'
-                showLineMoreImg.classList.remove('rotate');
-            }
-            isClosed[index] = !isClosed[index];
+            // if (isClosed[index]) {
+            //     showLineMoreText.textContent = 'Свернуть'
+            //     showLineMoreImg.classList.add('rotate');
+            // }
+            // else {
+            //     showLineMoreText.textContent = 'Развернуть'
+            //     showLineMoreImg.classList.remove('rotate');
+            // }
+            // isClosed[index] = !isClosed[index];
+
+            changeProductsVisibility(index, showLineMoreText, showLineMoreImg);
         })
+        changeProductsVisibility(index, showLineMoreText, showLineMoreImg);
+
     })
 
 

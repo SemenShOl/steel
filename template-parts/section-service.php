@@ -154,26 +154,33 @@
         }
     }
 
+
+    function changeServicesVisibility(index, showLineMoreText, showLineMoreImg) {
+        servicesInFirstRow = countServicesInFirstRow();
+        isClosedService[index] ? openExtraservices(index) : closeExtraservices(index);
+
+        if (isClosedService[index]) {
+            showLineMoreText.textContent = 'Свернуть'
+            showLineMoreImg.classList.add('rotate');
+        }
+        else {
+            showLineMoreText.textContent = 'Развернуть'
+            showLineMoreImg.classList.remove('rotate');
+        }
+        isClosedService[index] = !isClosedService[index];
+    }
     showLinesMoreService.forEach((showLine, index) => {
         //Проходимся по всем showLine-м и добавляем слушатель клика на каждую линию, а также берем текст и иконку, чтобы менять их при сворачивании
         const showLineMoreText = showLine.querySelector('p');
         const showLineMoreImg = showLine.querySelector('img');
         showLine.addEventListener('click', () => {
-            servicesInFirstRow = countServicesInFirstRow();
-            isClosedService[index] ? openExtraservices(index) : closeExtraservices(index);
-
-
-            if (isClosedService[index]) {
-                showLineMoreText.textContent = 'Свернуть'
-                showLineMoreImg.classList.add('rotate');
-            }
-            else {
-                showLineMoreText.textContent = 'Развернуть'
-                showLineMoreImg.classList.remove('rotate');
-            }
-            isClosedService[index] = !isClosedService[index];
+            changeServicesVisibility(index, showLineMoreText, showLineMoreImg);
         })
+        changeServicesVisibility(index, showLineMoreText, showLineMoreImg);
+
     })
+
+
 
 
 

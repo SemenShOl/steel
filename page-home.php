@@ -72,9 +72,9 @@ get_header(); ?>
 	</section>
 
 
-	<div id="app2">
+	<!-- <div id="app2">
 		<white-part></white-part>
-	</div>
+	</div> -->
 	<section class="main-modal">
 		<div class="main-modal__bg">
 			<div class="main-modal__content">

@@ -10,6 +10,7 @@ import { cityVue } from "./modules/cityVue.js";
 import { contactVue } from "./modules/contactVue.js";
 import { productsVue } from "./modules/productsVue.js";
 import { footerVue } from "./modules/footerVue.js";
+import { officesVue } from "./modules/officesVue.js";
 (function ($) {
   $(document).ready(function () {
     Common(jQuery);
@@ -21,6 +22,7 @@ import { footerVue } from "./modules/footerVue.js";
     contactVue();
     footerVue();
     productsVue();
+    officesVue();
     // VVue2();
   });
 

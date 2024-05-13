@@ -23,26 +23,35 @@ get_header(); ?>
                         <p class="contact-type__info"><b>+7 (965) 827-90-06</b>
                             <br><br> пн-пт 9:00-18:00, без перерыва
                         </p>
-                        <button class="nbtn">Заказать звонок</button>
+                        <button class="nbtn ask-price">Заказать звонок</button>
                     </div>
                     <div class="contact-type">
                         <h3 class="contact-type__title">Офис продаж</h3>
+                        <p class="contact-type__info"><b>+7 (962) 828-87-77</b>
+                            <br><br> пн-пт 9:00-18:00, без перерыва
+                        </p>
+                        <button class="nbtn ask-price">Заказать звонок</button>
+                    </div>
+                    <div class="contact-type">
+                        <h3 class="contact-type__title">Электронная почта</h3>
+                        <p class="contact-type__info"><b>steel-n@bk.ru</b>
+                        </p>
+                        <button class="nbtn ask-price">Заказать звонок</button>
+                    </div>
+                    <div class="contact-type">
+                        <h3 class="contact-type__title">Гананов Анатолий</h3>
                         <p class="contact-type__info"><b>+7 (965) 827-90-06</b>
                             <br><br> пн-пт 9:00-18:00, без перерыва
                         </p>
-                        <button class="nbtn">Заказать звонок</button>
+                        <button class="nbtn ask-price">Заказать звонок</button>
                     </div>
+
                     <div class="contact-type">
-                        <h3 class="contact-type__title">Электронная почта</h3>
-                        <p class="contact-type__info"><b>steel-n@bk.ru</b>
+                        <h3 class="contact-type__title">Батурин Максим</h3>
+                        <p class="contact-type__info"><b>+7 (913) 727-76-86</b>
+                            <br><br> пн-пт 9:00-18:00, без перерыва
                         </p>
-                        <button class="nbtn">Заказать звонок</button>
-                    </div>
-                    <div class="contact-type">
-                        <h3 class="contact-type__title">Электронная почта</h3>
-                        <p class="contact-type__info"><b>steel-n@bk.ru</b>
-                        </p>
-                        <button class="nbtn">Заказать звонок</button>
+                        <button class="nbtn ask-price">Заказать звонок</button>
                     </div>
                     <!-- </div> -->
 
@@ -60,36 +69,21 @@ get_header(); ?>
             <div class="ncol-10">
                 <div class="other-cities">
                     <div class="cities-list">
-                        <u>Абакан</u>
-                        <u class="active">Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-                        <u>Абакан</u>
-
+                        <u v-for="place in places" :class="{active: place.city === chosenPlace.city}"
+                            @click="changePlace(place)">{{place.city}}</u>
 
                     </div>
 
                     <div class="places">
                         <div class="contact-type">
-                            <h3 class="contact-type__title">Офис продаж</h3>
-                            <p class="contact-type__info"><b>+7 (965) 827-90-06</b>
-                                <br><br> пн-пт 9:00-18:00, без перерыва
+                            <h3 class="contact-type__title">{{chosenPlace.city}}</h3>
+                            <p class="contact-type__info"><a :href="chosenPlace.phone"> <b>
+                                        {{chosenPlace.phone[0]}}
+                                    </b></a> <br> <br>
+                                пн-пт 9:00-18:00, без перерыва
+
                             </p>
-                            <button class="nbtn">Заказать звонок</button>
+                            <button class="nbtn ask-price">Заказать звонок</button>
                         </div>
 
                     </div>

@@ -171,14 +171,20 @@ export function cityVue() {
       changePlace(place) {
         this.chosenPlace = place;
         localStorage.setItem("place", JSON.stringify(place));
-
         window.dispatchEvent(window.localStorageChangeEvent);
       },
     },
     mounted() {
       console.log("Component city mounted");
-      localStorage.setItem("place", JSON.stringify(this.places[0]));
+      const previousPlace = localStorage.getItem("place");
+      this.chosenPlace = JSON.parse(previousPlace) || places[0];
+      localStorage.setItem("place", JSON.stringify(this.chosenPlace));
       window.localStorageChangeEvent = new Event("storage-change");
+
+      //Связать с инфой в хедере
+      // window.addEventListener("storage-change", () => {
+      //   this.chosenPlace = JSON.parse(localStorage.getItem("place"));
+      // });
     },
   });
 }

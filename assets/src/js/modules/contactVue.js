@@ -17,7 +17,6 @@ export function contactVue() {
     mounted() {
       console.log("CONTACTS mounted");
       this.chosenPlace = JSON.parse(localStorage.getItem("place"));
-
       window.addEventListener("storage-change", this.handleLocalStorage);
     },
     beforeDestroy() {
