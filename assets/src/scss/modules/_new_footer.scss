@@ -156,6 +156,7 @@
               line-height: 33px;
               text-align: right;
               margin-bottom: 24px;
+              text-wrap: nowrap;
               &:hover {
                 color: $button-background;
               }

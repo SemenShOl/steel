@@ -3,12 +3,12 @@
 //-----------------------------------
 
 @font-face {
-    font-family: 'Stolzl';
-    src: url('../fonts/Stolzl/stolzl_book-webfont.woff2') format('woff2'),
-         url('../fonts/Stolzl/stolzl_book-webfont.woff') format('woff'),
-         url('../fonts/Stolzl/stolzl_book-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/stolzl_book-webfont.woff2") format("woff2"),
+    url("../fonts/Stolzl/stolzl_book-webfont.woff") format("woff"),
+    url("../fonts/Stolzl/stolzl_book-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 // @font-face {
@@ -21,34 +21,43 @@
 // }
 
 @font-face {
-    font-family: 'Stolzl';
-    src: url('../fonts/Stolzl/stolzl_medium-webfont.woff2') format('woff2'),
-         url('../fonts/Stolzl/stolzl_medium-webfont.woff') format('woff'),
-         url('../fonts/Stolzl/stolzl_medium-webfont.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/stolzl_medium-webfont.woff2") format("woff2"),
+    url("../fonts/Stolzl/stolzl_medium-webfont.woff") format("woff"),
+    url("../fonts/Stolzl/stolzl_medium-webfont.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Stolzl';
-    src: url('../fonts/Stolzl/stolzl_book-webfont.woff2') format('woff2'),
-         url('../fonts/Stolzl/stolzl_book-webfont.woff') format('woff'),
-         url('../fonts/Stolzl/stolzl_book-webfont.ttf') format('truetype');
-    font-weight: 350;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/stolzl_book-webfont.woff2") format("woff2"),
+    url("../fonts/Stolzl/stolzl_book-webfont.woff") format("woff"),
+    url("../fonts/Stolzl/stolzl_book-webfont.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "PT Root UI";
+  src: url("../fonts/PT Root UI/PT-Root-UI_Regular.ttf") format("truetype"),
+    url("../fonts/PT Root UI/PTRootUI-Regular.woff") format("woff"),
+    url("../fonts/PT Root UI/PTRootUI-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI";
+  src: url("../fonts/PT Root UI/PT-Root_Bold.ttf") format("truetype"),
+    url("../fonts/PT Root UI/PTRootUI-Bold.woff") format("woff"),
+    url("../fonts/PT Root UI/PTRootUI-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 
 @font-face {
-    font-family:"PT Root UI";
-    src: url("../fonts/PT Root UI/PT-Root-UI_Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family:"Consolas";
-    src: url("../../../fonts/Consolas/consolas.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "Consolas";
+  src: url("../../../fonts/Consolas/consolas.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

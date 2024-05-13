@@ -3,7 +3,6 @@
 
 get_header(); ?>
 
-<!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 
 <section class="l-page ">
 	<!-- <div id="app">
@@ -461,7 +460,7 @@ get_header(); ?>
 <!-- Модально окно -->
 <script>
 	const btnsAskPrice = document.querySelectorAll('.ask-price');
-
+	console.log(btnsAskPrice)
 	const sendedModal = document.querySelector('.sended-modal');
 	const sendedModalBg = document.querySelector('.sended-modal__bg');
 	const sendedModalClose = document.querySelector('.sended-close-btn');
@@ -505,6 +504,7 @@ get_header(); ?>
 
 	btnsAskPrice.forEach(btn => {
 		btn.addEventListener('click', () => {
+			alert('What?!')
 			onOpenModalMain();
 		})
 	})
